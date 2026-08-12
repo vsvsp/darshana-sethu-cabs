@@ -1,717 +1,997 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#0f172a">
-<meta name="description" content="Darshana Sethu Cab - Safe temple travel">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Darshana Sethu Cab</title>
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="Darshana Sethu Cab - Safe and trusted temple travel">
 
-<style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+  <link rel="manifest" href="./manifest.json">
 
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f5f7fb;
-  color:#172033;
-  padding-bottom:80px;
-}
+  <title>Darshana Sethu Cab</title>
 
-header{
-  background:#0f172a;
-  color:white;
-  padding:18px 16px;
-  position:sticky;
-  top:0;
-  z-index:100;
-  box-shadow:0 3px 12px #0002;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-.header-row{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      padding-bottom: 82px;
+    }
 
-.logo{
-  font-size:20px;
-  font-weight:800;
-}
+    button,
+    input,
+    select {
+      font-family: inherit;
+    }
 
-.logo span{
-  display:block;
-  font-size:12px;
-  color:#facc15;
-  margin-top:3px;
-}
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #0f172a;
+      color: #fff;
+      padding: 16px;
+      box-shadow: 0 3px 12px rgba(0,0,0,.15);
+    }
 
-.lang-btn{
-  background:#fff;
-  color:#0f172a;
-  border:0;
-  padding:8px 12px;
-  border-radius:20px;
-  font-weight:bold;
-}
+    .header-row {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-main{
-  max-width:600px;
-  margin:auto;
-}
+    .logo {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
 
-.page{
-  display:none;
-  padding:18px;
-}
+    .logo span {
+      display: block;
+      margin-top: 4px;
+      font-size: 11px;
+      color: #facc15;
+      letter-spacing: .5px;
+    }
 
-.page.active{
-  display:block;
-}
+    .lang-btn {
+      border: 0;
+      border-radius: 22px;
+      padding: 8px 13px;
+      background: #fff;
+      color: #0f172a;
+      font-weight: 700;
+      cursor: pointer;
+    }
 
-.hero{
-  background:linear-gradient(135deg,#0f172a,#1e293b);
-  color:white;
-  border-radius:22px;
-  padding:28px 20px;
-  margin-bottom:18px;
-}
+    main {
+      max-width: 600px;
+      margin: auto;
+    }
 
-.hero h1{
-  font-size:30px;
-  line-height:1.2;
-  margin-bottom:10px;
-}
+    .page {
+      display: none;
+      padding: 18px;
+    }
 
-.hero p{
-  color:#dbeafe;
-  line-height:1.5;
-}
+    .page.active {
+      display: block;
+    }
 
-.btn{
-  width:100%;
-  border:0;
-  padding:15px;
-  border-radius:12px;
-  background:#facc15;
-  color:#111827;
-  font-size:16px;
-  font-weight:800;
-  margin-top:15px;
-}
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #fff;
+      border-radius: 22px;
+      padding: 28px 20px;
+      margin-bottom: 18px;
+    }
 
-.btn.dark{
-  background:#0f172a;
-  color:white;
-}
+    .hero h1 {
+      font-size: 30px;
+      line-height: 1.18;
+      margin-bottom: 12px;
+    }
 
-.card{
-  background:white;
-  border-radius:18px;
-  padding:18px;
-  margin-bottom:15px;
-  box-shadow:0 4px 15px #0000000d;
-}
+    .hero p {
+      color: #dbeafe;
+      line-height: 1.55;
+    }
 
-.card h2{
-  font-size:20px;
-  margin-bottom:10px;
-}
+    .btn {
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      padding: 15px;
+      margin-top: 15px;
+      background: #facc15;
+      color: #111827;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+    }
 
-.card h3{
-  margin-bottom:8px;
-}
+    .btn.dark {
+      background: #0f172a;
+      color: #fff;
+    }
 
-.card p,
-.card li{
-  line-height:1.6;
-  color:#536174;
-}
+    .btn.sos {
+      background: #dc2626;
+      color: #fff;
+    }
 
-.card ul{
-  padding-left:20px;
-}
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 18px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.06);
+    }
 
-input,
-select,
-textarea{
-  width:100%;
-  padding:14px;
-  border:1px solid #d8dee8;
-  border-radius:10px;
-  margin-top:7px;
-  margin-bottom:13px;
-  font-size:16px;
-  background:white;
-}
+    .card h2 {
+      margin-bottom: 11px;
+      font-size: 20px;
+    }
 
-label{
-  font-size:14px;
-  font-weight:bold;
-}
+    .card h3 {
+      margin-bottom: 8px;
+    }
 
-.nav{
-  position:fixed;
-  bottom:0;
-  left:0;
-  right:0;
-  height:68px;
-  background:white;
-  border-top:1px solid #ddd;
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
-  z-index:200;
-}
+    .card p {
+      color: #536174;
+      line-height: 1.6;
+    }
 
-.nav button{
-  border:0;
-  background:none;
-  color:#667085;
-  font-size:11px;
-  font-weight:bold;
-}
+    .feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
 
-.nav button.active{
-  color:#0f172a;
-}
+    .feature-box {
+      background: #fff;
+      border-radius: 15px;
+      padding: 16px;
+      box-shadow: 0 3px 12px rgba(0,0,0,.05);
+    }
 
-.nav-icon{
-  font-size:22px;
-  display:block;
-  margin-bottom:3px;
-}
+    .feature-icon {
+      font-size: 25px;
+    }
 
-.feature{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-}
+    .feature-box b {
+      display: block;
+      margin: 7px 0 4px;
+    }
 
-.feature-box{
-  background:white;
-  border-radius:15px;
-  padding:16px;
-  box-shadow:0 3px 12px #0000000a;
-}
+    .small {
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.45;
+    }
 
-.feature-box b{
-  display:block;
-  margin-top:8px;
-}
+    label {
+      display: block;
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 700;
+    }
 
-.status{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:13px 0;
-  border-bottom:1px solid #eee;
-}
+    input,
+    select {
+      width: 100%;
+      padding: 14px;
+      margin-top: 7px;
+      margin-bottom: 12px;
+      border: 1px solid #d8dee8;
+      border-radius: 10px;
+      background: #fff;
+      color: #172033;
+      font-size: 16px;
+      outline: none;
+    }
 
-.switch{
-  width:48px;
-  height:27px;
-  background:#cbd5e1;
-  border-radius:30px;
-  position:relative;
-  border:0;
-}
+    input:focus,
+    select:focus {
+      border-color: #0f172a;
+    }
 
-.switch.on{
-  background:#16a34a;
-}
+    .nav {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 200;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: #fff;
+      border-top: 1px solid #e5e7eb;
+      box-shadow: 0 -3px 15px rgba(0,0,0,.06);
+    }
 
-.switch i{
-  width:21px;
-  height:21px;
-  background:white;
-  border-radius:50%;
-  position:absolute;
-  top:3px;
-  left:3px;
-  transition:.2s;
-}
+    .nav button {
+      border: 0;
+      background: transparent;
+      color: #667085;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      min-width: 65px;
+    }
 
-.switch.on i{
-  left:24px;
-}
+    .nav button.active {
+      color: #0f172a;
+    }
 
-.pin-box{
-  text-align:center;
-  background:#ecfdf5;
-  border:2px dashed #16a34a;
-  border-radius:15px;
-  padding:18px;
-  margin-top:15px;
-}
+    .nav-icon {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 22px;
+    }
 
-.pin{
-  font-size:34px;
-  font-weight:900;
-  letter-spacing:8px;
-  color:#166534;
-}
+    .status {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 13px 0;
+      border-bottom: 1px solid #edf0f3;
+    }
 
-.booking-id{
-  font-weight:bold;
-  font-size:20px;
-}
+    .switch {
+      width: 48px;
+      height: 27px;
+      border: 0;
+      border-radius: 30px;
+      background: #cbd5e1;
+      position: relative;
+      cursor: pointer;
+    }
 
-.success{
-  color:#15803d;
-  font-weight:bold;
-}
+    .switch.on {
+      background: #16a34a;
+    }
 
-.danger{
-  background:#dc2626;
-  color:white;
-}
+    .switch i {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 21px;
+      height: 21px;
+      border-radius: 50%;
+      background: #fff;
+      transition: .2s;
+    }
 
-.small{
-  font-size:13px;
-  color:#64748b;
-}
+    .switch.on i {
+      left: 24px;
+    }
 
-.faq{
-  border-bottom:1px solid #eee;
-  padding:14px 0;
-}
+    .safety {
+      border-left: 5px solid #16a34a;
+    }
 
-.faq summary{
-  font-weight:bold;
-  cursor:pointer;
-}
+    .pin-box {
+      margin-top: 15px;
+      padding: 18px;
+      text-align: center;
+      border: 2px dashed #16a34a;
+      border-radius: 15px;
+      background: #ecfdf5;
+    }
 
-.safety{
-  border-left:5px solid #16a34a;
-}
+    .pin {
+      margin: 8px 0;
+      color: #166534;
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: 8px;
+    }
 
-.sos{
-  background:#dc2626;
-  color:white;
-}
+    .booking-id {
+      margin-top: 5px;
+      font-size: 20px;
+      font-weight: 800;
+    }
 
-.sos .btn{
-  background:white;
-  color:#dc2626;
-}
+    .success {
+      color: #15803d !important;
+      font-weight: 700;
+    }
 
-footer{
-  text-align:center;
-  padding:20px;
-  color:#64748b;
-  font-size:12px;
-}
-</style>
+    .faq {
+      padding: 14px 0;
+      border-bottom: 1px solid #edf0f3;
+    }
+
+    .faq summary {
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .faq p {
+      margin-top: 9px;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      color: #64748b;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
   <div class="header-row">
+
     <div class="logo">
       DARSHANA SETHU CAB
-      <span>Safe • Simple • Trusted Travel</span>
+      <span>SAFE • SIMPLE • TRUSTED TRAVEL</span>
     </div>
-    <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">
+
+    <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">
       తెలుగు
     </button>
+
   </div>
 </header>
 
+
 <main>
 
-<!-- HOME -->
-<section id="home" class="page active">
+  <!-- HOME -->
+  <section id="home" class="page active">
 
-  <div class="hero">
-    <h1 id="heroTitle">Your Temple Journey Starts Here</h1>
-    <p id="heroText">
-      Safe and comfortable cab travel for temple visits and long-distance journeys.
-    </p>
-    <button class="btn" onclick="showPage('booking')">
-      🚕 Book a Cab
-    </button>
-  </div>
+    <div class="hero">
 
-  <div class="feature">
+      <h1 id="heroTitle">
+        Your Temple Journey Starts Here
+      </h1>
 
-    <div class="feature-box">
-      🛡️
-      <b>Safety First</b>
-      <span class="small">Verified trip & safety features</span>
-    </div>
-
-    <div class="feature-box">
-      👩
-      <b>Ladies Safety</b>
-      <span class="small">Special safety controls</span>
-    </div>
-
-    <div class="feature-box">
-      🔐
-      <b>Ride PIN</b>
-      <span class="small">4-digit trip verification</span>
-    </div>
-
-    <div class="feature-box">
-      📍
-      <b>Trip Tracking</b>
-      <span class="small">Track your journey</span>
-    </div>
-
-  </div>
-
-  <div class="card">
-    <h2>🙏 Temple Travel</h2>
-    <p>
-      Appanapalli • Antarvedi • Draksharama • Annavaram
-      and many more destinations.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>How it works</h2>
-    <p>1️⃣ Enter your trip details</p>
-    <p>2️⃣ Confirm your booking</p>
-    <p>3️⃣ Get your driver details</p>
-    <p>4️⃣ Verify the 4-digit Ride PIN</p>
-    <p>5️⃣ Start your safe journey</p>
-  </div>
-
-</section>
-
-
-<!-- BOOKING -->
-<section id="booking" class="page">
-
-  <div class="card">
-
-    <h2>🚕 Book Your Cab</h2>
-
-    <label>Customer Name</label>
-    <input id="customerName" placeholder="Enter your name">
-
-    <label>Mobile Number</label>
-    <input id="customerPhone" type="tel" maxlength="10"
-           placeholder="10 digit mobile number">
-
-    <label>Pickup Location</label>
-    <input id="pickup" placeholder="Enter pickup location">
-
-    <label>Destination</label>
-    <input id="destination" placeholder="Enter destination">
-
-    <label>Travel Date</label>
-    <input id="travelDate" type="date">
-
-    <label>Travel Time</label>
-    <input id="travelTime" type="time">
-
-    <label>Passengers</label>
-    <select id="passengers">
-      <option value="1">1 Passenger</option>
-      <option value="2">2 Passengers</option>
-      <option value="3">3 Passengers</option>
-      <option value="4">4 Passengers</option>
-      <option value="5">5 Passengers</option>
-      <option value="6">6 Passengers</option>
-      <option value="7">7 Passengers</option>
-    </select>
-
-    <button class="btn" onclick="createBooking()">
-      Confirm Booking
-    </button>
-
-  </div>
-
-  <div id="bookingResult"></div>
-
-</section>
-
-
-<!-- SAFETY -->
-<section id="safety" class="page">
-
-  <div class="card safety">
-
-    <h2>🛡️ Safety Center</h2>
-
-    <p>
-      Your safety is our priority. These features are designed
-      to make every ride safer.
-    </p>
-
-    <div class="status">
-      <span>🔐 Ride PIN</span>
-      <button class="switch on" onclick="toggleSwitch(this)">
-        <i></i>
-      </button>
-    </div>
-
-    <div class="status">
-      <span>📍 Live Trip Tracking</span>
-      <button class="switch on" onclick="toggleSwitch(this)">
-        <i></i>
-      </button>
-    </div>
-
-    <div class="status">
-      <span>🚨 Route Deviation Alert</span>
-      <button class="switch on" onclick="toggleSwitch(this)">
-        <i></i>
-      </button>
-    </div>
-
-    <div class="status">
-      <span>⏱️ Long Stop Alert</span>
-      <button class="switch on" onclick="toggleSwitch(this)">
-        <i></i>
-      </button>
-    </div>
-
-  </div>
-
-
-  <div class="card">
-    <h2>👩 Ladies Safety</h2>
-
-    <p>Additional safety options for women passengers.</p>
-
-    <div class="status">
-      <span>👩‍🦰 Women Safety Mode</span>
-      <button class="switch on" onclick="toggleSwitch(this)">
-        <i></i>
-      </button>
-    </div>
-
-    <div class="status">
-      <span>📤 Share Trip</span>
-      <button class="switch on" onclick="toggleSwitch(this)">
-        <i></i>
-      </button>
-    </div>
-
-    <div class="status">
-      <span>📞 Emergency Contact</span>
-      <button class="switch on" onclick="toggleSwitch(this)">
-        <i></i>
-      </button>
-    </div>
-
-    <div class="status">
-      <span>🚗 Vehicle Number Match</span>
-      <button class="switch on" onclick="toggleSwitch(this)">
-        <i></i>
-      </button>
-    </div>
-
-    <button class="btn sos" onclick="showSOS()">
-      🚨 EMERGENCY / SOS
-    </button>
-
-  </div>
-
-</section>
-
-
-<!-- LOGIN -->
-<section id="login" class="page">
-
-  <div class="card">
-
-    <h2>🔐 Customer Login</h2>
-
-    <p class="small">
-      Login with your mobile number and personal PIN.
-      No OTP is required.
-    </p>
-
-    <label>Mobile Number</label>
-    <input id="loginPhone" type="tel" maxlength="10"
-           placeholder="10 digit mobile number">
-
-    <label>Create / Enter 4-digit PIN</label>
-    <input id="loginPin" type="password" maxlength="4"
-           inputmode="numeric" placeholder="••••">
-
-    <button class="btn" onclick="loginUser()">
-      Login
-    </button>
-
-    <p id="loginMessage" class="small"></p>
-
-  </div>
-
-  <div class="card">
-    <h3>Why PIN Login?</h3>
-    <p>
-      Simple login without depending on SMS OTP.
-      Your PIN should be kept private.
-    </p>
-  </div>
-
-</section>
-
-
-<!-- ABOUT -->
-<section id="about" class="page">
-
-  <div class="card">
-    <h2>About Darshana Sethu Cab</h2>
-
-    <p>
-      Darshana Sethu Cab is designed to provide safe,
-      simple and convenient cab services for temple travel,
-      family journeys and long-distance trips.
-    </p>
-
-    <br>
-
-    <p>
-      Our focus is on passenger safety, verified driver
-      partners and transparent booking.
-    </p>
-  </div>
-
-</section>
-
-
-<!-- FAQ -->
-<section id="faq" class="page">
-
-  <div class="card">
-
-    <h2>❓ Frequently Asked Questions</h2>
-
-    <details class="faq">
-      <summary>How do I book a cab?</summary>
-      <p>Open Book Cab, enter your trip details and confirm.</p>
-    </details>
-
-    <details class="faq">
-      <summary>Is OTP required?</summary>
-      <p>No. Our planned customer login uses a PIN.</p>
-    </details>
-
-    <details class="faq">
-      <summary>What is Ride PIN?</summary>
-      <p>
-        A unique 4-digit PIN generated for a ride.
-        Share it with the driver only when you are ready to start.
+      <p id="heroText">
+        Safe and comfortable cab travel for temple visits,
+        family journeys and long-distance trips.
       </p>
-    </details>
 
-    <details class="faq">
-      <summary>Can I share my trip?</summary>
-      <p>Yes. The Safety Center will provide the Share Trip feature.</p>
-    </details>
+      <button class="btn" onclick="showPage('booking')">
+        🚕 Book a Cab
+      </button>
 
-    <details class="faq">
-      <summary>Is there an SOS feature?</summary>
-      <p>Yes. The Safety Center contains an emergency SOS option.</p>
-    </details>
-
-  </div>
-
-</section>
+    </div>
 
 
-<!-- TERMS -->
-<section id="terms" class="page">
+    <div class="feature">
 
-  <div class="card">
+      <div class="feature-box">
+        <div class="feature-icon">🛡️</div>
+        <b>Safety First</b>
+        <span class="small">
+          Verified trip and safety features
+        </span>
+      </div>
 
-    <h2>Terms & Conditions</h2>
+      <div class="feature-box">
+        <div class="feature-icon">👩</div>
+        <b>Ladies Safety</b>
+        <span class="small">
+          Additional passenger safety controls
+        </span>
+      </div>
 
-    <p>
-      Customers must provide accurate booking information.
-      The passenger is responsible for following applicable
-      travel and safety requirements.
-    </p>
+      <div class="feature-box">
+        <div class="feature-icon">🔐</div>
+        <b>Ride PIN</b>
+        <span class="small">
+          4-digit trip verification
+        </span>
+      </div>
 
-    <br>
+      <div class="feature-box">
+        <div class="feature-icon">📍</div>
+        <b>Live Trip</b>
+        <span class="small">
+          Continue tracking during active rides
+        </span>
+      </div>
 
-    <p>
-      Driver assignment, fares, cancellation rules and
-      availability may depend on the actual service conditions.
-    </p>
-
-    <br>
-
-    <p>
-      Safety features are designed to assist passengers but
-      should not replace contacting appropriate emergency
-      services when immediate danger exists.
-    </p>
-
-  </div>
-
-</section>
+    </div>
 
 
-<!-- PRIVACY -->
-<section id="privacy" class="page">
+    <div class="card">
 
-  <div class="card">
+      <h2>🙏 Temple Travel</h2>
 
-    <h2>Privacy Policy</h2>
+      <p>
+        Appanapalli • Antarvedi • Draksharama • Annavaram
+        and many more destinations.
+      </p>
 
-    <p>
-      Darshana Sethu Cab may collect information necessary
-      for booking and providing the service, such as name,
-      mobile number and trip details.
-    </p>
+    </div>
 
-    <br>
 
-    <p>
-      We aim to use customer information only for legitimate
-      service, safety and operational purposes.
-    </p>
+    <div class="card">
 
-    <br>
+      <h2>How It Works</h2>
 
-    <p>
-      We will implement appropriate security controls for
-      customer and trip information.
-    </p>
+      <p>1️⃣ Enter your trip details</p>
+      <p>2️⃣ Confirm your booking</p>
+      <p>3️⃣ Driver Partner accepts the trip</p>
+      <p>4️⃣ Verify the 4-digit Ride PIN</p>
+      <p>5️⃣ Start your safe journey</p>
 
-  </div>
+    </div>
 
-</section>
+  </section>
 
-<footer>
-  © 2026 Darshana Sethu Cab<br>
-  Safe • Simple • Trusted Travel
-</footer>
+
+  <!-- BOOKING -->
+  <section id="booking" class="page">
+
+    <div class="card">
+
+      <h2>🚕 Book Your Cab</h2>
+
+      <label for="customerName">
+        Customer Name
+      </label>
+
+      <input
+        id="customerName"
+        type="text"
+        placeholder="Enter your name"
+      >
+
+
+      <label for="customerPhone">
+        Mobile Number
+      </label>
+
+      <input
+        id="customerPhone"
+        type="tel"
+        maxlength="10"
+        inputmode="numeric"
+        placeholder="10 digit mobile number"
+      >
+
+
+      <label for="pickup">
+        Pickup Location
+      </label>
+
+      <input
+        id="pickup"
+        type="text"
+        placeholder="Enter pickup location"
+      >
+
+
+      <label for="destination">
+        Destination
+      </label>
+
+      <input
+        id="destination"
+        type="text"
+        placeholder="Enter destination"
+      >
+
+
+      <label for="travelDate">
+        Travel Date
+      </label>
+
+      <input
+        id="travelDate"
+        type="date"
+      >
+
+
+      <label for="travelTime">
+        Travel Time
+      </label>
+
+      <input
+        id="travelTime"
+        type="time"
+      >
+
+
+      <label for="passengers">
+        Passengers
+      </label>
+
+      <select id="passengers">
+
+        <option value="1">
+          1 Passenger
+        </option>
+
+        <option value="2">
+          2 Passengers
+        </option>
+
+        <option value="3">
+          3 Passengers
+        </option>
+
+        <option value="4">
+          4 Passengers
+        </option>
+
+        <option value="5">
+          5 Passengers
+        </option>
+
+        <option value="6">
+          6 Passengers
+        </option>
+
+        <option value="7">
+          7 Passengers
+        </option>
+
+      </select>
+
+
+      <button class="btn" onclick="createBooking()">
+        Confirm Booking
+      </button>
+
+    </div>
+
+
+    <div id="bookingResult"></div>
+
+  </section>
+
+
+  <!-- SAFETY -->
+  <section id="safety" class="page">
+
+    <div class="card safety">
+
+      <h2>🛡️ Safety Center</h2>
+
+      <p>
+        Your safety is our priority.
+      </p>
+
+
+      <div class="status">
+
+        <span>🔐 Ride PIN</span>
+
+        <button
+          class="switch on"
+          onclick="toggleSwitch(this)"
+        >
+          <i></i>
+        </button>
+
+      </div>
+
+
+      <div class="status">
+
+        <span>📍 Live Trip Tracking</span>
+
+        <button
+          class="switch on"
+          onclick="toggleSwitch(this)"
+        >
+          <i></i>
+        </button>
+
+      </div>
+
+
+      <div class="status">
+
+        <span>🛣️ Route Deviation Alert</span>
+
+        <button
+          class="switch on"
+          onclick="toggleSwitch(this)"
+        >
+          <i></i>
+        </button>
+
+      </div>
+
+
+      <div class="status">
+
+        <span>⏱️ Long Stop Alert</span>
+
+        <button
+          class="switch on"
+          onclick="toggleSwitch(this)"
+        >
+          <i></i>
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <h2>👩 Ladies Safety</h2>
+
+      <p>
+        Additional safety options for women passengers.
+      </p>
+
+
+      <div class="status">
+
+        <span>👩 Women Safety Mode</span>
+
+        <button
+          class="switch on"
+          onclick="toggleSwitch(this)"
+        >
+          <i></i>
+        </button>
+
+      </div>
+
+
+      <div class="status">
+
+        <span>📤 Share Trip</span>
+
+        <button
+          class="switch on"
+          onclick="toggleSwitch(this)"
+        >
+          <i></i>
+        </button>
+
+      </div>
+
+
+      <div class="status">
+
+        <span>📞 Emergency Contact</span>
+
+        <button
+          class="switch on"
+          onclick="toggleSwitch(this)"
+        >
+          <i></i>
+        </button>
+
+      </div>
+
+
+      <div class="status">
+
+        <span>🚗 Vehicle Number Match</span>
+
+        <button
+          class="switch on"
+          onclick="toggleSwitch(this)"
+        >
+          <i></i>
+        </button>
+
+      </div>
+
+
+      <button class="btn sos" onclick="showSOS()">
+        🚨 EMERGENCY / SOS
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ACCOUNT -->
+  <section id="login" class="page">
+
+    <div class="card">
+
+      <h2>🔐 Customer Login</h2>
+
+      <p class="small">
+        Use your mobile number and personal Login PIN.
+      </p>
+
+
+      <label for="loginPhone">
+        Mobile Number
+      </label>
+
+      <input
+        id="loginPhone"
+        type="tel"
+        maxlength="10"
+        inputmode="numeric"
+        placeholder="10 digit mobile number"
+      >
+
+
+      <label for="loginPin">
+        Login PIN
+      </label>
+
+      <input
+        id="loginPin"
+        type="password"
+        maxlength="4"
+        inputmode="numeric"
+        placeholder="••••"
+      >
+
+
+      <button class="btn" onclick="loginUser()">
+        Login
+      </button>
+
+
+      <p
+        id="loginMessage"
+        class="small"
+        style="margin-top:12px;"
+      ></p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>🔒 Privacy</h3>
+
+      <p>
+        Your personal information should be kept private.
+        Never share your Login PIN with anyone.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about" class="page">
+
+    <div class="card">
+
+      <h2>About Darshana Sethu Cab</h2>
+
+      <p>
+        Darshana Sethu Cab is designed to provide safe,
+        simple and convenient cab services for temple travel,
+        family journeys and long-distance trips.
+      </p>
+
+      <br>
+
+      <p>
+        Our focus is passenger safety, verified Driver
+        Partners and transparent booking.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+  <section id="faq" class="page">
+
+    <div class="card">
+
+      <h2>❓ Frequently Asked Questions</h2>
+
+
+      <details class="faq">
+
+        <summary>
+          How do I book a cab?
+        </summary>
+
+        <p>
+          Open Book Cab, enter your trip details and confirm.
+        </p>
+
+      </details>
+
+
+      <details class="faq">
+
+        <summary>
+          What is Ride PIN?
+        </summary>
+
+        <p>
+          A unique 4-digit PIN generated for the ride.
+          Share it with the Driver Partner only when you
+          are ready to start.
+        </p>
+
+      </details>
+
+
+      <details class="faq">
+
+        <summary>
+          Can I share my trip?
+        </summary>
+
+        <p>
+          Yes. The Safety Center will provide Share Trip.
+        </p>
+
+      </details>
+
+
+      <details class="faq">
+
+        <summary>
+          Is there an SOS feature?
+        </summary>
+
+        <p>
+          Yes. The Safety Center contains an emergency SOS
+          option.
+        </p>
+
+      </details>
+
+
+      <details class="faq">
+
+        <summary>
+          How is my fare handled?
+        </summary>
+
+        <p>
+          The platform model is commission-based.
+          Darshana Sethu Cab receives its applicable
+          commission rather than the full ride amount.
+        </p>
+
+      </details>
+
+    </div>
+
+  </section>
+
+
+  <!-- TERMS -->
+  <section id="terms" class="page">
+
+    <div class="card">
+
+      <h2>Terms & Conditions</h2>
+
+      <p>
+        Customers must provide accurate booking information.
+      </p>
+
+      <br>
+
+      <p>
+        Driver assignment, fares, cancellation rules and
+        availability may depend on actual service conditions.
+      </p>
+
+      <br>
+
+      <p>
+        Safety features are designed to assist passengers
+        and do not replace appropriate emergency services
+        when immediate danger exists.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRIVACY -->
+  <section id="privacy" class="page">
+
+    <div class="card">
+
+      <h2>Privacy Policy</h2>
+
+      <p>
+        Darshana Sethu Cab may collect information necessary
+        for booking and providing the service, such as name,
+        mobile number and trip details.
+      </p>
+
+      <br>
+
+      <p>
+        Information should be used only for legitimate
+        service, safety and operational purposes.
+      </p>
+
+      <br>
+
+      <p>
+        Appropriate security controls will be implemented
+        for customer and trip information.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+
+    © 2026 Darshana Sethu Cab<br>
+
+    SAFE • SIMPLE • TRUSTED TRAVEL
+
+  </footer>
 
 </main>
 
 
 <!-- BOTTOM NAVIGATION -->
+
 <nav class="nav">
 
-  <button onclick="showPage('home')" id="nav-home">
+  <button
+    id="nav-home"
+    class="active"
+    onclick="showPage('home')"
+  >
     <span class="nav-icon">🏠</span>
     Home
   </button>
 
-  <button onclick="showPage('booking')" id="nav-booking">
+
+  <button
+    id="nav-booking"
+    onclick="showPage('booking')"
+  >
     <span class="nav-icon">🚕</span>
     Book
   </button>
 
-  <button onclick="showPage('safety')" id="nav-safety">
+
+  <button
+    id="nav-safety"
+    onclick="showPage('safety')"
+  >
     <span class="nav-icon">🛡️</span>
     Safety
   </button>
 
-  <button onclick="showPage('login')" id="nav-login">
+
+  <button
+    id="nav-login"
+    onclick="showPage('login')"
+  >
     <span class="nav-icon">👤</span>
     Account
   </button>
@@ -725,52 +1005,94 @@ footer{
    FIREBASE
 ========================================= */
 
-import { initializeApp }
-from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
+import {
+  initializeApp
+} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
+
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCKKThIcHKI8jFvOmfXgQZ-UKXwNCiha_U",
-  authDomain: "darshana-sethu-cab.firebaseapp.com",
-  projectId: "darshana-sethu-cab",
-  storageBucket: "darshana-sethu-cab.firebasestorage.app",
-  messagingSenderId: "753735533400",
-  appId: "1:753735533400:web:dd314c6e8b61d2f1b09b2d",
-  measurementId: "G-E366CXE9LT"
+
+  apiKey:
+    "AIzaSyCKKThIcHKI8jFvOmfXgQZ-UKXwNCiha_U",
+
+  authDomain:
+    "darshana-sethu-cab.firebaseapp.com",
+
+  projectId:
+    "darshana-sethu-cab",
+
+  storageBucket:
+    "darshana-sethu-cab.firebasestorage.app",
+
+  messagingSenderId:
+    "753735533400",
+
+  appId:
+    "1:753735533400:web:dd314c6e8b61d2f1b09b2d",
+
+  measurementId:
+    "G-E366CXE9LT"
 };
+
 
 const app = initializeApp(firebaseConfig);
 
-console.log("Darshana Sethu Cab Firebase initialized");
+console.log(
+  "Darshana Sethu Cab Firebase initialized"
+);
 
 
 /* =========================================
    PAGE NAVIGATION
 ========================================= */
 
-window.showPage = function(page){
+window.showPage = function(page) {
 
-  document.querySelectorAll(".page")
-    .forEach(p => p.classList.remove("active"));
+  document
+    .querySelectorAll(".page")
+    .forEach(function(section) {
 
-  const target = document.getElementById(page);
+      section.classList.remove("active");
 
-  if(target){
+    });
+
+
+  const target =
+    document.getElementById(page);
+
+
+  if (target) {
+
     target.classList.add("active");
+
   }
 
-  document.querySelectorAll(".nav button")
-    .forEach(b => b.classList.remove("active"));
 
-  const nav = document.getElementById("nav-" + page);
+  document
+    .querySelectorAll(".nav button")
+    .forEach(function(button) {
 
-  if(nav){
+      button.classList.remove("active");
+
+    });
+
+
+  const nav =
+    document.getElementById("nav-" + page);
+
+
+  if (nav) {
+
     nav.classList.add("active");
+
   }
+
 
   window.scrollTo({
-    top:0,
-    behavior:"smooth"
+    top: 0,
+    behavior: "smooth"
   });
+
 };
 
 
@@ -778,43 +1100,53 @@ window.showPage = function(page){
    LANGUAGE
 ========================================= */
 
-let telugu = false;
+let isTelugu = false;
 
-window.toggleLanguage = function(){
 
-  telugu = !telugu;
+window.toggleLanguage = function() {
 
-  const btn = document.getElementById("langBtn");
+  isTelugu = !isTelugu;
 
-  if(telugu){
 
-    btn.textContent = "English";
+  const button =
+    document.getElementById("langBtn");
+
+
+  if (isTelugu) {
+
+    button.textContent = "English";
+
 
     document.getElementById("heroTitle").textContent =
       "మీ ఆలయ ప్రయాణం ఇక్కడ ప్రారంభం";
 
+
     document.getElementById("heroText").textContent =
       "సురక్షితమైన మరియు సౌకర్యవంతమైన క్యాబ్ ప్రయాణం.";
 
-  }else{
 
-    btn.textContent = "తెలుగు";
+  } else {
+
+    button.textContent = "తెలుగు";
+
 
     document.getElementById("heroTitle").textContent =
       "Your Temple Journey Starts Here";
 
+
     document.getElementById("heroText").textContent =
-      "Safe and comfortable cab travel for temple visits and long-distance journeys.";
+      "Safe and comfortable cab travel for temple visits, family journeys and long-distance trips.";
 
   }
+
 };
 
 
 /* =========================================
-   SAFETY SWITCH
+   SWITCH
 ========================================= */
 
-window.toggleSwitch = function(button){
+window.toggleSwitch = function(button) {
 
   button.classList.toggle("on");
 
@@ -822,258 +1154,52 @@ window.toggleSwitch = function(button){
 
 
 /* =========================================
-   BOOKING
+   BOOKING ID
 ========================================= */
 
-function generateBookingId(){
+function generateBookingId() {
 
   const now = new Date();
 
+
   const date =
     now.getFullYear().toString() +
-    String(now.getMonth()+1).padStart(2,"0") +
-    String(now.getDate()).padStart(2,"0");
+    String(now.getMonth() + 1).padStart(2, "0") +
+    String(now.getDate()).padStart(2, "0");
+
 
   const number =
     String(
-      Math.floor(Math.random()*999)+1
-    ).padStart(3,"0");
+      Math.floor(Math.random() * 999) + 1
+    ).padStart(3, "0");
+
 
   return "DSCS" + date + number;
+
 }
 
 
-function generateRidePin(){
+/* =========================================
+   RIDE PIN
+========================================= */
+
+function generateRidePin() {
 
   return String(
-    Math.floor(1000 + Math.random()*9000)
+    Math.floor(
+      1000 + Math.random() * 9000
+    )
   );
+
 }
 
 
-window.createBooking = function(){
+/* =========================================
+   CREATE BOOKING
+========================================= */
+
+window.createBooking = function() {
 
   const name =
-    document.getElementById("customerName").value.trim();
-
-  const phone =
-    document.getElementById("customerPhone").value.trim();
-
-  const pickup =
-    document.getElementById("pickup").value.trim();
-
-  const destination =
-    document.getElementById("destination").value.trim();
-
-  const date =
-    document.getElementById("travelDate").value;
-
-  const time =
-    document.getElementById("travelTime").value;
-
-  const passengers =
-    document.getElementById("passengers").value;
-
-
-  if(!name || !phone || !pickup || !destination || !date || !time){
-
-    alert("Please fill all booking details.");
-    return;
-  }
-
-  if(!/^[0-9]{10}$/.test(phone)){
-
-    alert("Please enter a valid 10 digit mobile number.");
-    return;
-  }
-
-
-  const bookingId = generateBookingId();
-
-  const ridePin = generateRidePin();
-
-
-  const booking = {
-
-    bookingId,
-    ridePin,
-    name,
-    phone,
-    pickup,
-    destination,
-    date,
-    time,
-    passengers,
-    status:"Requested",
-    createdAt:new Date().toISOString()
-
-  };
-
-
-  localStorage.setItem(
-    "darshanaBooking",
-    JSON.stringify(booking)
-  );
-
-
-  document.getElementById("bookingResult").innerHTML = `
-
-    <div class="card">
-
-      <h2 class="success">✅ Booking Request Created</h2>
-
-      <p>Booking ID</p>
-
-      <div class="booking-id">
-        ${bookingId}
-      </div>
-
-      <div class="pin-box">
-
-        <p>🔐 Your Ride PIN</p>
-
-        <div class="pin">
-          ${ridePin}
-        </div>
-
-        <p class="small">
-          Share this PIN with the driver only
-          when you are ready to start the ride.
-        </p>
-
-      </div>
-
-      <br>
-
-      <p>
-        <b>Pickup:</b> ${pickup}
-      </p>
-
-      <p>
-        <b>Destination:</b> ${destination}
-      </p>
-
-      <p>
-        <b>Date:</b> ${date}
-      </p>
-
-      <p>
-        <b>Time:</b> ${time}
-      </p>
-
-      <p>
-        <b>Passengers:</b> ${passengers}
-      </p>
-
-    </div>
-  `;
-
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
-
-};
-
-
-/* =========================================
-   PIN LOGIN
-========================================= */
-
-window.loginUser = async function(){
-
-  const phone =
-    document.getElementById("loginPhone").value.trim();
-
-  const pin =
-    document.getElementById("loginPin").value.trim();
-
-  const message =
-    document.getElementById("loginMessage");
-
-
-  if(!/^[0-9]{10}$/.test(phone)){
-
-    message.textContent =
-      "Please enter a valid 10 digit mobile number.";
-
-    return;
-  }
-
-
-  if(!/^[0-9]{4}$/.test(pin)){
-
-    message.textContent =
-      "PIN must contain exactly 4 digits.";
-
-    return;
-  }
-
-
-  /*
-    Initial customer-side PIN login.
-    Production authentication will be connected
-    to Firebase securely in the next stage.
-  */
-
-  localStorage.setItem(
-    "customerPhone",
-    phone
-  );
-
-  localStorage.setItem(
-    "customerLoggedIn",
-    "true"
-  );
-
-
-  message.textContent =
-    "✅ Login successful.";
-
-};
-
-
-/* =========================================
-   SOS
-========================================= */
-
-window.showSOS = function(){
-
-  const ok = confirm(
-    "Emergency SOS\n\n" +
-    "Are you sure you want to activate emergency assistance?"
-  );
-
-  if(ok){
-
-    alert(
-      "🚨 SOS activated.\n\n" +
-      "In the production version this will connect " +
-      "to the configured emergency contact and safety system."
-    );
-
-  }
-
-};
-
-
-/* =========================================
-   LOAD SAVED BOOKING
-========================================= */
-
-const savedBooking =
-  localStorage.getItem("darshanaBooking");
-
-if(savedBooking){
-
-  console.log(
-    "Previous booking found:",
-    JSON.parse(savedBooking)
-  );
-
-}
-
-</script>
-
-</body>
-</html>
+    document
+      .getElementById("cus
