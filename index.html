@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -11,12 +12,16 @@
 
 <meta
   name="theme-color"
-  content="#f5b400"
+  content="#111827"
 >
 
 <title>Darshana Sethu Cab</title>
 
 <style>
+
+/* =====================================================
+   RESET
+===================================================== */
 
 *{
   box-sizing:border-box;
@@ -24,14 +29,20 @@
   padding:0;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   font-family:
     Arial,
     Helvetica,
     sans-serif;
+
   background:#f5f6f8;
   color:#111827;
-  padding-bottom:82px;
+
+  padding-bottom:92px;
 }
 
 button,
@@ -44,13 +55,26 @@ button{
   cursor:pointer;
 }
 
+button:disabled{
+  opacity:.65;
+  cursor:not-allowed;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
 .header{
   position:sticky;
   top:0;
-  z-index:100;
+  z-index:1000;
+
   background:#111827;
   color:#fff;
+
   padding:14px 16px;
+
   box-shadow:
     0 3px 15px rgba(0,0,0,.16);
 }
@@ -58,6 +82,7 @@ button{
 .header-inner{
   max-width:650px;
   margin:auto;
+
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -75,21 +100,32 @@ button{
 
 .tagline{
   margin-top:4px;
+
   font-size:8px;
   letter-spacing:1.1px;
+
   color:#cbd5e1;
   font-weight:800;
 }
 
 .language{
   border:1px solid #475569;
+
   background:#1f2937;
   color:#fff;
+
   padding:8px 12px;
+
   border-radius:20px;
+
   font-size:11px;
   font-weight:800;
 }
+
+
+/* =====================================================
+   MAIN
+===================================================== */
 
 main{
   max-width:650px;
@@ -106,39 +142,58 @@ main{
 }
 
 
-/* ================= HERO ================= */
+/* =====================================================
+   HOME HERO
+===================================================== */
 
 .hero{
   position:relative;
   overflow:hidden;
+
   background:#111827;
+
   border-radius:24px;
-  padding:25px 19px;
+
+  padding:27px 19px;
+
   margin-bottom:14px;
-  min-height:220px;
+
+  min-height:225px;
 }
 
 .hero:before{
   content:"";
+
   position:absolute;
-  width:210px;
-  height:210px;
+
+  width:220px;
+  height:220px;
+
   border-radius:50%;
-  right:-100px;
-  top:-105px;
+
+  right:-105px;
+  top:-110px;
+
   background:#f5b400;
-  opacity:.16;
+
+  opacity:.15;
 }
 
 .hero:after{
   content:"";
+
   position:absolute;
-  width:110px;
-  height:110px;
+
+  width:120px;
+  height:120px;
+
   border-radius:50%;
-  left:-60px;
-  bottom:-60px;
+
+  left:-65px;
+  bottom:-65px;
+
   background:#f5b400;
+
   opacity:.08;
 }
 
@@ -149,43 +204,61 @@ main{
 
 .hero-badge{
   display:inline-block;
+
   background:
     rgba(245,180,0,.13);
+
   color:#f5b400;
+
   padding:6px 10px;
+
   border-radius:20px;
+
   font-size:9px;
   font-weight:900;
+
   letter-spacing:.5px;
+
   margin-bottom:12px;
 }
 
 .hero h1{
-  max-width:420px;
+  max-width:430px;
+
   color:#fff;
+
   font-size:29px;
   line-height:1.18;
+
   margin-bottom:9px;
 }
 
 .hero p{
   max-width:470px;
+
   color:#cbd5e1;
+
   font-size:13px;
   line-height:1.55;
 }
 
 .hero-buttons{
   display:flex;
+
   gap:9px;
+
   margin-top:18px;
 }
 
 .hero-button{
   flex:1;
+
   border:0;
+
   border-radius:13px;
+
   padding:14px 9px;
+
   font-size:13px;
   font-weight:900;
 }
@@ -201,12 +274,17 @@ main{
 }
 
 
-/* ================= BOOKING CARD ================= */
+/* =====================================================
+   BOOKING CARD
+===================================================== */
 
 .booking-card{
   background:#fff;
+
   border-radius:21px;
+
   padding:17px;
+
   box-shadow:
     0 4px 18px rgba(0,0,0,.07);
 }
@@ -215,27 +293,28 @@ main{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  margin-bottom:14px;
+
+  margin-bottom:15px;
 }
 
 .booking-heading h2{
   font-size:19px;
 }
 
-.rate-badge{
-  background:#fff7d6;
-  color:#9a6800;
-  border-radius:20px;
-  padding:6px 9px;
-  font-size:10px;
-  font-weight:900;
-}
+
+/* =====================================================
+   LOCATION
+===================================================== */
 
 .location-box{
   border:1px solid #e1e5ea;
+
   background:#fafafa;
+
   border-radius:14px;
+
   padding:12px;
+
   margin-bottom:8px;
 }
 
@@ -243,49 +322,66 @@ main{
   display:flex;
   align-items:center;
   justify-content:space-between;
+
   margin-bottom:7px;
 }
 
 .location-label{
   font-size:9px;
+
   font-weight:900;
+
   letter-spacing:.6px;
+
   color:#667085;
 }
 
 .maps-button{
   border:0;
+
   background:transparent;
+
   color:#2563eb;
+
   font-size:10px;
+
   font-weight:900;
 }
 
 .location-row{
   display:flex;
   align-items:center;
+
   gap:9px;
 }
 
 .location-dot{
   width:9px;
   height:9px;
+
   flex:none;
+
   border-radius:50%;
+
   background:#16a34a;
 }
 
 .location-dot.destination{
   border-radius:3px;
+
   background:#111827;
 }
 
 .location-row input{
   width:100%;
+
   border:0;
   outline:0;
+
   background:transparent;
+
   font-size:14px;
+
   color:#111827;
 }
 
@@ -295,75 +391,173 @@ main{
 
 .current-location{
   display:block;
+
   border:0;
+
   background:transparent;
+
   color:#2563eb;
+
   font-size:11px;
+
   font-weight:900;
-  padding:4px 0 11px;
+
+  padding:4px 0 12px;
 }
 
 
-/* ================= TRIP TYPE ================= */
+/* =====================================================
+   TRIP TYPE
+===================================================== */
 
 .trip-title{
-  font-size:11px;
+  font-size:10px;
+
   font-weight:900;
+
   color:#667085;
+
   margin:5px 0 7px;
 }
 
 .trip-types{
   display:grid;
-  grid-template-columns:1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
+
   gap:8px;
 }
 
 .trip-type{
   border:1px solid #e1e5ea;
+
   background:#fff;
+
   color:#344054;
+
   border-radius:12px;
-  padding:11px 8px;
+
+  padding:12px 8px;
+
   font-size:12px;
+
   font-weight:900;
 }
 
 .trip-type.active{
   border-color:#f5b400;
+
   background:#fff9df;
+
   color:#111827;
 }
 
 
-/* ================= ESTIMATE ================= */
+/* =====================================================
+   PRIMARY BUTTONS
+===================================================== */
+
+.primary-button{
+  width:100%;
+
+  border:0;
+
+  border-radius:14px;
+
+  background:#f5b400;
+
+  color:#111827;
+
+  padding:15px;
+
+  margin-top:13px;
+
+  font-size:14px;
+
+  font-weight:900;
+}
+
+.dark-button{
+  width:100%;
+
+  border:0;
+
+  border-radius:14px;
+
+  background:#111827;
+
+  color:#fff;
+
+  padding:15px;
+
+  margin-top:10px;
+
+  font-size:14px;
+
+  font-weight:900;
+}
+
+
+/* =====================================================
+   FARE ESTIMATE
+===================================================== */
 
 .estimate{
   display:none;
-  margin-top:12px;
-  border:1px solid #e7e9ed;
-  border-radius:16px;
+
+  margin-top:13px;
+
+  border-radius:17px;
+
   background:#f8fafc;
-  padding:13px;
+
+  border:1px solid #e5e7eb;
+
+  padding:15px;
 }
 
 .estimate.show{
   display:block;
 }
 
-.estimate-title{
-  font-size:11px;
-  font-weight:900;
-  color:#667085;
+.estimate-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
   margin-bottom:10px;
+}
+
+.estimate-head span:first-child{
+  font-size:11px;
+
+  font-weight:900;
+
+  color:#667085;
+}
+
+.estimate-status{
+  font-size:10px;
+
+  color:#15803d;
+
+  font-weight:900;
 }
 
 .estimate-row{
   display:flex;
-  align-items:center;
+
+  align-items:flex-start;
+
   justify-content:space-between;
-  padding:7px 0;
+
+  gap:12px;
+
+  padding:8px 0;
+
   border-bottom:1px solid #e5e7eb;
+
   font-size:12px;
 }
 
@@ -377,54 +571,54 @@ main{
 
 .estimate-value{
   font-weight:900;
-  color:#111827;
+
+  text-align:right;
+
+  max-width:65%;
 }
 
-.fare-row{
-  margin-top:4px;
-  padding-top:10px;
+.total-row{
+  margin-top:5px;
+
+  padding-top:13px;
 }
 
-.fare-value{
+.total-label{
+  font-size:13px;
+
+  font-weight:900;
+}
+
+.total-value{
+  font-size:22px;
+
   color:#15803d;
-  font-size:19px;
+
   font-weight:900;
 }
 
-
-/* ================= ACTION ================= */
-
-.calculate-button{
-  width:100%;
-  border:0;
-  border-radius:13px;
-  background:#111827;
-  color:#fff;
-  padding:15px;
+.extra-note{
   margin-top:11px;
-  font-size:14px;
-  font-weight:900;
-}
 
-.book-button{
-  width:100%;
-  border:0;
-  border-radius:13px;
-  background:#f5b400;
-  color:#111827;
-  padding:15px;
-  margin-top:9px;
-  font-size:15px;
-  font-weight:900;
-  display:none;
-}
+  padding:10px;
 
-.book-button.show{
-  display:block;
+  border-radius:10px;
+
+  background:#fff7d6;
+
+  color:#795900;
+
+  font-size:10px;
+
+  line-height:1.5;
+
+  font-weight:700;
 }
 
 
-/* ================= SERVICES ================= */
+/* =====================================================
+   SERVICES
+===================================================== */
 
 .section-title{
   margin:20px 2px 10px;
@@ -436,39 +630,696 @@ main{
 
 .services{
   display:grid;
+
   grid-template-columns:
     repeat(3,1fr);
+
   gap:9px;
 }
 
 .service{
   background:#fff;
+
   border-radius:16px;
+
   padding:15px 7px;
+
   text-align:center;
+
   box-shadow:
     0 3px 12px rgba(0,0,0,.05);
 }
 
 .service-icon{
-  font-size:24px;
+  font-size:23px;
+
   margin-bottom:7px;
 }
 
 .service b{
   display:block;
+
   font-size:11px;
 }
 
 .service small{
   display:block;
+
   color:#667085;
+
   font-size:9px;
+
   margin-top:4px;
 }
 
 
-/* ================= MOBILE ================= */
+/* =====================================================
+   PAGE TOP
+===================================================== */
+
+.page-top{
+  padding:6px 2px 15px;
+}
+
+.page-top h1{
+  font-size:24px;
+
+  margin-bottom:5px;
+}
+
+.page-top p{
+  color:#667085;
+
+  font-size:12px;
+
+  line-height:1.55;
+}
+
+
+/* =====================================================
+   BOOKING PAGE
+===================================================== */
+
+.trip-summary{
+  border-radius:17px;
+
+  background:#111827;
+
+  color:#fff;
+
+  padding:16px;
+
+  margin-bottom:13px;
+}
+
+.summary-label{
+  color:#9ca3af;
+
+  font-size:9px;
+
+  font-weight:900;
+
+  letter-spacing:.7px;
+
+  margin-bottom:7px;
+}
+
+.summary-location{
+  font-size:13px;
+
+  font-weight:800;
+
+  line-height:1.5;
+}
+
+.summary-arrow{
+  color:#f5b400;
+
+  margin:6px 0;
+}
+
+.form-label{
+  display:block;
+
+  margin:13px 0 6px;
+
+  color:#344054;
+
+  font-size:11px;
+
+  font-weight:900;
+}
+
+.form-input,
+.form-select{
+  width:100%;
+
+  border:1px solid #d9dee7;
+
+  background:#fff;
+
+  border-radius:12px;
+
+  padding:13px;
+
+  outline:0;
+
+  font-size:14px;
+}
+
+.form-input:focus,
+.form-select:focus{
+  border-color:#f5b400;
+}
+
+
+/* =====================================================
+   SUCCESS
+===================================================== */
+
+.success-card{
+  text-align:center;
+}
+
+.success-icon{
+  width:68px;
+  height:68px;
+
+  margin:3px auto 13px;
+
+  border-radius:50%;
+
+  background:#dcfce7;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:34px;
+}
+
+.success-card h1{
+  font-size:23px;
+}
+
+.success-card p{
+  color:#667085;
+
+  font-size:12px;
+
+  line-height:1.6;
+
+  margin-top:7px;
+}
+
+.booking-id-box{
+  background:#111827;
+
+  color:#fff;
+
+  border-radius:16px;
+
+  padding:16px;
+
+  margin-top:17px;
+}
+
+.booking-id-label{
+  color:#9ca3af;
+
+  font-size:9px;
+
+  font-weight:900;
+
+  letter-spacing:.8px;
+}
+
+.booking-id{
+  color:#f5b400;
+
+  font-size:22px;
+
+  font-weight:900;
+
+  margin-top:6px;
+}
+
+.pin-box{
+  margin-top:10px;
+
+  background:#f8fafc;
+
+  border:1px solid #e5e7eb;
+
+  border-radius:14px;
+
+  padding:13px;
+}
+
+.pin-label{
+  color:#667085;
+
+  font-size:9px;
+
+  font-weight:900;
+}
+
+.pin-value{
+  font-size:22px;
+
+  font-weight:900;
+
+  letter-spacing:4px;
+
+  margin-top:4px;
+}
+
+
+/* =====================================================
+   SAFETY
+===================================================== */
+
+.safety-hero{
+  background:#111827;
+
+  color:#fff;
+
+  border-radius:20px;
+
+  padding:20px;
+
+  margin-bottom:12px;
+}
+
+.safety-icon{
+  font-size:31px;
+
+  margin-bottom:10px;
+}
+
+.safety-hero h2{
+  font-size:21px;
+}
+
+.safety-hero p{
+  color:#cbd5e1;
+
+  font-size:12px;
+
+  line-height:1.55;
+
+  margin-top:7px;
+}
+
+.safety-item{
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  padding:15px 0;
+
+  border-bottom:1px solid #edf0f3;
+}
+
+.safety-item:last-child{
+  border-bottom:0;
+}
+
+.safety-item-icon{
+  width:40px;
+  height:40px;
+
+  border-radius:12px;
+
+  background:#f1f5f9;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:20px;
+}
+
+.safety-item-content{
+  flex:1;
+}
+
+.safety-item-content b{
+  display:block;
+
+  font-size:12px;
+}
+
+.safety-item-content span{
+  display:block;
+
+  color:#667085;
+
+  font-size:10px;
+
+  margin-top:3px;
+}
+
+.safety-active{
+  color:#15803d;
+
+  font-size:10px;
+
+  font-weight:900;
+}
+
+.sos-button{
+  width:100%;
+
+  border:0;
+
+  border-radius:14px;
+
+  background:#dc2626;
+
+  color:#fff;
+
+  padding:15px;
+
+  margin-top:13px;
+
+  font-size:14px;
+
+  font-weight:900;
+}
+
+
+/* =====================================================
+   ACCOUNT
+===================================================== */
+
+.profile-card{
+  background:#111827;
+
+  color:#fff;
+
+  border-radius:22px;
+
+  padding:20px;
+
+  margin-bottom:13px;
+
+  box-shadow:
+    0 6px 20px rgba(0,0,0,.10);
+}
+
+.profile-top{
+  display:flex;
+
+  align-items:center;
+
+  gap:13px;
+}
+
+.profile-avatar{
+  width:55px;
+  height:55px;
+
+  flex:none;
+
+  border-radius:17px;
+
+  background:#f5b400;
+
+  color:#111827;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:23px;
+
+  font-weight:900;
+}
+
+.profile-info{
+  flex:1;
+}
+
+.profile-info h2{
+  font-size:18px;
+}
+
+.profile-info p{
+  color:#cbd5e1;
+
+  font-size:11px;
+
+  margin-top:4px;
+}
+
+.profile-edit{
+  border:1px solid #475569;
+
+  background:#1f2937;
+
+  color:#fff;
+
+  padding:8px 10px;
+
+  border-radius:10px;
+
+  font-size:10px;
+
+  font-weight:900;
+}
+
+
+/* =====================================================
+   LOYALTY POINTS
+===================================================== */
+
+.loyalty-card{
+  background:#fff;
+
+  border-radius:20px;
+
+  padding:17px;
+
+  margin-bottom:13px;
+
+  box-shadow:
+    0 4px 16px rgba(0,0,0,.06);
+}
+
+.loyalty-head{
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  margin-bottom:13px;
+}
+
+.loyalty-icon{
+  width:45px;
+  height:45px;
+
+  border-radius:14px;
+
+  background:#fff7d6;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  font-size:22px;
+}
+
+.loyalty-head-text{
+  flex:1;
+}
+
+.loyalty-head-text b{
+  display:block;
+
+  font-size:14px;
+}
+
+.loyalty-head-text span{
+  display:block;
+
+  color:#667085;
+
+  font-size:10px;
+
+  margin-top:3px;
+}
+
+.points-display{
+  background:#111827;
+
+  color:#fff;
+
+  border-radius:16px;
+
+  padding:15px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+}
+
+.points-label{
+  color:#cbd5e1;
+
+  font-size:10px;
+
+  font-weight:800;
+}
+
+.points-value{
+  color:#f5b400;
+
+  font-size:25px;
+
+  font-weight:900;
+
+  margin-top:3px;
+}
+
+.points-unit{
+  font-size:10px;
+
+  color:#fff;
+
+  font-weight:800;
+}
+
+.loyalty-note{
+  color:#667085;
+
+  font-size:10px;
+
+  line-height:1.5;
+
+  margin-top:10px;
+}
+
+
+/* =====================================================
+   ACCOUNT MENU
+===================================================== */
+
+.account-menu{
+  background:#fff;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 4px 16px rgba(0,0,0,.06);
+}
+
+.account-menu-item{
+  width:100%;
+
+  border:0;
+
+  background:#fff;
+
+  display:flex;
+
+  align-items:center;
+
+  text-align:left;
+
+  padding:15px;
+
+  border-bottom:1px solid #edf0f3;
+
+  gap:12px;
+}
+
+.account-menu-item:last-child{
+  border-bottom:0;
+}
+
+.menu-icon{
+  width:40px;
+  height:40px;
+
+  flex:none;
+
+  border-radius:12px;
+
+  background:#f5f6f8;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  font-size:19px;
+}
+
+.menu-text{
+  flex:1;
+}
+
+.menu-text b{
+  display:block;
+
+  font-size:12px;
+}
+
+.menu-text span{
+  display:block;
+
+  color:#667085;
+
+  font-size:10px;
+
+  margin-top:3px;
+}
+
+.menu-arrow{
+  color:#98a2b3;
+
+  font-size:20px;
+}
+
+
+/* =====================================================
+   COMMON
+===================================================== */
+
+.hidden{
+  display:none!important;
+}
+
+.muted{
+  color:#667085;
+}
+
+.center{
+  text-align:center;
+}
+
+.empty-state{
+  text-align:center;
+
+  padding:28px 12px;
+
+  color:#667085;
+}
+
+.empty-state-icon{
+  font-size:35px;
+
+  margin-bottom:9px;
+}
+
+.empty-state h3{
+  color:#344054;
+
+  font-size:15px;
+
+  margin-bottom:5px;
+}
+
+.empty-state p{
+  font-size:11px;
+
+  line-height:1.5;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:380px){
 
@@ -480,8 +1331,22 @@ main{
     flex-direction:column;
   }
 
-  .rate-badge{
-    font-size:9px;
+  .services{
+    gap:6px;
+  }
+
+}
+
+
+/* =====================================================
+   DESKTOP
+===================================================== */
+
+@media(min-width:700px){
+
+  .page{
+    padding-left:4px;
+    padding-right:4px;
   }
 
 }
@@ -492,6 +1357,10 @@ main{
 
 <body>
 
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header class="header">
 
@@ -525,7 +1394,9 @@ main{
 <main>
 
 
-<!-- ================= HOME ================= -->
+<!-- =====================================================
+     HOME PAGE
+===================================================== -->
 
 <section
   id="home"
@@ -545,8 +1416,8 @@ main{
       </h1>
 
       <p id="heroText">
-        Comfortable cab service for local,
-        outstation and family travel.
+        Comfortable cab service for
+        local, outstation and family travel.
       </p>
 
       <div class="hero-buttons">
@@ -572,6 +1443,10 @@ main{
   </div>
 
 
+<!-- =====================================================
+     TRIP PLANNER
+===================================================== -->
+
   <div
     class="booking-card"
     id="bookingCard"
@@ -580,17 +1455,13 @@ main{
     <div class="booking-heading">
 
       <h2>
-        Plan your ride
+        Plan your trip
       </h2>
-
-      <div class="rate-badge">
-        ₹16 / KM
-      </div>
 
     </div>
 
 
-    <!-- PICKUP -->
+<!-- PICKUP -->
 
     <div class="location-box">
 
@@ -608,7 +1479,6 @@ main{
         </button>
 
       </div>
-
 
       <div class="location-row">
 
@@ -633,7 +1503,7 @@ main{
     </button>
 
 
-    <!-- DESTINATION -->
+<!-- DESTINATION -->
 
     <div class="location-box">
 
@@ -652,12 +1522,9 @@ main{
 
       </div>
 
-
       <div class="location-row">
 
-        <div
-          class="location-dot destination"
-        ></div>
+        <div class="location-dot destination"></div>
 
         <input
           id="destinationLocation"
@@ -670,12 +1537,11 @@ main{
     </div>
 
 
-    <!-- TRIP TYPE -->
+<!-- TRIP TYPE -->
 
     <div class="trip-title">
       TRIP TYPE
     </div>
-
 
     <div class="trip-types">
 
@@ -698,49 +1564,24 @@ main{
     </div>
 
 
-    <!-- ESTIMATE -->
+<!-- FARE ESTIMATE -->
 
     <div
       id="estimateBox"
       class="estimate"
     >
 
-      <div class="estimate-title">
-        FARE ESTIMATE
-      </div>
+      <div class="estimate-head">
 
-
-      <div class="estimate-row">
-
-        <span class="estimate-label">
-          Distance
+        <span>
+          FARE ESTIMATE
         </span>
 
-        <span
-          class="estimate-value"
-          id="distanceText"
-        >
-          -- KM
+        <span class="estimate-status">
+          Estimated
         </span>
 
       </div>
-
-
-      <div class="estimate-row">
-
-        <span class="estimate-label">
-          Rate
-        </span>
-
-        <span
-          class="estimate-value"
-          id="rateText"
-        >
-          ₹16 / KM
-        </span>
-
-      </div>
-
 
       <div class="estimate-row">
 
@@ -750,448 +1591,251 @@ main{
 
         <span
           class="estimate-value"
-          id="tripText"
+          id="estimateTrip"
         >
           One Way
         </span>
 
       </div>
 
+      <div class="estimate-row total-row">
 
-      <div
-        class="estimate-row fare-row"
-      >
-
-        <span class="estimate-label">
+        <span class="total-label">
           Estimated Fare
         </span>
 
-        <span
-          class="fare-value"
+        <strong
+          class="total-value"
           id="fareText"
         >
           ₹0
-        </span>
+        </strong>
 
+      </div>
+
+      <div class="extra-note">
+        ℹ️ Toll charges and parking fees
+        are extra, if applicable.
       </div>
 
     </div>
 
 
     <button
-      class="calculate-button"
+      class="primary-button"
       id="calculateButton"
       onclick="calculateFare()"
     >
-      Calculate Distance & Fare
+      Get Fare Estimate
     </button>
-
 
     <button
-      class="book-button"
-      id="bookButton"
+      class="dark-button hidden"
+      id="continueButton"
       onclick="startBooking()"
     >
-      🚕 Book This Cab →
+      Continue with this Fare →
     </button>
 
   </div>
 
 
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
   <div class="section-title">
-    <h2>Travel with confidence</h2>
-  </div>
+
+    <h2>
+
+      <!-- =====================================================
+     PART 2
+     DARSHANA SETHU CAB
+     CONTINUATION
+===================================================== -->
 
 
-  <div class="services">
-
-    <div class="service">
-
-      <div class="service-icon">
-        🚕
-      </div>
-
-      <b>Comfort</b>
-
-      <small>
-        Reliable cab
-      </small>
-
-    </div>
-
-
-    <div class="service">
-
-      <div class="service-icon">
-        🛡️
-      </div>
-
-      <b>Safety</b>
-
-      <small>
-        Trusted travel
-      </small>
-
-    </div>
-
-
-    <div class="service">
-
-      <div class="service-icon">
-        📍
-      </div>
-
-      <b>Tracking</b>
-
-      <small>
-        Trip visibility
-      </small>
-
-    </div>
-
-  </div>
-
-</section>
-<!-- ================= BOOKING PAGE ================= -->
+<!-- =====================================================
+     BOOKING PAGE
+===================================================== -->
 
 <section
   id="booking"
   class="page"
 >
 
-  <div class="booking-card">
+  <div class="page-top">
 
-    <div class="booking-heading">
+    <h1>
+      Complete your booking
+    </h1>
 
-      <h2>
-        Confirm your ride
-      </h2>
-
-      <div class="rate-badge">
-        ₹16 / KM
-      </div>
-
-    </div>
-
-
-    <div class="estimate show">
-
-      <div class="estimate-title">
-        YOUR TRIP
-      </div>
-
-
-      <div class="estimate-row">
-
-        <span class="estimate-label">
-          Pickup
-        </span>
-
-        <span
-          class="estimate-value"
-          id="confirmPickup"
-        >
-          —
-        </span>
-
-      </div>
-
-
-      <div class="estimate-row">
-
-        <span class="estimate-label">
-          Destination
-        </span>
-
-        <span
-          class="estimate-value"
-          id="confirmDestination"
-        >
-          —
-        </span>
-
-      </div>
-
-
-      <div class="estimate-row">
-
-        <span class="estimate-label">
-          Distance
-        </span>
-
-        <span
-          class="estimate-value"
-          id="confirmDistance"
-        >
-          — KM
-        </span>
-
-      </div>
-
-
-      <div class="estimate-row">
-
-        <span class="estimate-label">
-          Trip Type
-        </span>
-
-        <span
-          class="estimate-value"
-          id="confirmTrip"
-        >
-          One Way
-        </span>
-
-      </div>
-
-
-      <div class="estimate-row fare-row">
-
-        <span class="estimate-label">
-          Estimated Fare
-        </span>
-
-        <span
-          class="fare-value"
-          id="confirmFare"
-        >
-          ₹0
-        </span>
-
-      </div>
-
-    </div>
-
-
-    <!-- CUSTOMER DETAILS -->
-
-    <div style="margin-top:18px">
-
-      <label>
-        Customer Name
-      </label>
-
-      <input
-        id="customerName"
-        type="text"
-        placeholder="Enter your name"
-      >
-
-
-      <label>
-        Mobile Number
-      </label>
-
-      <input
-        id="customerPhone"
-        type="tel"
-        inputmode="numeric"
-        maxlength="10"
-        placeholder="10 digit mobile number"
-      >
-
-
-      <label>
-        Travel Date
-      </label>
-
-      <input
-        id="travelDate"
-        type="date"
-      >
-
-
-      <label>
-        Travel Time
-      </label>
-
-      <input
-        id="travelTime"
-        type="time"
-      >
-
-
-      <label>
-        Passengers
-      </label>
-
-      <select id="passengers">
-
-        <option value="1">
-          1 Passenger
-        </option>
-
-        <option value="2">
-          2 Passengers
-        </option>
-
-        <option value="3">
-          3 Passengers
-        </option>
-
-        <option value="4">
-          4 Passengers
-        </option>
-
-        <option value="5">
-          5 Passengers
-        </option>
-
-        <option value="6">
-          6 Passengers
-        </option>
-
-        <option value="7">
-          7 Passengers
-        </option>
-
-      </select>
-
-
-      <button
-        class="book-button show"
-        onclick="createBooking()"
-      >
-        Confirm Cab Booking
-      </button>
-
-
-      <div
-        id="bookingMessage"
-        style="
-          margin-top:13px;
-          font-size:13px;
-          line-height:1.6;
-          font-weight:800;
-        "
-      ></div>
-
-    </div>
+    <p>
+      Enter your details to confirm your cab booking.
+    </p>
 
   </div>
 
-</section>
-
-
-<!-- ================= BOOKING SUCCESS ================= -->
-
-<section
-  id="success"
-  class="page"
->
 
   <div class="booking-card">
 
     <div
-      style="
-        text-align:center;
-        padding:15px 5px;
-      "
+      class="trip-summary"
+      id="bookingSummary"
     >
 
+      <div class="summary-label">
+        YOUR TRIP
+      </div>
+
       <div
-        style="
-          font-size:48px;
-          margin-bottom:10px;
-        "
+        class="summary-location"
+        id="summaryPickup"
       >
-        ✅
+        Pickup location
       </div>
 
+      <div class="summary-arrow">
+        ↓
+      </div>
 
-      <h2>
-        Booking Request Sent
-      </h2>
-
-
-      <p
-        style="
-          color:#667085;
-          font-size:13px;
-          line-height:1.6;
-          margin-top:8px;
-        "
+      <div
+        class="summary-location"
+        id="summaryDestination"
       >
-        Your cab booking request has been
-        successfully submitted.
-      </p>
+        Destination
+      </div>
 
     </div>
 
 
-    <div class="estimate show">
+    <label class="form-label">
+      Full Name
+    </label>
 
-      <div class="estimate-row">
-
-        <span class="estimate-label">
-          Booking ID
-        </span>
-
-        <span
-          class="estimate-value"
-          id="successBookingId"
-        >
-          —
-        </span>
-
-      </div>
+    <input
+      id="customerName"
+      class="form-input"
+      type="text"
+      placeholder="Enter your name"
+      autocomplete="name"
+    >
 
 
-      <div class="estimate-row">
+    <label class="form-label">
+      Mobile Number
+    </label>
 
-        <span class="estimate-label">
-          Ride PIN
-        </span>
-
-        <span
-          class="estimate-value"
-          id="successRidePin"
-        >
-          —
-        </span>
-
-      </div>
+    <input
+      id="customerPhone"
+      class="form-input"
+      type="tel"
+      inputmode="numeric"
+      maxlength="10"
+      placeholder="Enter 10-digit mobile number"
+    >
 
 
-      <div class="estimate-row">
+    <label class="form-label">
+      Travel Date
+    </label>
 
-        <span class="estimate-label">
-          Distance
-        </span>
-
-        <span
-          class="estimate-value"
-          id="successDistance"
-        >
-          — KM
-        </span>
-
-      </div>
+    <input
+      id="travelDate"
+      class="form-input"
+      type="date"
+    >
 
 
-      <div class="estimate-row fare-row">
+    <label class="form-label">
+      Pickup Time
+    </label>
 
-        <span class="estimate-label">
-          Estimated Fare
-        </span>
+    <input
+      id="travelTime"
+      class="form-input"
+      type="time"
+    >
 
-        <span
-          class="fare-value"
-          id="successFare"
-        >
-          ₹0
-        </span>
 
-      </div>
+    <label class="form-label">
+      Vehicle Type
+    </label>
 
-    </div>
+    <select
+      id="vehicleType"
+      class="form-select"
+    >
+
+      <option value="sedan">
+        Sedan – Comfortable
+      </option>
+
+      <option value="suv">
+        SUV – Family Travel
+      </option>
+
+      <option value="premium">
+        Premium – Extra Comfort
+      </option>
+
+    </select>
+
+
+    <label class="form-label">
+      Passengers
+    </label>
+
+    <select
+      id="passengers"
+      class="form-select"
+    >
+
+      <option value="1">
+        1 Passenger
+      </option>
+
+      <option value="2">
+        2 Passengers
+      </option>
+
+      <option value="3">
+        3 Passengers
+      </option>
+
+      <option value="4">
+        4 Passengers
+      </option>
+
+      <option value="5">
+        5 Passengers
+      </option>
+
+      <option value="6">
+        6 Passengers
+      </option>
+
+      <option value="7">
+        7 Passengers
+      </option>
+
+    </select>
 
 
     <button
-      class="calculate-button"
+      class="primary-button"
+      id="confirmBookingButton"
+      onclick="confirmBooking()"
+    >
+      Confirm Booking
+    </button>
+
+
+    <button
+      class="dark-button"
       onclick="showPage('home')"
     >
-      ← Back to Home
+      ← Change Trip
     </button>
 
   </div>
@@ -1199,85 +1843,246 @@ main{
 </section>
 
 
-<!-- ================= SAFETY ================= -->
+
+<!-- =====================================================
+     BOOKING SUCCESS PAGE
+===================================================== -->
+
+<section
+  id="success"
+  class="page"
+>
+
+  <div class="booking-card success-card">
+
+    <div class="success-icon">
+      ✓
+    </div>
+
+    <h1>
+      Booking Request Sent
+    </h1>
+
+    <p>
+      Your cab booking request has been received.
+      Our team will contact you shortly.
+    </p>
+
+
+    <div class="booking-id-box">
+
+      <div class="booking-id-label">
+        BOOKING ID
+      </div>
+
+      <div
+        class="booking-id"
+        id="bookingId"
+      >
+        DSCS-000000
+      </div>
+
+    </div>
+
+
+    <div class="pin-box">
+
+      <div class="pin-label">
+        YOUR 4-DIGIT RIDE PIN
+      </div>
+
+      <div
+        class="pin-value"
+        id="ridePin"
+      >
+        0000
+      </div>
+
+    </div>
+
+
+    <button
+      class="primary-button"
+      onclick="openWhatsAppBooking()"
+    >
+      💬 Contact Booking Support
+    </button>
+
+
+    <button
+      class="dark-button"
+      onclick="showPage('home')"
+    >
+      Back to Home
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SAFETY PAGE
+===================================================== -->
 
 <section
   id="safety"
   class="page"
 >
 
-  <div class="booking-card">
+  <div class="page-top">
 
-    <h2>
-      🛡️ Safety Center
-    </h2>
+    <h1>
+      Safety Center
+    </h1>
 
-
-    <p
-      style="
-        color:#667085;
-        font-size:13px;
-        line-height:1.6;
-        margin-top:8px;
-      "
-    >
-      Safety features for your journey.
+    <p>
+      Your safety is important throughout your journey.
     </p>
 
+  </div>
 
-    <div class="estimate show">
 
-      <div class="estimate-row">
+  <div class="safety-hero">
 
-        <span class="estimate-label">
-          🔐 Ride PIN
+    <div class="safety-icon">
+      🛡️
+    </div>
+
+    <h2>
+      Travel with confidence
+    </h2>
+
+    <p>
+      Darshana Sethu Cab is designed with
+      safety-focused travel features.
+    </p>
+
+  </div>
+
+
+  <div class="booking-card">
+
+
+    <div class="safety-item">
+
+      <div class="safety-item-icon">
+        👤
+      </div>
+
+      <div class="safety-item-content">
+
+        <b>
+          Driver Verification
+        </b>
+
+        <span>
+          Driver and vehicle details are checked.
         </span>
-
-        <strong>
-          Active
-        </strong>
 
       </div>
 
+      <span class="safety-active">
+        ✓
+      </span>
 
-      <div class="estimate-row">
+    </div>
 
-        <span class="estimate-label">
-          📍 Trip Tracking
+
+    <div class="safety-item">
+
+      <div class="safety-item-icon">
+        🔢
+      </div>
+
+      <div class="safety-item-content">
+
+        <b>
+          Ride PIN
+        </b>
+
+        <span>
+          Confirm your Ride PIN before starting.
         </span>
-
-        <strong>
-          Active
-        </strong>
 
       </div>
 
+      <span class="safety-active">
+        ✓
+      </span>
 
-      <div class="estimate-row">
+    </div>
 
-        <span class="estimate-label">
-          🛣️ Route Monitoring
+
+    <div class="safety-item">
+
+      <div class="safety-item-icon">
+        📍
+      </div>
+
+      <div class="safety-item-content">
+
+        <b>
+          Trip Visibility
+        </b>
+
+        <span>
+          Keep your trip information available.
         </span>
-
-        <strong>
-          Active
-        </strong>
 
       </div>
 
+      <span class="safety-active">
+        ✓
+      </span>
 
-      <div class="estimate-row">
+    </div>
 
-        <span class="estimate-label">
-          📤 Share Trip
+
+    <div class="safety-item">
+
+      <div class="safety-item-icon">
+        📤
+      </div>
+
+      <div class="safety-item-content">
+
+        <b>
+          Share Trip
+        </b>
+
+        <span>
+          Share your journey details with family.
         </span>
 
-        <button
-          class="maps-button"
-          onclick="shareTrip()"
-        >
-          Share
-        </button>
+      </div>
+
+      <button
+        class="maps-button"
+        onclick="shareTrip()"
+      >
+        Share
+      </button>
+
+    </div>
+
+
+    <div class="safety-item">
+
+      <div class="safety-item-icon">
+        ☎️
+      </div>
+
+      <div class="safety-item-content">
+
+        <b>
+          Emergency Contact
+        </b>
+
+        <span>
+          Keep a trusted contact informed.
+        </span>
 
       </div>
 
@@ -1285,12 +2090,8 @@ main{
 
 
     <button
-      class="book-button show"
-      style="
-        background:#dc2626;
-        color:#fff;
-      "
-      onclick="showSOS()"
+      class="sos-button"
+      onclick="triggerSOS()"
     >
       🚨 Emergency SOS
     </button>
@@ -1300,318 +2101,1514 @@ main{
 </section>
 
 
-<!-- ================= ACCOUNT ================= -->
+
+<!-- =====================================================
+     ACCOUNT PAGE
+===================================================== -->
 
 <section
   id="account"
   class="page"
 >
 
-  <div class="booking-card">
+  <div class="page-top">
 
-    <h2>
-      👤 My Account
-    </h2>
+    <h1>
+      Account
+    </h1>
 
-
-    <p
-      style="
-        color:#667085;
-        font-size:13px;
-        line-height:1.6;
-        margin-top:8px;
-      "
-    >
-      View your profile and previous bookings.
+    <p>
+      Manage your profile, bookings and rewards.
     </p>
 
+  </div>
 
-    <label>
-      Mobile Number
-    </label>
 
-    <input
-      id="accountPhone"
-      type="tel"
-      maxlength="10"
-      inputmode="numeric"
-      placeholder="10 digit mobile number"
+  <!-- PROFILE -->
+
+  <div class="profile-card">
+
+    <div class="profile-top">
+
+      <div
+        class="profile-avatar"
+        id="profileAvatar"
+      >
+        G
+      </div>
+
+      <div class="profile-info">
+
+        <h2 id="profileName">
+          Guest User
+        </h2>
+
+        <p id="profilePhone">
+          Login to manage your account
+        </p>
+
+      </div>
+
+      <button
+        class="profile-edit"
+        onclick="editProfile()"
+      >
+        Edit
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =================================================
+       LOYALTY CARD
+  ================================================== -->
+
+  <div
+    class="booking-card"
+    style="margin-bottom:13px;"
+  >
+
+    <div
+      style="
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:10px;
+      "
     >
 
+      <div>
 
-    <button
-      class="calculate-button"
-      onclick="loadMyBookings()"
-    >
-      View My Bookings
-    </button>
+        <div
+          style="
+            font-size:9px;
+            font-weight:900;
+            color:#667085;
+            letter-spacing:.7px;
+          "
+        >
+          SETHU REWARDS
+        </div>
+
+        <div
+          style="
+            font-size:20px;
+            font-weight:900;
+            margin-top:5px;
+          "
+        >
+          ⭐ <span id="loyaltyPoints">0</span>
+          Points
+        </div>
+
+      </div>
+
+
+      <div
+        style="
+          width:46px;
+          height:46px;
+          border-radius:14px;
+          background:#fff7d6;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          font-size:24px;
+        "
+      >
+        🎁
+      </div>
+
+    </div>
 
 
     <div
-      id="myBookings"
       style="
-        margin-top:15px;
+        margin-top:12px;
+        padding:11px;
+        border-radius:12px;
+        background:#f8fafc;
+        color:#667085;
+        font-size:10px;
+        line-height:1.5;
+        font-weight:700;
       "
-    ></div>
+    >
+      Earn points on eligible completed rides
+      and use your rewards on future bookings.
+    </div>
+
+
+    <button
+      class="primary-button"
+      onclick="showLoyaltyDetails()"
+    >
+      View Rewards
+    </button>
+
+  </div>
+
+
+  <!-- ACCOUNT MENU -->
+
+  <div class="account-menu">
+
+
+    <button
+      class="account-menu-item"
+      onclick="showMyBookings()"
+    >
+
+      <div class="menu-icon">
+        📋
+      </div>
+
+      <div class="menu-text">
+
+        <b>
+          My Bookings
+        </b>
+
+        <span>
+          View your cab booking history
+        </span>
+
+      </div>
+
+      <div class="menu-arrow">
+        ›
+      </div>
+
+    </button>
+
+
+    <button
+      class="account-menu-item"
+      onclick="showLoyaltyDetails()"
+    >
+
+      <div class="menu-icon">
+        ⭐
+      </div>
+
+      <div class="menu-text">
+
+        <b>
+          Sethu Rewards
+        </b>
+
+        <span>
+          Loyalty points and rewards
+        </span>
+
+      </div>
+
+      <div class="menu-arrow">
+        ›
+      </div>
+
+    </button>
+
+
+    <button
+      class="account-menu-item"
+      onclick="showSafety()"
+    >
+
+      <div class="menu-icon">
+        🛡️
+      </div>
+
+      <div class="menu-text">
+
+        <b>
+          Safety Center
+        </b>
+
+        <span>
+          Safety tools and emergency support
+        </span>
+
+      </div>
+
+      <div class="menu-arrow">
+        ›
+      </div>
+
+    </button>
+
+
+    <button
+      class="account-menu-item"
+      onclick="showAbout()"
+    >
+
+      <div class="menu-icon">
+        ℹ️
+      </div>
+
+      <div class="menu-text">
+
+        <b>
+          About Darshana Sethu
+        </b>
+
+        <span>
+          Learn about our service
+        </span>
+
+      </div>
+
+      <div class="menu-arrow">
+        ›
+      </div>
+
+    </button>
+
+
+    <button
+      class="account-menu-item"
+      onclick="showTerms()"
+    >
+
+      <div class="menu-icon">
+        📄
+      </div>
+
+      <div class="menu-text">
+
+        <b>
+          Terms & Conditions
+        </b>
+
+        <span>
+          Service terms and policies
+        </span>
+
+      </div>
+
+      <div class="menu-arrow">
+        ›
+      </div>
+
+    </button>
+
+
+    <button
+      class="account-menu-item"
+      onclick="showPrivacy()"
+    >
+
+      <div class="menu-icon">
+        🔐
+      </div>
+
+      <div class="menu-text">
+
+        <b>
+          Privacy Policy
+        </b>
+
+        <span>
+          How your information is handled
+        </span>
+
+      </div>
+
+      <div class="menu-arrow">
+        ›
+      </div>
+
+    </button>
+
+
+    <button
+      class="account-menu-item"
+      onclick="showFAQ()"
+    >
+
+      <div class="menu-icon">
+        ❓
+      </div>
+
+      <div class="menu-text">
+
+        <b>
+          FAQ
+        </b>
+
+        <span>
+          Frequently asked questions
+        </span>
+
+      </div>
+
+      <div class="menu-arrow">
+        ›
+      </div>
+
+    </button>
+
 
   </div>
 
 </section>
 
 
-<!-- ================= BOTTOM NAV ================= -->
 
-<nav class="bottom-nav">
+<!-- =====================================================
+     LOYALTY PAGE
+===================================================== -->
 
-  <button
-    id="nav-home"
-    class="active"
-    onclick="showPage('home')"
+<section
+  id="loyalty"
+  class="page"
+>
+
+  <div class="page-top">
+
+    <h1>
+      Sethu Rewards
+    </h1>
+
+    <p>
+      Earn points through eligible completed rides.
+    </p>
+
+  </div>
+
+
+  <div class="booking-card center">
+
+    <div
+      style="
+        font-size:45px;
+        margin-bottom:8px;
+      "
+    >
+      ⭐
+    </div>
+
+    <div
+      style="
+        color:#667085;
+        font-size:10px;
+        font-weight:900;
+        letter-spacing:.7px;
+      "
+    >
+      YOUR LOYALTY BALANCE
+    </div>
+
+    <div
+      id="loyaltyPagePoints"
+      style="
+        font-size:34px;
+        font-weight:900;
+        margin-top:5px;
+      "
+    >
+      0
+    </div>
+
+    <div
+      style="
+        color:#667085;
+        font-size:11px;
+        margin-top:3px;
+      "
+    >
+      Sethu Points
+    </div>
+
+  </div>
+
+
+  <div
+    class="booking-card"
+    style="margin-top:12px;"
   >
 
-    <span class="nav-icon">
-      ⌂
-    </span>
+    <div
+      style="
+        font-size:15px;
+        font-weight:900;
+        margin-bottom:12px;
+      "
+    >
+      How points work
+    </div>
 
-    Home
 
-  </button>
+    <div class="safety-item">
+
+      <div class="safety-item-icon">
+        🚕
+      </div>
+
+      <div class="safety-item-content">
+
+        <b>
+          Complete eligible rides
+        </b>
+
+        <span>
+          Points are added after eligible ride completion.
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="safety-item">
+
+      <div class="safety-item-icon">
+        ⭐
+      </div>
+
+      <div class="safety-item-content">
+
+        <b>
+          Build your balance
+        </b>
+
+        <span>
+          Your points are stored in your account.
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="safety-item">
+
+      <div class="safety-item-icon">
+        🎁
+      </div>
+
+      <div class="safety-item-content">
+
+        <b>
+          Redeem rewards
+        </b>
+
+        <span>
+          Available rewards can be used when eligible.
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
 
 
   <button
-    id="nav-booking"
-    onclick="showPage('booking')"
-  >
-
-    <span class="nav-icon">
-      🚕
-    </span>
-
-    Book
-
-  </button>
-
-
-  <button
-    id="nav-safety"
-    onclick="showPage('safety')"
-  >
-
-    <span class="nav-icon">
-      🛡️
-    </span>
-
-    Safety
-
-  </button>
-
-
-  <button
-    id="nav-account"
+    class="dark-button"
     onclick="showPage('account')"
   >
-
-    <span class="nav-icon">
-      👤
-    </span>
-
-    Account
-
+    ← Back to Account
   </button>
 
-</nav>
+</section>
 
 
-<footer>
 
-  © 2026 Darshana Sethu Cab
+<!-- =====================================================
+     MY BOOKINGS PAGE
+===================================================== -->
 
-  <br>
+<section
+  id="myBookings"
+  class="page"
+>
 
-  SAFE • SIMPLE • TRUSTED TRAVEL
+  <div class="page-top">
 
-      </footer>
-      <script>
+    <h1>
+      My Bookings
+    </h1>
 
-const FARE_PER_KM = 16;
+    <p>
+      Your recent booking requests will appear here.
+    </p>
 
-let selectedTripType = "oneway";
-
-let calculatedDistance = 0;
-
-let calculatedFare = 0;
-
-
-/* =========================
-   PAGE NAVIGATION
-========================= */
-
-function showPage(page){
-
-  document
-    .querySelectorAll(".page")
-    .forEach(function(item){
-
-      item.classList.remove("active");
-
-    });
+  </div>
 
 
-  const target =
-    document.getElementById(page);
+  <div
+    id="bookingHistory"
+    class="booking-card"
+  >
+
+    <div class="empty-state">
+
+      <div class="empty-state-icon">
+        📋
+      </div>
+
+      <h3>
+        No bookings yet
+      </h3>
+
+      <p>
+        Your booking history will appear here
+        after you make a booking.
+      </p>
+
+    </div>
+
+  </div>
 
 
-  if(target){
+  <button
+    class="primary-button"
+    onclick="showPage('home')"
+  >
+    🚕 Book a Cab
+  </button>
 
-    target.classList.add("active");
-
-  }
-
-
-  document
-    .querySelectorAll(".bottom-nav button")
-    .forEach(function(button){
-
-      button.classList.remove("active");
-
-    });
+</section>
 
 
-  const nav =
-    document.getElementById(
-      "nav-" + page
-    );
+
+<!-- =====================================================
+     ABOUT PAGE
+===================================================== -->
+
+<section
+  id="about"
+  class="page"
+>
+
+  <div class="page-top">
+
+    <h1>
+      About Darshana Sethu
+    </h1>
+
+    <p>
+      Safe, simple and trusted travel.
+    </p>
+
+  </div>
 
 
-  if(nav){
+  <div class="booking-card">
 
-    nav.classList.add("active");
+    <h2
+      style="
+        font-size:18px;
+        margin-bottom:9px;
+      "
+    >
+      Our Journey
+    </h2>
 
-  }
+    <p
+      style="
+        color:#667085;
+        font-size:12px;
+        line-height:1.7;
+      "
+    >
+      Darshana Sethu Cab is a travel service
+      focused on comfortable and dependable
+      cab journeys for families, local travel,
+      outstation trips and temple travel.
+    </p>
 
 
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
+    <div
+      style="
+        margin-top:17px;
+        padding:14px;
+        border-radius:14px;
+        background:#fff7d6;
+        color:#5f4b00;
+        font-size:11px;
+        line-height:1.6;
+        font-weight:700;
+      "
+    >
+      🚕 Safe • Simple • Trusted Travel
+    </div>
+
+  </div>
+
+
+  <button
+    class="dark-button"
+    onclick="showPage('account')"
+  >
+    ← Back to Account
+  </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     TERMS PAGE
+===================================================== -->
+
+<section
+  id="terms"
+  class="page"
+>
+
+  <div class="page-top">
+
+    <h1>
+      Terms & Conditions
+    </h1>
+
+    <p>
+      Please read the service terms before booking.
+    </p>
+
+  </div>
+
+
+  <div class="booking-card">
+
+    <h3 style="font-size:14px;margin-bottom:7px;">
+      1. Booking
+    </h3>
+
+    <p
+      class="muted"
+      style="font-size:11px;line-height:1.6;margin-bottom:14px;"
+    >
+      A booking request is subject to vehicle
+      and driver availability. Confirmation may
+      require contact from our team.
+    </p>
+
+
+    <h3 style="font-size:14px;margin-bottom:7px;">
+      2. Fare
+    </h3>
+
+    <p
+      class="muted"
+      style="font-size:11px;line-height:1.6;margin-bottom:14px;"
+    >
+      Displayed fares are estimates unless
+      specifically confirmed. Toll, parking and
+      other applicable charges may be extra.
+    </p>
+
+
+    <h3 style="font-size:14px;margin-bottom:7px;">
+      3. Cancellation
+    </h3>
+
+    <p
+      class="muted"
+      style="font-size:11px;line-height:1.6;margin-bottom:14px;"
+    >
+      Cancellation and waiting policies may
+      depend on the booking and vehicle type.
+    </p>
+
+
+    <h3 style="font-size:14px;margin-bottom:7px;">
+      4. Safety
+    </h3>
+
+    <p
+      class="muted"
+      style="font-size:11px;line-height:1.6;"
+    >
+      Customers should verify the vehicle and
+      driver details before starting the trip.
+    </p>
+
+  </div>
+
+
+  <button
+    class="dark-button"
+    onclick="showPage('account')"
+  >
+    ← Back to Account
+  </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRIVACY PAGE
+===================================================== -->
+
+<section
+  id="privacy"
+  class="page"
+>
+
+  <div class="page-top">
+
+    <h1>
+      Privacy Policy
+    </h1>
+
+    <p>
+      Your information should be handled responsibly.
+    </p>
+
+  </div>
+
+
+  <div class="booking-card">
+
+    <h3 style="font-size:14px;margin-bottom:7px;">
+      Information we collect
+    </h3>
+
+    <p
+      class="muted"
+      style="font-size:11px;line-height:1.6;margin-bottom:14px;"
+    >
+      Information such as your name, mobile
+      number and booking details may be used
+      to provide the requested travel service.
+    </p>
+
+
+    <h3 style="font-size:14px;margin-bottom:7px;">
+      Use of information
+    </h3>
+
+    <p
+      class="muted"
+      style="font-size:11px;line-height:1.6;margin-bottom:14px;"
+    >
+      Booking information may be used for
+      communication, service support and
+      improving the customer experience.
+    </p>
+
+
+    <h3 style="font-size:14px;margin-bottom:7px;">
+      Data security
+    </h3>
+
+    <p
+      class="muted"
+      style="font-size:11px;line-height:1.6;"
+    >
+      Reasonable measures should be used to
+      protect customer information.
+    </p>
+
+  </div>
+
+
+  <button
+    class="dark-button"
+    onclick="showPage('account')"
+  >
+    ← Back to Account
+  </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ PAGE
+===================================================== -->
+
+<section
+  id="faq"
+  class="page"
+>
+
+  <div class="page-top">
+
+    <h1>
+      Frequently Asked Questions
+    </h1>
+
+    <p>
+      Quick answers about Darshana Sethu Cab.
+    </p>
+
+  </div>
+
+
+  <div class="booking-card">
+
+
+    <details style="padding:12px 0;border-bottom:1px solid #edf0f3;">
+
+      <summary
+        style="
+          font-size:12px;
+          font-weight:900;
+          cursor:pointer;
+        "
+      >
+        How can I book a cab?
+      </summary>
+
+      <p
+        class="muted"
+        style="
+          font-size:11px;
+          line-height:1.6;
+          margin-top:8px;
+        "
+      >
+        Enter your pickup and destination,
+        get an estimate and continue with
+        the booking details.
+      </p>
+
+    </details>
+
+
+    <details style="padding:12px 0;border-bottom:1px solid #edf0f3;">
+
+      <summary
+        style="
+          font-size:12px;
+          font-weight:900;
+          cursor:pointer;
+        "
+  <!-- =====================================================
+     PART 3
+     DARSHANA SETHU CAB
+     FINAL JAVASCRIPT + FOOTER + PWA SUPPORT
+===================================================== */
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+(function createFooter(){
+
+  const footer = document.createElement("footer");
+
+  footer.style.cssText = `
+    max-width:650px;
+    margin:20px auto 100px;
+    padding:20px 14px;
+    text-align:center;
+  `;
+
+  footer.innerHTML = `
+
+    <div
+      style="
+        background:#111827;
+        color:#fff;
+        border-radius:20px;
+        padding:20px 15px;
+      "
+    >
+
+      <div
+        style="
+          font-size:16px;
+          font-weight:900;
+        "
+      >
+        DARSHANA
+        <span style="color:#f5b400;">
+          SETHU CAB
+        </span>
+      </div>
+
+      <div
+        style="
+          margin-top:5px;
+          color:#cbd5e1;
+          font-size:9px;
+          font-weight:800;
+          letter-spacing:1px;
+        "
+      >
+        SAFE • SIMPLE • TRUSTED TRAVEL
+      </div>
+
+      <div
+        style="
+          margin-top:14px;
+          color:#94a3b8;
+          font-size:10px;
+          line-height:1.6;
+        "
+      >
+        Local • Outstation • Family • Temple Travel
+      </div>
+
+      <div
+        style="
+          margin-top:14px;
+          padding-top:13px;
+          border-top:1px solid #334155;
+          color:#94a3b8;
+          font-size:9px;
+          line-height:1.6;
+        "
+      >
+        © ${new Date().getFullYear()}
+        Darshana Sethu Cab.
+        All rights reserved.
+      </div>
+
+    </div>
+
+  `;
+
+  document.body.appendChild(footer);
+
+})();
+
+
+
+/* =====================================================
+   SAVE LANGUAGE
+===================================================== */
+
+function saveLanguage(){
+
+  localStorage.setItem(
+    "sethuLanguage",
+    currentLanguage
+  );
 
 }
 
 
-/* =========================
-   BOOKING FOCUS
-========================= */
 
-function focusBooking(){
+/* =====================================================
+   LOAD LANGUAGE
+===================================================== */
+
+function loadLanguage(){
+
+  const saved =
+    localStorage.getItem(
+      "sethuLanguage"
+    );
+
+
+  if(
+    saved === "te" ||
+    saved === "en"
+  ){
+
+    currentLanguage = saved;
+
+  }
+
+
+  const data =
+    languageData[currentLanguage];
+
+
+  if(
+    document.getElementById("heroTitle")
+  ){
+
+    document.getElementById("heroTitle")
+      .textContent =
+        data.heroTitle;
+
+  }
+
+
+  if(
+    document.getElementById("heroText")
+  ){
+
+    document.getElementById("heroText")
+      .textContent =
+        data.heroText;
+
+  }
+
+
+  if(
+    document.getElementById("languageButton")
+  ){
+
+    document.getElementById("languageButton")
+      .textContent =
+        currentLanguage === "en"
+          ? "తెలుగు"
+          : "English";
+
+  }
+
+
+  if(
+    document.getElementById("oneWay")
+  ){
+
+    document.getElementById("oneWay")
+      .textContent =
+        data.oneWay;
+
+  }
+
+
+  if(
+    document.getElementById("roundTrip")
+  ){
+
+    document.getElementById("roundTrip")
+      .textContent =
+        data.roundTrip;
+
+  }
+
+
+  if(
+    document.getElementById("calculateButton")
+  ){
+
+    document.getElementById("calculateButton")
+      .textContent =
+        data.fareEstimate;
+
+  }
+
+}
+
+
+
+/* =====================================================
+   OVERRIDE LANGUAGE TO SAVE
+===================================================== */
+
+const originalToggleLanguage =
+  toggleLanguage;
+
+
+toggleLanguage = function(){
+
+  originalToggleLanguage();
+
+  saveLanguage();
+
+};
+
+
+
+/* =====================================================
+   BOOKING NUMBER SAFETY
+===================================================== */
+
+function getNextBookingNumber(){
+
+  const stored =
+    Number(
+      localStorage.getItem(
+        "sethuBookingSequence"
+      ) || 0
+    );
+
+
+  const next =
+    stored + 1;
+
+
+  localStorage.setItem(
+    "sethuBookingSequence",
+    next
+  );
+
+
+  return next;
+
+}
+
+
+
+/* =====================================================
+   BETTER BOOKING ID
+   DSCS + DATE + SERIAL
+===================================================== */
+
+generateBookingId = function(){
+
+  const now =
+    new Date();
+
+
+  const date =
+    String(now.getDate())
+      .padStart(2,"0") +
+
+    String(now.getMonth()+1)
+      .padStart(2,"0") +
+
+    String(now.getFullYear())
+      .slice(-2);
+
+
+  const number =
+    getNextBookingNumber();
+
+
+  return (
+    "DSCS" +
+    date +
+    String(number)
+      .padStart(3,"0")
+  );
+
+};
+
+
+
+/* =====================================================
+   PHONE NUMBER INPUT
+===================================================== */
+
+document.addEventListener(
+  "input",
+  function(event){
+
+    if(
+      event.target &&
+      event.target.id === "customerPhone"
+    ){
+
+      event.target.value =
+        event.target.value
+          .replace(/\D/g,"")
+          .slice(0,10);
+
+    }
+
+  }
+);
+
+
+
+/* =====================================================
+   PREVENT PAST TRAVEL DATE
+===================================================== */
+
+function setMinimumTravelDate(){
+
+  const dateInput =
+    document.getElementById(
+      "travelDate"
+    );
+
+
+  if(!dateInput){
+
+    return;
+
+  }
+
+
+  const now =
+    new Date();
+
+
+  const year =
+    now.getFullYear();
+
+
+  const month =
+    String(
+      now.getMonth()+1
+    ).padStart(2,"0");
+
+
+  const day =
+    String(
+      now.getDate()
+    ).padStart(2,"0");
+
+
+  const today =
+    year +
+    "-" +
+    month +
+    "-" +
+    day;
+
+
+  dateInput.min = today;
+
+}
+
+
+
+/* =====================================================
+   AUTO SET TIME
+===================================================== */
+
+function setDefaultTravelTime(){
+
+  const timeInput =
+    document.getElementById(
+      "travelTime"
+    );
+
+
+  if(
+    !timeInput ||
+    timeInput.value
+  ){
+
+    return;
+
+  }
+
+
+  const now =
+    new Date();
+
+
+  let hours =
+    now.getHours();
+
+
+  let minutes =
+    now.getMinutes();
+
+
+  minutes =
+    Math.ceil(
+      minutes / 15
+    ) * 15;
+
+
+  if(minutes >= 60){
+
+    minutes = 0;
+
+    hours++;
+
+  }
+
+
+  if(hours >= 24){
+
+    hours = 23;
+
+    minutes = 45;
+
+  }
+
+
+  timeInput.value =
+    String(hours)
+      .padStart(2,"0") +
+    ":" +
+    String(minutes)
+      .padStart(2,"0");
+
+}
+
+
+
+/* =====================================================
+   BOOKING FORM RESET
+===================================================== */
+
+function resetBookingForm(){
+
+  const fields = [
+
+    "customerName",
+    "customerPhone",
+    "travelDate",
+    "travelTime"
+
+  ];
+
+
+  fields.forEach(function(id){
+
+    const element =
+      document.getElementById(id);
+
+
+    if(element){
+
+      element.value = "";
+
+    }
+
+  });
+
+
+  const vehicle =
+    document.getElementById(
+      "vehicleType"
+    );
+
+
+  if(vehicle){
+
+    vehicle.value = "sedan";
+
+  }
+
+
+  const passengers =
+    document.getElementById(
+      "passengers"
+    );
+
+
+  if(passengers){
+
+    passengers.value = "1";
+
+  }
+
+}
+
+
+
+/* =====================================================
+   SUCCESS → NEW BOOKING
+===================================================== */
+
+function startNewBooking(){
+
+  currentFare = 0;
+
+  currentBookingId = "";
+
+  currentRidePin = "";
+
+  const estimate =
+    document.getElementById(
+      "estimateBox"
+    );
+
+
+  const continueButton =
+    document.getElementById(
+      "continueButton"
+    );
+
+
+  if(estimate){
+
+    estimate.classList.remove("show");
+
+  }
+
+
+  if(continueButton){
+
+    continueButton.classList.add("hidden");
+
+  }
+
+
+  resetBookingForm();
+
+  showPage("home");
+
+}
+
+
+
+/* =====================================================
+   ADD NEW BOOKING BUTTON
+===================================================== */
+
+(function addNewBookingButton(){
+
+  const success =
+    document.getElementById(
+      "success"
+    );
+
+
+  if(!success){
+
+    return;
+
+  }
+
 
   const card =
-    document.getElementById(
-      "bookingCard"
+    success.querySelector(
+      ".booking-card"
     );
 
 
-  card.scrollIntoView({
-    behavior:"smooth",
-    block:"start"
-  });
+  if(!card){
+
+    return;
+
+  }
 
 
-  setTimeout(function(){
+  const button =
+    document.createElement(
+      "button"
+    );
 
-    document
-      .getElementById(
-        "pickupLocation"
-      )
-      .focus();
 
-  },500);
+  button.className =
+    "dark-button";
+
+
+  button.textContent =
+    "🚕 Make Another Booking";
+
+
+  button.onclick =
+    startNewBooking;
+
+
+  card.appendChild(button);
+
+})();
+
+
+
+/* =====================================================
+   BOOKING DETAILS
+===================================================== */
+
+function getLatestBooking(){
+
+  return bookings.length
+    ? bookings[0]
+    : null;
 
 }
 
 
-/* =========================
-   TRIP TYPE
-========================= */
 
-function selectTripType(type){
+/* =====================================================
+   COPY BOOKING ID
+===================================================== */
 
-  selectedTripType = type;
+function copyBookingId(){
 
-
-  document
-    .getElementById("oneWay")
-    .classList.toggle(
-      "active",
-      type === "oneway"
-    );
+  const latest =
+    getLatestBooking();
 
 
-  document
-    .getElementById("roundTrip")
-    .classList.toggle(
-      "active",
-      type === "roundtrip"
-    );
-
-
-  const tripText =
-    document.getElementById(
-      "tripText"
-    );
-
-
-  if(tripText){
-
-    tripText.textContent =
-      type === "roundtrip"
-        ? "Round Trip"
-        : "One Way";
-
-  }
-
-
-  const confirmTrip =
-    document.getElementById(
-      "confirmTrip"
-    );
-
-
-  if(confirmTrip){
-
-    confirmTrip.textContent =
-      type === "roundtrip"
-        ? "Round Trip"
-        : "One Way";
-
-  }
-
-
-  /*
-    If distance was already calculated,
-    recalculate fare automatically.
-  */
-
-  if(calculatedDistance > 0){
-
-    updateFare(
-      calculatedDistance
-    );
-
-  }
-
-}
-
-
-/* =========================
-   CURRENT LOCATION
-========================= */
-
-function useCurrentLocation(){
-
-  if(!navigator.geolocation){
+  if(!latest){
 
     alert(
-      "Location is not supported on this device."
+      "Booking information not found."
     );
 
     return;
@@ -1619,297 +3616,389 @@ function useCurrentLocation(){
   }
 
 
-  navigator.geolocation.getCurrentPosition(
+  if(
+    navigator.clipboard
+  ){
 
-    function(position){
+    navigator.clipboard
+      .writeText(latest.id)
+      .then(function(){
 
-      const lat =
-        position.coords.latitude;
-
-
-      const lng =
-        position.coords.longitude;
-
-
-      const locationText =
-        lat.toFixed(6) +
-        ", " +
-        lng.toFixed(6);
-
-
-      const pickup =
-        document.getElementById(
-          "pickupLocation"
+        alert(
+          "Booking ID copied."
         );
 
+      })
+      .catch(function(){
 
-      if(pickup){
+        alert(
+          "Booking ID: " +
+          latest.id
+        );
 
-        pickup.value =
-          locationText;
+      });
 
-      }
+  }
+
+  else{
+
+    alert(
+      "Booking ID: " +
+      latest.id
+    );
+
+  }
+
+}
 
 
-      alert(
-        "Current location selected."
-      );
 
-    },
+/* =====================================================
+   BOOKING DETAILS SHARE
+===================================================== */
+
+function shareBooking(){
+
+  const latest =
+    getLatestBooking();
 
 
-    function(){
+  if(!latest){
 
-      alert(
-        "Please allow location permission or enter pickup manually."
-      );
+    alert(
+      "No booking information available."
+    );
 
-    },
+    return;
 
-    {
-      enableHighAccuracy:true,
-      timeout:10000,
-      maximumAge:60000
-    }
+  }
 
+
+  const text =
+    "Darshana Sethu Cab\n\n" +
+
+    "Booking ID: " +
+    latest.id +
+
+    "\nName: " +
+    latest.name +
+
+    "\nPickup: " +
+    latest.pickup +
+
+    "\nDestination: " +
+    latest.destination +
+
+    "\nDate: " +
+    latest.date +
+
+    "\nTime: " +
+    latest.time +
+
+    "\nVehicle: " +
+    latest.vehicle;
+
+
+  if(
+    navigator.share
+  ){
+
+    navigator.share({
+
+      title:
+        "Darshana Sethu Cab Booking",
+
+      text:text
+
+    });
+
+  }
+
+  else if(
+    navigator.clipboard
+  ){
+
+    navigator.clipboard
+      .writeText(text)
+      .then(function(){
+
+        alert(
+          "Booking details copied."
+        );
+
+      });
+
+  }
+
+}
+
+
+
+/* =====================================================
+   REWARDS INFORMATION
+===================================================== */
+
+function getRewardMessage(){
+
+  if(loyaltyPoints <= 0){
+
+    return (
+      "Complete eligible rides to start earning Sethu Points."
+    );
+
+  }
+
+
+  if(loyaltyPoints < 100){
+
+    return (
+      "Keep travelling with Darshana Sethu Cab to build your rewards."
+    );
+
+  }
+
+
+  return (
+    "You have rewards available. Redemption rules may apply."
   );
 
 }
 
 
-/* =========================
-   MAP LINKS
-========================= */
 
-function openPickupMap(){
+/* =====================================================
+   LOYALTY DETAILS ALERT
+===================================================== */
 
-  const value =
-    document
-      .getElementById(
-        "pickupLocation"
-      )
-      .value
-      .trim();
+function showRewardMessage(){
 
-
-  if(value){
-
-    window.open(
-
-      "https://www.google.com/maps/search/?api=1&query=" +
-      encodeURIComponent(value),
-
-      "_blank"
-
-    );
-
-  }else{
-
-    window.open(
-      "https://www.google.com/maps",
-      "_blank"
-    );
-
-  }
+  alert(
+    "⭐ Sethu Rewards\n\n" +
+    "Points: " +
+    loyaltyPoints +
+    "\n\n" +
+    getRewardMessage()
+  );
 
 }
 
 
-function openDestinationMap(){
 
-  const value =
-    document
-      .getElementById(
-        "destinationLocation"
-      )
-      .value
-      .trim();
+/* =====================================================
+   LOYALTY SAFE RENDER
+===================================================== */
+
+const originalRenderLoyalty =
+  renderLoyalty;
 
 
-  if(value){
+renderLoyalty = function(){
 
-    window.open(
+  originalRenderLoyalty();
 
-      "https://www.google.com/maps/search/?api=1&query=" +
-      encodeURIComponent(value),
 
-      "_blank"
-
+  const points =
+    document.getElementById(
+      "loyaltyPoints"
     );
 
-  }else{
 
-    window.open(
-      "https://www.google.com/maps",
-      "_blank"
-    );
+  if(points){
+
+    points.textContent =
+      Number(loyaltyPoints)
+        .toLocaleString("en-IN");
 
   }
+
+
+  const pagePoints =
+    document.getElementById(
+      "loyaltyPagePoints"
+    );
+
+
+  if(pagePoints){
+
+    pagePoints.textContent =
+      Number(loyaltyPoints)
+        .toLocaleString("en-IN");
+
+  }
+
+};
+
+
+
+/* =====================================================
+   ACTIVE BOOKING STATUS
+===================================================== */
+
+function getActiveBooking(){
+
+  return bookings.find(
+    function(booking){
+
+      return (
+        booking.status === "Requested" ||
+        booking.status === "Confirmed" ||
+        booking.status === "Driver Assigned" ||
+        booking.status === "Started"
+      );
+
+    }
+  );
 
 }
 
 
-/* =========================
-   DISTANCE SERVICE
-   OSRM / OPENSTREETMAP
-========================= */
 
-async function getRouteDistance(
-  pickup,
-  destination
-){
+/* =====================================================
+   SAFETY SHARE — ACTIVE BOOKING FIRST
+===================================================== */
 
-  /*
-    First geocode pickup.
-  */
+shareTrip = function(){
 
-  const pickupResponse =
-    await fetch(
+  const latest =
+    getActiveBooking() ||
+    getLatestBooking();
 
-      "https://nominatim.openstreetmap.org/search?format=json&limit=1&q=" +
-      encodeURIComponent(pickup),
 
-      {
-        headers:{
-          "Accept-Language":"en"
-        }
-      }
+  if(!latest){
 
+    alert(
+      "No booking is available to share."
     );
 
-
-  const pickupData =
-    await pickupResponse.json();
-
-
-  if(
-    !pickupData ||
-    pickupData.length === 0
-  ){
-
-    throw new Error(
-      "Pickup location not found."
-    );
+    return;
 
   }
 
 
-  /*
-    Then geocode destination.
-  */
+  const text =
+    "Darshana Sethu Cab Trip\n\n" +
 
-  const destinationResponse =
-    await fetch(
+    "Booking ID: " +
+    latest.id +
 
-      "https://nominatim.openstreetmap.org/search?format=json&limit=1&q=" +
-      encodeURIComponent(destination),
+    "\nPickup: " +
+    latest.pickup +
 
-      {
-        headers:{
-          "Accept-Language":"en"
-        }
-      }
+    "\nDestination: " +
+    latest.destination +
 
-    );
+    "\nDate: " +
+    latest.date +
 
-
-  const destinationData =
-    await destinationResponse.json();
+    "\nTime: " +
+    latest.time;
 
 
   if(
-    !destinationData ||
-    destinationData.length === 0
+    navigator.share
   ){
 
-    throw new Error(
-      "Destination location not found."
+    navigator.share({
+
+      title:
+        "Darshana Sethu Cab Trip",
+
+      text:text
+
+    }).catch(function(){});
+
+  }
+
+  else if(
+    navigator.clipboard
+  ){
+
+    navigator.clipboard
+      .writeText(text)
+      .then(function(){
+
+        alert(
+          "Trip details copied."
+        );
+
+      });
+
+  }
+
+  else{
+
+    alert(text);
+
+  }
+
+};
+
+
+
+/* =====================================================
+   SOS — SAFETY CONFIRMATION
+===================================================== */
+
+triggerSOS = function(){
+
+  const confirmed =
+    confirm(
+      "🚨 EMERGENCY SOS\n\n" +
+      "Do you need emergency assistance?\n\n" +
+      "Press OK to continue."
     );
+
+
+  if(!confirmed){
+
+    return;
 
   }
 
 
-  const pickupLat =
-    parseFloat(
-      pickupData[0].lat
-    );
+  const latest =
+    getActiveBooking();
 
 
-  const pickupLon =
-    parseFloat(
-      pickupData[0].lon
-    );
+  const bookingInfo =
+    latest
+      ? "\nBooking ID: " + latest.id
+      : "";
 
 
-  const destinationLat =
-    parseFloat(
-      destinationData[0].lat
-    );
+  alert(
+    "SOS support request initiated." +
+    bookingInfo +
+    "\n\n" +
+    "If you are in immediate danger, " +
+    "contact the appropriate local emergency service."
+  );
+
+};
 
 
-  const destinationLon =
-    parseFloat(
-      destinationData[0].lon
-    );
 
+/* =====================================================
+   FARE DISPLAY SAFETY
+===================================================== */
 
-  /*
-    OSRM gives road distance,
-    not straight-line distance.
-  */
+function formatFare(amount){
 
-  const routeResponse =
-    await fetch(
-
-      "https://router.project-osrm.org/route/v1/driving/" +
-
-      pickupLon +
-      "," +
-      pickupLat +
-      ";" +
-      destinationLon +
-      "," +
-      destinationLat +
-
-      "?overview=false"
-
-    );
-
-
-  const routeData =
-    await routeResponse.json();
-
-
-  if(
-    !routeData.routes ||
-    !routeData.routes.length
-  ){
-
-    throw new Error(
-      "Route could not be calculated."
-    );
-
-  }
-
-
-  const meters =
-    routeData.routes[0].distance;
-
-
-  const kilometers =
-    meters / 1000;
-
-
-  return kilometers;
+  return (
+    "₹" +
+    Number(amount)
+      .toLocaleString("en-IN")
+  );
 
 }
 
 
-/* =========================
-   CALCULATE FARE
-========================= */
 
-async function calculateFare(){
+/* =====================================================
+   ENHANCED FARE ESTIMATE
+===================================================== */
+
+calculateFare = function(){
 
   const pickup =
     document
@@ -1927,12 +4016,6 @@ async function calculateFare(){
       )
       .value
       .trim();
-
-
-  const button =
-    document.getElementById(
-      "calculateButton"
-    );
 
 
   if(!pickup){
@@ -1957,114 +4040,36 @@ async function calculateFare(){
   }
 
 
-  button.disabled = true;
-
-  button.textContent =
-    "Calculating KM...";
-
-
-  try{
-
-    const distance =
-      await getRouteDistance(
-        pickup,
-        destination
-      );
-
-
-    updateFare(distance);
-
-
-  }catch(error){
-
-    console.error(error);
-
-
-    alert(
-      error.message +
-      "\n\nPlease enter complete location names, such as Rajahmundry or Annavaram."
-    );
-
-
-  }finally{
-
-    button.disabled = false;
-
-    button.textContent =
-      "Recalculate Distance & Fare";
-
-  }
-
-}
-
-
-/* =========================
-   UPDATE FARE
-========================= */
-
-function updateFare(distance){
-
-  calculatedDistance =
-    Math.round(
-      distance * 10
-    ) / 10;
-
-
-  let chargeableDistance =
-    calculatedDistance;
-
-
   /*
-    Current agreed rule:
+    FINAL PRODUCTION NOTE:
 
-    One Way:
-    KM × ₹16
+    This amount is only a temporary
+    front-end estimate.
 
-    Round Trip:
-    Total journey distance × ₹16
-
-    We do NOT secretly double the
-    road distance here.
+    Later the Admin/Firebase fare
+    engine can replace this value
+    with the actual approved fare.
   */
 
+
   if(
-    selectedTripType === "roundtrip"
+    selectedTripType === "oneway"
   ){
 
-    chargeableDistance =
-      calculatedDistance * 2;
+    currentFare = 1500;
+
+  }
+
+  else{
+
+    currentFare = 2800;
 
   }
 
 
-  calculatedFare =
-    Math.round(
-      chargeableDistance *
-      FARE_PER_KM
-    );
-
-
-  const estimate =
+  const estimateTrip =
     document.getElementById(
-      "estimateBox"
-    );
-
-
-  const distanceText =
-    document.getElementById(
-      "distanceText"
-    );
-
-
-  const rateText =
-    document.getElementById(
-      "rateText"
-    );
-
-
-  const tripText =
-    document.getElementById(
-      "tripText"
+      "estimateTrip"
     );
 
 
@@ -2074,55 +4079,63 @@ function updateFare(distance){
     );
 
 
-  distanceText.textContent =
-    calculatedDistance.toFixed(1) +
-    " KM";
+  const estimateBox =
+    document.getElementById(
+      "estimateBox"
+    );
 
 
-  rateText.textContent =
-    "₹" +
-    FARE_PER_KM +
-    " / KM";
+  const continueButton =
+    document.getElementById(
+      "continueButton"
+    );
 
 
-  tripText.textContent =
-    selectedTripType === "roundtrip"
-      ? "Round Trip"
-      : "One Way";
+  if(estimateTrip){
+
+    estimateTrip.textContent =
+      selectedTripType === "oneway"
+        ? "One Way"
+        : "Round Trip";
+
+  }
 
 
-  fareText.textContent =
-    "₹" +
-    calculatedFare.toLocaleString("en-IN");
+  if(fareText){
+
+    fareText.textContent =
+      formatFare(currentFare);
+
+  }
 
 
-  estimate.classList.add(
-    "show"
-  );
+  if(estimateBox){
+
+    estimateBox.classList.add("show");
+
+  }
 
 
-  document
-    .getElementById(
-      "bookButton"
-    )
-    .classList.add("show");
+  if(continueButton){
 
-}
+    continueButton.classList.remove("hidden");
+
+  }
+
+};
 
 
-/* =========================
-   START BOOKING
-========================= */
 
-function startBooking(){
+/* =====================================================
+   START BOOKING — ENHANCED
+===================================================== */
 
-  if(
-    calculatedDistance <= 0 ||
-    calculatedFare <= 0
-  ){
+startBooking = function(){
+
+  if(!currentFare){
 
     alert(
-      "Please calculate distance and fare first."
+      "Please get a fare estimate first."
     );
 
     return;
@@ -2148,357 +4161,53 @@ function startBooking(){
       .trim();
 
 
-  document
-    .getElementById(
-      "confirmPickup"
-    )
-    .textContent =
-    pickup;
+  if(!pickup || !destination){
 
-
-  document
-    .getElementById(
-      "confirmDestination"
-    )
-    .textContent =
-    destination;
-
-
-  document
-    .getElementById(
-      "confirmDistance"
-    )
-    .textContent =
-    calculatedDistance.toFixed(1) +
-    " KM";
-
-
-  document
-    .getElementById(
-      "confirmTrip"
-    )
-    .textContent =
-    selectedTripType === "roundtrip"
-      ? "Round Trip"
-      : "One Way";
-
-
-  document
-    .getElementById(
-      "confirmFare"
-    )
-    .textContent =
-    "₹" +
-    calculatedFare.toLocaleString(
-      "en-IN"
+    alert(
+      "Please enter pickup and destination."
     );
+
+    return;
+
+  }
+
+
+  document
+    .getElementById(
+      "summaryPickup"
+    )
+    .textContent =
+      pickup;
+
+
+  document
+    .getElementById(
+      "summaryDestination"
+    )
+    .textContent =
+      destination;
+
+
+  setMinimumTravelDate();
+
+  setDefaultTravelTime();
 
 
   showPage("booking");
 
-}
-
-
-/* =========================
-   DATE DEFAULT
-========================= */
-
-const dateInput =
-  document.getElementById(
-    "travelDate"
-  );
-
-
-if(dateInput){
-
-  const today =
-    new Date();
-
-
-  const yyyy =
-    today.getFullYear();
-
-
-  const mm =
-    String(
-      today.getMonth()+1
-    ).padStart(2,"0");
-
-
-  const dd =
-    String(
-      today.getDate()
-    ).padStart(2,"0");
-
-
-  dateInput.min =
-    yyyy +
-    "-" +
-    mm +
-    "-" +
-    dd;
-
-}
-
-
-/* =========================
-   LANGUAGE
-========================= */
-
-let teluguMode = false;
-
-
-function toggleLanguage(){
-
-  teluguMode =
-    !teluguMode;
-
-
-  const button =
-    document.getElementById(
-      "languageButton"
-    );
-
-
-  button.textContent =
-    teluguMode
-      ? "English"
-      : "తెలుగు";
-
-
-  document
-    .getElementById(
-      "heroTitle"
-    )
-    .textContent =
-    teluguMode
-      ? "మీ ప్రయాణం ఇక్కడ మొదలు."
-      : "Your journey starts here.";
-
-
-  document
-    .getElementById(
-      "heroText"
-    )
-    .textContent =
-    teluguMode
-      ? "లోకల్, అవుట్‌స్టేషన్ మరియు కుటుంబ ప్రయాణాలకు సౌకర్యవంతమైన క్యాబ్."
-      : "Comfortable cab service for local, outstation and family travel.";
-
-}
-
-
-/* =========================
-   SHARE TRIP
-========================= */
-
-async function shareTrip(){
-
-  const text =
-    "Darshana Sethu Cab\n" +
-    "My trip is being arranged through Darshana Sethu Cab.";
-
-
-  if(
-    navigator.share
-  ){
-
-    try{
-
-      await navigator.share({
-        title:
-          "Darshana Sethu Cab",
-        text:
-          text
-      });
-
-    }catch(error){
-
-      console.log(error);
-
-    }
-
-  }else{
-
-    try{
-
-      await navigator.clipboard.writeText(
-        text
-      );
-
-      alert(
-        "Trip information copied."
-      );
-
-    }catch(error){
-
-      alert(
-        text
-      );
-
-    }
-
-  }
-
-}
-
-
-/* =========================
-   SOS
-========================= */
-
-function showSOS(){
-
-  const confirmEmergency =
-    confirm(
-      "Emergency SOS?\n\nPress OK only if you need emergency assistance."
-    );
-
-
-  if(confirmEmergency){
-
-    alert(
-      "SOS request activated."
-    );
-
-  }
-
-}
-
-      </script>
-      <script type="module">
-
-import {
-  initializeApp
-} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
-
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  query,
-  where,
-  getDocs,
-  serverTimestamp
-} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
-
-
-/* =========================
-   FIREBASE
-========================= */
-
-const firebaseConfig = {
-
-  apiKey:
-    "AIzaSyCKKThIcHKI8jFvOmfXgQZ-UKXwNCiha_U",
-
-  authDomain:
-    "darshana-sethu-cab.firebaseapp.com",
-
-  projectId:
-    "darshana-sethu-cab",
-
-  storageBucket:
-    "darshana-sethu-cab.firebasestorage.app",
-
-  messagingSenderId:
-    "753735533400",
-
-  appId:
-    "1:753735533400:web:dd314c6e8b61d2f1b09b2d",
-
-  measurementId:
-    "G-E366CXE9LT"
-
 };
 
 
-const app =
-  initializeApp(firebaseConfig);
+
+/* =====================================================
+   BOOKING CONFIRMATION — SAFER VERSION
+===================================================== */
+
+const originalConfirmBooking =
+  confirmBooking;
 
 
-const db =
-  getFirestore(app);
-
-
-/* =========================
-   BOOKING ID
-========================= */
-
-function generateBookingId(){
-
-  const now =
-    new Date();
-
-
-  const year =
-    now.getFullYear();
-
-
-  const month =
-    String(
-      now.getMonth() + 1
-    ).padStart(2,"0");
-
-
-  const day =
-    String(
-      now.getDate()
-    ).padStart(2,"0");
-
-
-  const random =
-    String(
-      Math.floor(
-        Math.random() * 999
-      ) + 1
-    ).padStart(3,"0");
-
-
-  return (
-    "DSCS" +
-    year +
-    month +
-    day +
-    random
-  );
-
-}
-
-
-/* =========================
-   RIDE PIN
-========================= */
-
-function generateRidePin(){
-
-  return String(
-
-    Math.floor(
-      1000 +
-      Math.random() * 9000
-    )
-
-  );
-
-}
-
-
-/* =========================
-   CREATE BOOKING
-========================= */
-
-window.createBooking =
-async function(){
-
-  const name =
-    document
-      .getElementById(
-        "customerName"
-      )
-      .value
-      .trim();
-
+confirmBooking = function(){
 
   const phone =
     document
@@ -2506,636 +4215,249 @@ async function(){
         "customerPhone"
       )
       .value
-      .trim();
+      .replace(/\D/g,"");
 
 
-  const date =
-    document
-      .getElementById(
-        "travelDate"
-      )
-      .value;
+  if(phone.length !== 10){
 
-
-  const time =
-    document
-      .getElementById(
-        "travelTime"
-      )
-      .value;
-
-
-  const passengers =
-    document
-      .getElementById(
-        "passengers"
-      )
-      .value;
-
-
-  const pickup =
-    document
-      .getElementById(
-        "pickupLocation"
-      )
-      .value
-      .trim();
-
-
-  const destination =
-    document
-      .getElementById(
-        "destinationLocation"
-      )
-      .value
-      .trim();
-
-
-  const message =
-    document
-      .getElementById(
-        "bookingMessage"
-      );
-
-
-  /* =====================
-     VALIDATION
-  ===================== */
-
-  if(!name){
-
-    message.style.color =
-      "#dc2626";
-
-    message.textContent =
-      "Please enter your name.";
-
-    return;
-
-  }
-
-
-  if(
-    !/^[0-9]{10}$/.test(phone)
-  ){
-
-    message.style.color =
-      "#dc2626";
-
-    message.textContent =
-      "Please enter a valid 10-digit mobile number.";
-
-    return;
-
-  }
-
-
-  if(!date){
-
-    message.style.color =
-      "#dc2626";
-
-    message.textContent =
-      "Please select travel date.";
-
-    return;
-
-  }
-
-
-  if(!time){
-
-    message.style.color =
-      "#dc2626";
-
-    message.textContent =
-      "Please select travel time.";
-
-    return;
-
-  }
-
-
-  if(
-    !pickup ||
-    !destination
-  ){
-
-    message.style.color =
-      "#dc2626";
-
-    message.textContent =
-      "Pickup and destination are required.";
-
-    return;
-
-  }
-
-
-  if(
-    calculatedDistance <= 0 ||
-    calculatedFare <= 0
-  ){
-
-    message.style.color =
-      "#dc2626";
-
-    message.textContent =
-      "Please calculate KM and fare before booking.";
-
-    return;
-
-  }
-
-
-  /* =====================
-     BUTTON STATE
-  ===================== */
-
-  const button =
-    document.querySelector(
-      "#booking .book-button"
+    alert(
+      "Please enter a valid 10-digit mobile number."
     );
 
-
-  if(button){
-
-    button.disabled =
-      true;
-
-    button.textContent =
-      "Submitting Booking...";
+    return;
 
   }
 
 
-  message.style.color =
-    "#667085";
+  originalConfirmBooking();
 
-  message.textContent =
-    "Creating your booking...";
+};
 
 
-  /* =====================
-     GENERATE DETAILS
-  ===================== */
 
-  const bookingId =
-    generateBookingId();
+/* =====================================================
+   PROFILE LOAD
+===================================================== */
 
+function loadSavedProfile(){
 
-  const ridePin =
-    generateRidePin();
+  renderProfile();
 
-
-  const tripType =
-    selectedTripType === "roundtrip"
-      ? "Round Trip"
-      : "One Way";
+}
 
 
-  /*
-    For Round Trip the fare
-    has already been calculated
-    as double distance.
-  */
 
+/* =====================================================
+   LOCAL STORAGE HEALTH CHECK
+===================================================== */
 
-  const bookingData = {
-
-    bookingId:
-      bookingId,
-
-    ridePin:
-      ridePin,
-
-
-    customerName:
-      name,
-
-    customerPhone:
-      phone,
-
-
-    pickup:
-      pickup,
-
-    destination:
-      destination,
-
-
-    distanceKm:
-      Number(
-        calculatedDistance.toFixed(1)
-      ),
-
-
-    ratePerKm:
-      16,
-
-
-    estimatedFare:
-      calculatedFare,
-
-
-    tripType:
-      tripType,
-
-
-    travelDate:
-      date,
-
-    travelTime:
-      time,
-
-
-    passengers:
-      Number(passengers),
-
-
-    status:
-      "pending",
-
-
-    driverId:
-      "",
-
-    driverName:
-      "",
-
-    driverPhone:
-      "",
-
-    vehicleNumber:
-      "",
-
-
-    finalFare:
-      0,
-
-
-    commissionRate:
-      8.3,
-
-
-    commissionAmount:
-      0,
-
-
-    driverWalletDeduction:
-      0,
-
-
-    ttDonation:
-      1,
-
-
-    templeDonation:
-      1,
-
-
-    paymentStatus:
-      "pending",
-
-
-    safetyStatus:
-      "active",
-
-
-    createdAt:
-      serverTimestamp(),
-
-    updatedAt:
-      serverTimestamp()
-
-  };
-
-
-  /* =====================
-     SAVE TO FIREBASE
-  ===================== */
+function checkStorage(){
 
   try{
 
-    await addDoc(
+    const testKey =
+      "__sethu_storage_test__";
 
-      collection(
-        db,
-        "bookings"
-      ),
-
-      bookingData
-
-    );
-
-
-    /* =====================
-       SUCCESS SCREEN
-    ===================== */
-
-    document
-      .getElementById(
-        "successBookingId"
-      )
-      .textContent =
-      bookingId;
-
-
-    document
-      .getElementById(
-        "successRidePin"
-      )
-      .textContent =
-      ridePin;
-
-
-    document
-      .getElementById(
-        "successDistance"
-      )
-      .textContent =
-      calculatedDistance.toFixed(1) +
-      " KM";
-
-
-    document
-      .getElementById(
-        "successFare"
-      )
-      .textContent =
-      "₹" +
-      calculatedFare.toLocaleString(
-        "en-IN"
-      );
-
-
-    /*
-      Save current booking locally
-      so the customer can see it
-      during this device session.
-    */
 
     localStorage.setItem(
-
-      "lastDarshanaBooking",
-
-      JSON.stringify({
-
-        bookingId:
-          bookingId,
-
-        ridePin:
-          ridePin,
-
-        phone:
-          phone,
-
-        distanceKm:
-          calculatedDistance,
-
-        fare:
-          calculatedFare,
-
-        pickup:
-          pickup,
-
-        destination:
-          destination
-
-      })
-
+      testKey,
+      "1"
     );
 
 
-    message.textContent =
-      "";
+    localStorage.removeItem(
+      testKey
+    );
 
 
-    showPage("success");
+    return true;
 
+  }
 
-  }catch(error){
+  catch(error){
 
-    console.error(
-      "Firebase booking error:",
+    console.warn(
+      "Local storage unavailable.",
       error
     );
 
 
-    message.style.color =
-      "#dc2626";
-
-
-    message.textContent =
-      "Booking failed. Please check Firebase Firestore connection.";
-
-
-    if(button){
-
-      button.disabled =
-        false;
-
-      button.textContent =
-        "Confirm Cab Booking";
-
-    }
+    return false;
 
   }
 
-};
+}
 
 
-/* =========================
-   LOAD MY BOOKINGS
-========================= */
 
-window.loadMyBookings =
-async function(){
+/* =====================================================
+   PWA INSTALL PROMPT
+===================================================== */
 
-  const phone =
-    document
-      .getElementById(
-        "accountPhone"
-      )
-      .value
-      .trim();
+let deferredInstallPrompt = null;
 
 
-  const container =
-    document
-      .getElementById(
-        "myBookings"
-      );
+window.addEventListener(
+  "beforeinstallprompt",
+  function(event){
+
+    event.preventDefault();
+
+    deferredInstallPrompt = event;
+
+  }
+);
 
 
-  if(
-    !/^[0-9]{10}$/.test(phone)
-  ){
 
-    container.innerHTML =
+function installApp(){
 
-      "<div style='color:#dc2626;font-size:13px;font-weight:800'>" +
+  if(!deferredInstallPrompt){
 
-      "Please enter a valid 10-digit mobile number." +
-
-      "</div>";
+    alert(
+      "If the install option is available, " +
+      "use your browser menu and choose " +
+      "'Add to Home screen'."
+    );
 
     return;
 
   }
 
 
-  container.innerHTML =
-
-    "<div style='font-size:13px;color:#667085'>" +
-
-    "Loading bookings..." +
-
-    "</div>";
+  deferredInstallPrompt
+    .prompt();
 
 
-  try{
+  deferredInstallPrompt
+    .userChoice
+    .then(function(){
 
-    const bookingsQuery =
-      query(
+      deferredInstallPrompt = null;
 
-        collection(
-          db,
-          "bookings"
-        ),
+    });
 
-        where(
-          "customerPhone",
-          "==",
-          phone
-        )
-
-      );
+}
 
 
-    const snapshot =
-      await getDocs(
-        bookingsQuery
-      );
+
+/* =====================================================
+   ONLINE / OFFLINE STATUS
+===================================================== */
+
+window.addEventListener(
+  "online",
+  function(){
+
+    console.log(
+      "Darshana Sethu Cab is online."
+    );
+
+  }
+);
 
 
-    if(snapshot.empty){
+window.addEventListener(
+  "offline",
+  function(){
 
-      container.innerHTML =
+    console.log(
+      "Darshana Sethu Cab is offline."
+    );
 
-        "<div style='font-size:13px;color:#667085'>" +
+  }
+);
 
-        "No bookings found for this mobile number." +
 
-        "</div>";
 
-      return;
+/* =====================================================
+   SERVICE WORKER
+===================================================== */
+
+if(
+  "serviceWorker" in navigator
+){
+
+  window.addEventListener(
+    "load",
+    function(){
+
+      navigator.serviceWorker
+        .register("./sw.js")
+        .then(function(){
+
+          console.log(
+            "Darshana Sethu Cab service worker registered."
+          );
+
+        })
+        .catch(function(error){
+
+          console.log(
+            "Service worker registration skipped:",
+            error
+          );
+
+        });
+
+    }
+  );
+
+}
+
+
+
+/* =====================================================
+   FINAL INITIALIZATION
+===================================================== */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    checkStorage();
+
+    loadSavedProfile();
+
+    renderLoyalty();
+
+    renderBookingHistory();
+
+    loadLanguage();
+
+    setMinimumTravelDate();
+
+    updateBottomNav("home");
+
+  }
+);
+
+
+
+/* =====================================================
+   PREVENT ACCIDENTAL FORM SUBMISSION
+===================================================== */
+
+document.addEventListener(
+  "keydown",
+  function(event){
+
+    if(
+      event.key === "Enter" &&
+      event.target &&
+      event.target.tagName === "INPUT"
+    ){
+
+      /*
+        Do not submit anything accidentally.
+        User must press the actual button.
+      */
 
     }
 
-
-    let html = "";
-
-
-    snapshot.forEach(
-      function(doc){
-
-        const data =
-          doc.data();
-
-
-        html +=
-
-          "<div style='" +
-
-          "background:#f8fafc;" +
-          "border:1px solid #e5e7eb;" +
-          "border-radius:14px;" +
-          "padding:13px;" +
-          "margin-bottom:10px;" +
-
-          "'>" +
-
-
-          "<div style='font-size:13px;font-weight:900'>" +
-
-          (data.bookingId || "Booking") +
-
-          "</div>" +
-
-
-          "<div style='font-size:11px;color:#667085;margin-top:6px'>" +
-
-          (data.pickup || "") +
-
-          " → " +
-
-          (data.destination || "") +
-
-          "</div>" +
-
-
-          "<div style='font-size:11px;margin-top:6px'>" +
-
-          "Distance: " +
-
-          (data.distanceKm || 0) +
-
-          " KM" +
-
-          "</div>" +
-
-
-          "<div style='font-size:12px;font-weight:900;margin-top:5px'>" +
-
-          "Estimated Fare: ₹" +
-
-          Number(
-            data.estimatedFare || 0
-          ).toLocaleString(
-            "en-IN"
-          ) +
-
-          "</div>" +
-
-
-          "<div style='font-size:11px;margin-top:5px'>" +
-
-          "Status: " +
-
-          (data.status || "pending") +
-
-          "</div>" +
-
-
-          "</div>";
-
-      }
-    );
-
-
-    container.innerHTML =
-      html;
-
-
-  }catch(error){
-
-    console.error(error);
-
-
-    container.innerHTML =
-
-      "<div style='color:#dc2626;font-size:13px;font-weight:800'>" +
-
-      "Unable to load bookings. Please check Firebase rules." +
-
-      "</div>";
-
   }
+);
 
-};
 
-</script>
 
-</body>
-</html>
+/* ===========
