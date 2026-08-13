@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
 
 <meta
   name="viewport"
-  content="width=device-width,initial-scale=1.0"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 >
 
-<meta
-  name="theme-color"
-  content="#111827"
->
+<meta name="theme-color" content="#111827">
 
 <title>Darshana Sethu Cab</title>
 
 <style>
 
 /* =====================================================
-   RESET
+   DARSHANA SETHU CAB
+   CUSTOMER PWA — NEW PREMIUM DESIGN
 ===================================================== */
 
 *{
   box-sizing:border-box;
   margin:0;
   padding:0;
+  -webkit-tap-highlight-color:transparent;
 }
 
 html{
@@ -35,29 +33,48 @@ html{
 
 body{
   font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
     Arial,
-    Helvetica,
     sans-serif;
 
-  background:#f5f6f8;
+  background:#f4f6f8;
   color:#111827;
 
-  padding-bottom:92px;
+  padding-bottom:88px;
 }
 
 button,
 input,
 select{
-  font-family:inherit;
+  font:inherit;
 }
 
 button{
   cursor:pointer;
 }
 
-button:disabled{
-  opacity:.65;
-  cursor:not-allowed;
+button:active{
+  transform:scale(.98);
+}
+
+.hidden{
+  display:none!important;
+}
+
+
+/* =====================================================
+   APP SHELL
+===================================================== */
+
+.app{
+  width:100%;
+  max-width:680px;
+  margin:auto;
+  min-height:100vh;
 }
 
 
@@ -71,70 +88,103 @@ button:disabled{
   z-index:1000;
 
   background:#111827;
+
   color:#fff;
 
-  padding:14px 16px;
+  padding:
+    15px
+    17px
+    14px;
 
   box-shadow:
-    0 3px 15px rgba(0,0,0,.16);
+    0 4px 20px rgba(0,0,0,.14);
 }
 
 .header-inner{
-  max-width:650px;
-  margin:auto;
-
   display:flex;
   align-items:center;
   justify-content:space-between;
+
+  gap:12px;
 }
 
-.logo{
-  font-size:18px;
-  font-weight:900;
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.brand-mark{
+  width:40px;
+  height:40px;
+
+  border-radius:13px;
+
+  background:#f5b400;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:#111827;
+
+  font-size:20px;
+  font-weight:1000;
+
+  box-shadow:
+    0 5px 12px rgba(245,180,0,.22);
+}
+
+.brand-name{
+  font-size:15px;
+  line-height:1.1;
+
+  font-weight:1000;
+
   letter-spacing:.2px;
 }
 
-.logo span{
+.brand-name span{
   color:#f5b400;
 }
 
-.tagline{
-  margin-top:4px;
+.brand-sub{
+  color:#9ca3af;
 
-  font-size:8px;
+  font-size:7px;
+
+  font-weight:900;
+
   letter-spacing:1.1px;
 
-  color:#cbd5e1;
-  font-weight:800;
+  margin-top:4px;
 }
 
-.language{
-  border:1px solid #475569;
+.lang-btn{
+  border:1px solid #374151;
 
   background:#1f2937;
+
   color:#fff;
 
-  padding:8px 12px;
+  border-radius:22px;
 
-  border-radius:20px;
+  padding:8px 11px;
 
-  font-size:11px;
-  font-weight:800;
+  font-size:10px;
+
+  font-weight:900;
 }
 
 
 /* =====================================================
-   MAIN
+   PAGE
 ===================================================== */
-
-main{
-  max-width:650px;
-  margin:auto;
-}
 
 .page{
   display:none;
-  padding:14px;
+
+  padding:15px;
 }
 
 .page.active{
@@ -148,17 +198,26 @@ main{
 
 .hero{
   position:relative;
+
   overflow:hidden;
 
-  background:#111827;
+  min-height:245px;
 
-  border-radius:24px;
+  border-radius:27px;
 
-  padding:27px 19px;
+  padding:24px 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111827 0%,
+      #182234 100%
+    );
+
+  box-shadow:
+    0 10px 30px rgba(17,24,39,.14);
 
   margin-bottom:14px;
-
-  min-height:225px;
 }
 
 .hero:before{
@@ -166,17 +225,17 @@ main{
 
   position:absolute;
 
-  width:220px;
-  height:220px;
+  width:210px;
+  height:210px;
+
+  right:-100px;
+  top:-100px;
 
   border-radius:50%;
 
-  right:-105px;
-  top:-110px;
-
   background:#f5b400;
 
-  opacity:.15;
+  opacity:.12;
 }
 
 .hero:after{
@@ -184,17 +243,17 @@ main{
 
   position:absolute;
 
-  width:120px;
-  height:120px;
+  width:145px;
+  height:145px;
+
+  left:-75px;
+  bottom:-75px;
 
   border-radius:50%;
 
-  left:-65px;
-  bottom:-65px;
-
   background:#f5b400;
 
-  opacity:.08;
+  opacity:.07;
 }
 
 .hero-content{
@@ -203,74 +262,82 @@ main{
 }
 
 .hero-badge{
-  display:inline-block;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
 
-  background:
-    rgba(245,180,0,.13);
+  background:rgba(245,180,0,.12);
+
+  border:1px solid rgba(245,180,0,.18);
 
   color:#f5b400;
 
-  padding:6px 10px;
+  border-radius:30px;
+
+  padding:7px 10px;
+
+  font-size:9px;
+
+  font-weight:1000;
+
+  letter-spacing:.5px;
+}
+
+.hero-title{
+  color:#fff;
+
+  font-size:30px;
+
+  line-height:1.12;
+
+  font-weight:1000;
+
+  letter-spacing:-.7px;
+
+  margin-top:15px;
+
+  max-width:450px;
+}
+
+.hero-title span{
+  color:#f5b400;
+}
+
+.hero-text{
+  color:#cbd5e1;
+
+  font-size:12px;
+
+  line-height:1.6;
+
+  margin-top:10px;
+
+  max-width:440px;
+}
+
+.hero-trust{
+  display:flex;
+  gap:7px;
+
+  margin-top:16px;
+
+  flex-wrap:wrap;
+}
+
+.trust-pill{
+  background:rgba(255,255,255,.07);
+
+  color:#e5e7eb;
+
+  border:1px solid rgba(255,255,255,.08);
+
+  padding:7px 9px;
 
   border-radius:20px;
 
-  font-size:9px;
+  font-size:8px;
+
   font-weight:900;
-
-  letter-spacing:.5px;
-
-  margin-bottom:12px;
-}
-
-.hero h1{
-  max-width:430px;
-
-  color:#fff;
-
-  font-size:29px;
-  line-height:1.18;
-
-  margin-bottom:9px;
-}
-
-.hero p{
-  max-width:470px;
-
-  color:#cbd5e1;
-
-  font-size:13px;
-  line-height:1.55;
-}
-
-.hero-buttons{
-  display:flex;
-
-  gap:9px;
-
-  margin-top:18px;
-}
-
-.hero-button{
-  flex:1;
-
-  border:0;
-
-  border-radius:13px;
-
-  padding:14px 9px;
-
-  font-size:13px;
-  font-weight:900;
-}
-
-.hero-book{
-  background:#f5b400;
-  color:#111827;
-}
-
-.hero-map{
-  background:#fff;
-  color:#111827;
 }
 
 
@@ -281,15 +348,19 @@ main{
 .booking-card{
   background:#fff;
 
-  border-radius:21px;
+  border-radius:23px;
 
   padding:17px;
 
   box-shadow:
-    0 4px 18px rgba(0,0,0,.07);
+    0 5px 22px rgba(15,23,42,.06);
+
+  border:1px solid #eef0f3;
+
+  margin-bottom:14px;
 }
 
-.booking-heading{
+.card-heading{
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -297,82 +368,92 @@ main{
   margin-bottom:15px;
 }
 
-.booking-heading h2{
-  font-size:19px;
+.card-heading h2{
+  font-size:18px;
+
+  font-weight:1000;
+
+  letter-spacing:-.2px;
+}
+
+.card-heading small{
+  color:#667085;
+
+  font-size:9px;
+
+  font-weight:800;
 }
 
 
 /* =====================================================
-   LOCATION
+   LOCATION INPUTS
 ===================================================== */
 
-.location-box{
-  border:1px solid #e1e5ea;
+.location-stack{
+  border:1px solid #e4e7ec;
 
-  background:#fafafa;
+  border-radius:17px;
 
-  border-radius:14px;
+  overflow:hidden;
 
-  padding:12px;
-
-  margin-bottom:8px;
+  background:#fafbfc;
 }
 
-.location-top{
+.location{
+  padding:13px;
+
+  display:flex;
+
+  gap:11px;
+
+  align-items:center;
+}
+
+.location + .location{
+  border-top:1px solid #e8ebef;
+}
+
+.location-icon{
+  width:30px;
+  height:30px;
+
+  border-radius:10px;
+
   display:flex;
   align-items:center;
-  justify-content:space-between;
-
-  margin-bottom:7px;
-}
-
-.location-label{
-  font-size:9px;
-
-  font-weight:900;
-
-  letter-spacing:.6px;
-
-  color:#667085;
-}
-
-.maps-button{
-  border:0;
-
-  background:transparent;
-
-  color:#2563eb;
-
-  font-size:10px;
-
-  font-weight:900;
-}
-
-.location-row{
-  display:flex;
-  align-items:center;
-
-  gap:9px;
-}
-
-.location-dot{
-  width:9px;
-  height:9px;
+  justify-content:center;
 
   flex:none;
 
-  border-radius:50%;
-
-  background:#16a34a;
+  font-size:14px;
 }
 
-.location-dot.destination{
-  border-radius:3px;
-
-  background:#111827;
+.pickup-icon{
+  background:#dcfce7;
 }
 
-.location-row input{
+.destination-icon{
+  background:#fff3cd;
+}
+
+.location-content{
+  min-width:0;
+  flex:1;
+}
+
+.location-label{
+  color:#667085;
+
+  font-size:8px;
+
+  font-weight:1000;
+
+  letter-spacing:.7px;
+
+  margin-bottom:4px;
+}
+
+.location-input{
   width:100%;
 
   border:0;
@@ -380,17 +461,42 @@ main{
 
   background:transparent;
 
-  font-size:14px;
-
   color:#111827;
+
+  font-size:13px;
+
+  font-weight:700;
 }
 
-.location-row input::placeholder{
+.location-input::placeholder{
   color:#98a2b3;
+
+  font-weight:500;
 }
+
+.location-map{
+  border:0;
+
+  background:#eef2ff;
+
+  color:#2563eb;
+
+  border-radius:9px;
+
+  padding:7px;
+
+  font-size:11px;
+
+  flex:none;
+}
+
+
+/* =====================================================
+   CURRENT LOCATION
+===================================================== */
 
 .current-location{
-  display:block;
+  width:100%;
 
   border:0;
 
@@ -398,11 +504,13 @@ main{
 
   color:#2563eb;
 
-  font-size:11px;
+  text-align:left;
+
+  padding:10px 2px 3px;
+
+  font-size:10px;
 
   font-weight:900;
-
-  padding:4px 0 12px;
 }
 
 
@@ -410,53 +518,426 @@ main{
    TRIP TYPE
 ===================================================== */
 
-.trip-title{
-  font-size:10px;
-
-  font-weight:900;
-
+.field-title{
   color:#667085;
 
-  margin:5px 0 7px;
+  font-size:8px;
+
+  font-weight:1000;
+
+  letter-spacing:.7px;
+
+  margin:
+    16px
+    0
+    7px;
 }
 
-.trip-types{
+.trip-grid{
   display:grid;
 
-  grid-template-columns:
-    1fr 1fr;
+  grid-template-columns:1fr 1fr;
 
   gap:8px;
 }
 
-.trip-type{
-  border:1px solid #e1e5ea;
+.trip-btn{
+  border:1px solid #e2e6eb;
 
   background:#fff;
 
-  color:#344054;
+  color:#475467;
 
-  border-radius:12px;
+  border-radius:13px;
 
-  padding:12px 8px;
+  padding:12px 9px;
 
-  font-size:12px;
+  font-size:11px;
 
   font-weight:900;
+
+  text-align:left;
+
+  transition:.2s;
 }
 
-.trip-type.active{
+.trip-btn.active{
   border-color:#f5b400;
 
   background:#fff9df;
 
   color:#111827;
+
+  box-shadow:
+    0 3px 10px rgba(245,180,0,.12);
+}
+
+.trip-btn-icon{
+  font-size:17px;
+
+  margin-bottom:5px;
+}
+
+.trip-btn-text{
+  display:block;
 }
 
 
 /* =====================================================
-   PRIMARY BUTTONS
+   BOOK BUTTON
 ===================================================== */
+
+.book-button{
+  width:100%;
+
+  border:0;
+
+  background:#f5b400;
+
+  color:#111827;
+
+  border-radius:15px;
+
+  padding:15px;
+
+  margin-top:14px;
+
+  font-size:13px;
+
+  font-weight:1000;
+
+  box-shadow:
+    0 7px 16px rgba(245,180,0,.22);
+}
+
+
+/* =====================================================
+   FARE NOTE
+===================================================== */
+
+.fare-note{
+  display:flex;
+
+  gap:8px;
+
+  align-items:flex-start;
+
+  margin-top:10px;
+
+  padding:10px 11px;
+
+  border-radius:12px;
+
+  background:#f8fafc;
+
+  color:#667085;
+
+  font-size:9px;
+
+  line-height:1.5;
+
+  font-weight:700;
+}
+
+.fare-note-icon{
+  flex:none;
+
+  font-size:12px;
+}
+
+
+/* =====================================================
+   SECTION HEADER
+===================================================== */
+
+.section-head{
+  display:flex;
+
+  align-items:flex-end;
+
+  justify-content:space-between;
+
+  margin:
+    20px
+    2px
+    10px;
+}
+
+.section-head h2{
+  font-size:18px;
+
+  font-weight:1000;
+
+  letter-spacing:-.3px;
+}
+
+.section-head span{
+  color:#667085;
+
+  font-size:9px;
+
+  font-weight:700;
+}
+
+
+/* =====================================================
+   SERVICE CARDS
+===================================================== */
+
+.service-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:9px;
+}
+
+.service-card{
+  background:#fff;
+
+  border:1px solid #eef0f3;
+
+  border-radius:17px;
+
+  padding:14px 9px;
+
+  box-shadow:
+    0 4px 14px rgba(15,23,42,.04);
+}
+
+.service-icon{
+  width:38px;
+  height:38px;
+
+  border-radius:12px;
+
+  background:#f8fafc;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:20px;
+
+  margin-bottom:9px;
+}
+
+.service-card b{
+  display:block;
+
+  font-size:10px;
+
+  font-weight:1000;
+}
+
+.service-card p{
+  color:#667085;
+
+  font-size:8px;
+
+  line-height:1.4;
+
+  margin-top:4px;
+}
+
+
+/* =====================================================
+   TRUST STRIP
+===================================================== */
+
+.trust-strip{
+  background:#111827;
+
+  color:#fff;
+
+  border-radius:21px;
+
+  padding:16px;
+
+  margin-top:14px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+}
+
+.trust-shield{
+  width:42px;
+  height:42px;
+
+  flex:none;
+
+  border-radius:14px;
+
+  background:#f5b400;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:#111827;
+
+  font-size:21px;
+}
+
+.trust-content b{
+  display:block;
+
+  font-size:12px;
+}
+
+.trust-content span{
+  display:block;
+
+  color:#cbd5e1;
+
+  font-size:9px;
+
+  line-height:1.4;
+
+  margin-top:3px;
+}
+
+
+/* =====================================================
+   PAGE TOP
+===================================================== */
+
+.page-top{
+  padding:
+    7px
+    2px
+    15px;
+}
+
+.page-top h1{
+  font-size:25px;
+
+  font-weight:1000;
+
+  letter-spacing:-.5px;
+}
+
+.page-top p{
+  color:#667085;
+
+  font-size:11px;
+
+  line-height:1.5;
+
+  margin-top:5px;
+}
+
+
+/* =====================================================
+   BOOKING FORM
+===================================================== */
+
+.trip-summary{
+  background:#111827;
+
+  color:#fff;
+
+  border-radius:18px;
+
+  padding:15px;
+
+  margin-bottom:14px;
+}
+
+.summary-label{
+  color:#9ca3af;
+
+  font-size:8px;
+
+  font-weight:1000;
+
+  letter-spacing:.8px;
+
+  margin-bottom:8px;
+}
+
+.summary-row{
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  font-size:11px;
+
+  font-weight:800;
+
+  line-height:1.5;
+}
+
+.summary-dot{
+  width:7px;
+  height:7px;
+
+  border-radius:50%;
+
+  background:#f5b400;
+
+  flex:none;
+}
+
+.summary-arrow{
+  color:#f5b400;
+
+  font-size:13px;
+
+  margin:
+    3px
+    0
+    3px
+    2px;
+}
+
+.form-label{
+  display:block;
+
+  color:#344054;
+
+  font-size:9px;
+
+  font-weight:1000;
+
+  margin:
+    13px
+    0
+    6px;
+}
+
+.form-input,
+.form-select{
+  width:100%;
+
+  border:1px solid #dfe3e8;
+
+  background:#fff;
+
+  color:#111827;
+
+  outline:0;
+
+  border-radius:12px;
+
+  padding:13px;
+
+  font-size:13px;
+}
+
+.form-input:focus,
+.form-select:focus{
+  border-color:#f5b400;
+
+  box-shadow:
+    0 0 0 3px rgba(245,180,0,.10);
+}
 
 .primary-button{
   width:100%;
@@ -469,16 +950,16 @@ main{
 
   color:#111827;
 
-  padding:15px;
+  padding:14px;
 
-  margin-top:13px;
+  margin-top:14px;
 
-  font-size:14px;
+  font-size:12px;
 
-  font-weight:900;
+  font-weight:1000;
 }
 
-.dark-button{
+.secondary-button{
   width:100%;
 
   border:0;
@@ -489,303 +970,37 @@ main{
 
   color:#fff;
 
-  padding:15px;
+  padding:14px;
 
-  margin-top:10px;
-
-  font-size:14px;
-
-  font-weight:900;
-}
-
-
-/* =====================================================
-   FARE ESTIMATE
-===================================================== */
-
-.estimate{
-  display:none;
-
-  margin-top:13px;
-
-  border-radius:17px;
-
-  background:#f8fafc;
-
-  border:1px solid #e5e7eb;
-
-  padding:15px;
-}
-
-.estimate.show{
-  display:block;
-}
-
-.estimate-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  margin-bottom:10px;
-}
-
-.estimate-head span:first-child{
-  font-size:11px;
-
-  font-weight:900;
-
-  color:#667085;
-}
-
-.estimate-status{
-  font-size:10px;
-
-  color:#15803d;
-
-  font-weight:900;
-}
-
-.estimate-row{
-  display:flex;
-
-  align-items:flex-start;
-
-  justify-content:space-between;
-
-  gap:12px;
-
-  padding:8px 0;
-
-  border-bottom:1px solid #e5e7eb;
+  margin-top:9px;
 
   font-size:12px;
-}
 
-.estimate-row:last-child{
-  border-bottom:0;
-}
-
-.estimate-label{
-  color:#667085;
-}
-
-.estimate-value{
-  font-weight:900;
-
-  text-align:right;
-
-  max-width:65%;
-}
-
-.total-row{
-  margin-top:5px;
-
-  padding-top:13px;
-}
-
-.total-label{
-  font-size:13px;
-
-  font-weight:900;
-}
-
-.total-value{
-  font-size:22px;
-
-  color:#15803d;
-
-  font-weight:900;
-}
-
-.extra-note{
-  margin-top:11px;
-
-  padding:10px;
-
-  border-radius:10px;
-
-  background:#fff7d6;
-
-  color:#795900;
-
-  font-size:10px;
-
-  line-height:1.5;
-
-  font-weight:700;
+  font-weight:1000;
 }
 
 
 /* =====================================================
-   SERVICES
-===================================================== */
-
-.section-title{
-  margin:20px 2px 10px;
-}
-
-.section-title h2{
-  font-size:18px;
-}
-
-.services{
-  display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
-  gap:9px;
-}
-
-.service{
-  background:#fff;
-
-  border-radius:16px;
-
-  padding:15px 7px;
-
-  text-align:center;
-
-  box-shadow:
-    0 3px 12px rgba(0,0,0,.05);
-}
-
-.service-icon{
-  font-size:23px;
-
-  margin-bottom:7px;
-}
-
-.service b{
-  display:block;
-
-  font-size:11px;
-}
-
-.service small{
-  display:block;
-
-  color:#667085;
-
-  font-size:9px;
-
-  margin-top:4px;
-}
-
-
-/* =====================================================
-   PAGE TOP
-===================================================== */
-
-.page-top{
-  padding:6px 2px 15px;
-}
-
-.page-top h1{
-  font-size:24px;
-
-  margin-bottom:5px;
-}
-
-.page-top p{
-  color:#667085;
-
-  font-size:12px;
-
-  line-height:1.55;
-}
-
-
-/* =====================================================
-   BOOKING PAGE
-===================================================== */
-
-.trip-summary{
-  border-radius:17px;
-
-  background:#111827;
-
-  color:#fff;
-
-  padding:16px;
-
-  margin-bottom:13px;
-}
-
-.summary-label{
-  color:#9ca3af;
-
-  font-size:9px;
-
-  font-weight:900;
-
-  letter-spacing:.7px;
-
-  margin-bottom:7px;
-}
-
-.summary-location{
-  font-size:13px;
-
-  font-weight:800;
-
-  line-height:1.5;
-}
-
-.summary-arrow{
-  color:#f5b400;
-
-  margin:6px 0;
-}
-
-.form-label{
-  display:block;
-
-  margin:13px 0 6px;
-
-  color:#344054;
-
-  font-size:11px;
-
-  font-weight:900;
-}
-
-.form-input,
-.form-select{
-  width:100%;
-
-  border:1px solid #d9dee7;
-
-  background:#fff;
-
-  border-radius:12px;
-
-  padding:13px;
-
-  outline:0;
-
-  font-size:14px;
-}
-
-.form-input:focus,
-.form-select:focus{
-  border-color:#f5b400;
-}
-
-
-/* =====================================================
-   SUCCESS
+   SUCCESS CARD
 ===================================================== */
 
 .success-card{
   text-align:center;
+
+  padding:
+    25px
+    17px
+    19px;
 }
 
-.success-icon{
+.success-mark{
   width:68px;
   height:68px;
 
-  margin:3px auto 13px;
+  margin:
+    0
+    auto
+    14px;
 
   border-radius:50%;
 
@@ -795,568 +1010,133 @@ main{
   align-items:center;
   justify-content:center;
 
-  font-size:34px;
+  font-size:31px;
 }
 
 .success-card h1{
-  font-size:23px;
+  font-size:22px;
+
+  font-weight:1000;
 }
 
 .success-card p{
   color:#667085;
 
-  font-size:12px;
+  font-size:11px;
 
   line-height:1.6;
 
   margin-top:7px;
 }
 
-.booking-id-box{
+.booking-number{
+  margin-top:17px;
+
   background:#111827;
 
   color:#fff;
 
-  border-radius:16px;
+  border-radius:17px;
 
-  padding:16px;
-
-  margin-top:17px;
+  padding:15px;
 }
 
-.booking-id-label{
+.booking-number-label{
   color:#9ca3af;
 
-  font-size:9px;
+  font-size:8px;
 
-  font-weight:900;
+  font-weight:1000;
 
   letter-spacing:.8px;
 }
 
-.booking-id{
+.booking-number-value{
   color:#f5b400;
 
-  font-size:22px;
+  font-size:21px;
 
-  font-weight:900;
+  font-weight:1000;
 
-  margin-top:6px;
+  margin-top:5px;
 }
 
-.pin-box{
-  margin-top:10px;
-
-  background:#f8fafc;
-
-  border:1px solid #e5e7eb;
-
-  border-radius:14px;
+.ride-pin{
+  margin-top:9px;
 
   padding:13px;
+
+  background:#fff9df;
+
+  border:1px solid #f5e4a0;
+
+  border-radius:15px;
 }
 
-.pin-label{
-  color:#667085;
+.ride-pin-label{
+  color:#795900;
 
-  font-size:9px;
+  font-size:8px;
 
-  font-weight:900;
+  font-weight:1000;
+
+  letter-spacing:.7px;
 }
 
-.pin-value{
-  font-size:22px;
-
-  font-weight:900;
-
-  letter-spacing:4px;
-
-  margin-top:4px;
-}
-
-
-/* =====================================================
-   SAFETY
-===================================================== */
-
-.safety-hero{
-  background:#111827;
-
-  color:#fff;
-
-  border-radius:20px;
-
-  padding:20px;
-
-  margin-bottom:12px;
-}
-
-.safety-icon{
-  font-size:31px;
-
-  margin-bottom:10px;
-}
-
-.safety-hero h2{
-  font-size:21px;
-}
-
-.safety-hero p{
-  color:#cbd5e1;
-
-  font-size:12px;
-
-  line-height:1.55;
-
-  margin-top:7px;
-}
-
-.safety-item{
-  display:flex;
-
-  align-items:center;
-
-  gap:12px;
-
-  padding:15px 0;
-
-  border-bottom:1px solid #edf0f3;
-}
-
-.safety-item:last-child{
-  border-bottom:0;
-}
-
-.safety-item-icon{
-  width:40px;
-  height:40px;
-
-  border-radius:12px;
-
-  background:#f1f5f9;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-size:20px;
-}
-
-.safety-item-content{
-  flex:1;
-}
-
-.safety-item-content b{
-  display:block;
-
-  font-size:12px;
-}
-
-.safety-item-content span{
-  display:block;
-
-  color:#667085;
-
-  font-size:10px;
-
-  margin-top:3px;
-}
-
-.safety-active{
-  color:#15803d;
-
-  font-size:10px;
-
-  font-weight:900;
-}
-
-.sos-button{
-  width:100%;
-
-  border:0;
-
-  border-radius:14px;
-
-  background:#dc2626;
-
-  color:#fff;
-
-  padding:15px;
-
-  margin-top:13px;
-
-  font-size:14px;
-
-  font-weight:900;
-}
-
-
-/* =====================================================
-   ACCOUNT
-===================================================== */
-
-.profile-card{
-  background:#111827;
-
-  color:#fff;
-
-  border-radius:22px;
-
-  padding:20px;
-
-  margin-bottom:13px;
-
-  box-shadow:
-    0 6px 20px rgba(0,0,0,.10);
-}
-
-.profile-top{
-  display:flex;
-
-  align-items:center;
-
-  gap:13px;
-}
-
-.profile-avatar{
-  width:55px;
-  height:55px;
-
-  flex:none;
-
-  border-radius:17px;
-
-  background:#f5b400;
-
+.ride-pin-value{
   color:#111827;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
 
   font-size:23px;
 
-  font-weight:900;
-}
+  font-weight:1000;
 
-.profile-info{
-  flex:1;
-}
-
-.profile-info h2{
-  font-size:18px;
-}
-
-.profile-info p{
-  color:#cbd5e1;
-
-  font-size:11px;
-
-  margin-top:4px;
-}
-
-.profile-edit{
-  border:1px solid #475569;
-
-  background:#1f2937;
-
-  color:#fff;
-
-  padding:8px 10px;
-
-  border-radius:10px;
-
-  font-size:10px;
-
-  font-weight:900;
-}
-
-
-/* =====================================================
-   LOYALTY POINTS
-===================================================== */
-
-.loyalty-card{
-  background:#fff;
-
-  border-radius:20px;
-
-  padding:17px;
-
-  margin-bottom:13px;
-
-  box-shadow:
-    0 4px 16px rgba(0,0,0,.06);
-}
-
-.loyalty-head{
-  display:flex;
-
-  align-items:center;
-
-  gap:12px;
-
-  margin-bottom:13px;
-}
-
-.loyalty-icon{
-  width:45px;
-  height:45px;
-
-  border-radius:14px;
-
-  background:#fff7d6;
-
-  display:flex;
-
-  align-items:center;
-  justify-content:center;
-
-  font-size:22px;
-}
-
-.loyalty-head-text{
-  flex:1;
-}
-
-.loyalty-head-text b{
-  display:block;
-
-  font-size:14px;
-}
-
-.loyalty-head-text span{
-  display:block;
-
-  color:#667085;
-
-  font-size:10px;
+  letter-spacing:5px;
 
   margin-top:3px;
 }
 
-.points-display{
-  background:#111827;
-
-  color:#fff;
-
-  border-radius:16px;
-
-  padding:15px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-}
-
-.points-label{
-  color:#cbd5e1;
-
-  font-size:10px;
-
-  font-weight:800;
-}
-
-.points-value{
-  color:#f5b400;
-
-  font-size:25px;
-
-  font-weight:900;
-
-  margin-top:3px;
-}
-
-.points-unit{
-  font-size:10px;
-
-  color:#fff;
-
-  font-weight:800;
-}
-
-.loyalty-note{
-  color:#667085;
-
-  font-size:10px;
-
-  line-height:1.5;
-
-  margin-top:10px;
-}
-
 
 /* =====================================================
-   ACCOUNT MENU
-===================================================== */
-
-.account-menu{
-  background:#fff;
-
-  border-radius:20px;
-
-  overflow:hidden;
-
-  box-shadow:
-    0 4px 16px rgba(0,0,0,.06);
-}
-
-.account-menu-item{
-  width:100%;
-
-  border:0;
-
-  background:#fff;
-
-  display:flex;
-
-  align-items:center;
-
-  text-align:left;
-
-  padding:15px;
-
-  border-bottom:1px solid #edf0f3;
-
-  gap:12px;
-}
-
-.account-menu-item:last-child{
-  border-bottom:0;
-}
-
-.menu-icon{
-  width:40px;
-  height:40px;
-
-  flex:none;
-
-  border-radius:12px;
-
-  background:#f5f6f8;
-
-  display:flex;
-
-  align-items:center;
-  justify-content:center;
-
-  font-size:19px;
-}
-
-.menu-text{
-  flex:1;
-}
-
-.menu-text b{
-  display:block;
-
-  font-size:12px;
-}
-
-.menu-text span{
-  display:block;
-
-  color:#667085;
-
-  font-size:10px;
-
-  margin-top:3px;
-}
-
-.menu-arrow{
-  color:#98a2b3;
-
-  font-size:20px;
-}
-
-
-/* =====================================================
-   COMMON
-===================================================== */
-
-.hidden{
-  display:none!important;
-}
-
-.muted{
-  color:#667085;
-}
-
-.center{
-  text-align:center;
-}
-
-.empty-state{
-  text-align:center;
-
-  padding:28px 12px;
-
-  color:#667085;
-}
-
-.empty-state-icon{
-  font-size:35px;
-
-  margin-bottom:9px;
-}
-
-.empty-state h3{
-  color:#344054;
-
-  font-size:15px;
-
-  margin-bottom:5px;
-}
-
-.empty-state p{
-  font-size:11px;
-
-  line-height:1.5;
-}
-
-
-/* =====================================================
-   MOBILE
+   RESPONSIVE
 ===================================================== */
 
 @media(max-width:380px){
 
-  .hero h1{
-    font-size:25px;
+  .hero{
+    padding:21px 16px;
   }
 
-  .hero-buttons{
-    flex-direction:column;
+  .hero-title{
+    font-size:26px;
   }
 
-  .services{
+  .page{
+    padding:12px;
+  }
+
+  .service-grid{
     gap:6px;
+  }
+
+  .service-card{
+    padding:
+      12px
+      7px;
   }
 
 }
 
 
 /* =====================================================
-   DESKTOP
+   PART 2 CONTINUES DIRECTLY BELOW
 ===================================================== */
 
-@media(min-width:700px){
-
-  .page{
-    padding-left:4px;
-    padding-right:4px;
-  }
-
-}
-
 </style>
-
 </head>
 
 <body>
 
+<div class="app">
 
 <!-- =====================================================
      HEADER
@@ -1366,20 +1146,28 @@ main{
 
   <div class="header-inner">
 
-    <div>
+    <div class="brand">
 
-      <div class="logo">
-        DARSHANA <span>SETHU CAB</span>
+      <div class="brand-mark">
+        🚕
       </div>
 
-      <div class="tagline">
-        SAFE • SIMPLE • TRUSTED TRAVEL
+      <div>
+
+        <div class="brand-name">
+          DARSHANA <span>SETHU CAB</span>
+        </div>
+
+        <div class="brand-sub">
+          SAFE • SIMPLE • TRUSTED TRAVEL
+        </div>
+
       </div>
 
     </div>
 
     <button
-      class="language"
+      class="lang-btn"
       id="languageButton"
       onclick="toggleLanguage()"
     >
@@ -1391,9 +1179,6 @@ main{
 </header>
 
 
-<main>
-
-
 <!-- =====================================================
      HOME PAGE
 ===================================================== -->
@@ -1403,38 +1188,46 @@ main{
   class="page active"
 >
 
+  <!-- HERO -->
+
   <div class="hero">
 
     <div class="hero-content">
 
       <div class="hero-badge">
-        ● CAB SERVICE
+        ✦ TEMPLE • FAMILY • OUTSTATION
       </div>
 
-      <h1 id="heroTitle">
-        Your journey starts here.
+      <h1
+        class="hero-title"
+        id="heroTitle"
+      >
+        Your journey,
+        <span>our care.</span>
       </h1>
 
-      <p id="heroText">
-        Comfortable cab service for
-        local, outstation and family travel.
+      <p
+        class="hero-text"
+        id="heroText"
+      >
+        Comfortable and dependable cab service
+        for families, temple journeys and
+        outstation travel.
       </p>
 
-      <div class="hero-buttons">
+      <div class="hero-trust">
 
-        <button
-          class="hero-button hero-book"
-          onclick="focusBooking()"
-        >
-          🚕 Book a Cab
-        </button>
+        <div class="trust-pill">
+          🛡️ Safety focused
+        </div>
 
-        <button
-          class="hero-button hero-map"
-          onclick="useCurrentLocation()"
-        >
-          📍 My Location
-        </button>
+        <div class="trust-pill">
+          ✓ Trusted service
+        </div>
+
+        <div class="trust-pill">
+          🚕 Comfortable travel
+        </div>
 
       </div>
 
@@ -1443,52 +1236,92 @@ main{
   </div>
 
 
-<!-- =====================================================
-     TRIP PLANNER
-===================================================== -->
+  <!-- BOOKING -->
 
-  <div
-    class="booking-card"
-    id="bookingCard"
-  >
+  <div class="booking-card">
 
-    <div class="booking-heading">
+    <div class="card-heading">
 
-      <h2>
-        Plan your trip
+      <h2 id="planTitle">
+        Where are you going?
       </h2>
+
+      <small>
+        Book your trip
+      </small>
 
     </div>
 
 
-<!-- PICKUP -->
+    <div class="location-stack">
 
-    <div class="location-box">
 
-      <div class="location-top">
+      <!-- PICKUP -->
 
-        <span class="location-label">
-          PICKUP LOCATION
-        </span>
+      <div class="location">
+
+        <div class="location-icon pickup-icon">
+          ●
+        </div>
+
+        <div class="location-content">
+
+          <div class="location-label">
+            PICKUP LOCATION
+          </div>
+
+          <input
+            id="pickupLocation"
+            class="location-input"
+            type="text"
+            placeholder="Enter pickup location"
+            autocomplete="street-address"
+          >
+
+        </div>
 
         <button
-          class="maps-button"
+          class="location-map"
           onclick="openPickupMap()"
+          aria-label="Pickup map"
         >
-          🗺️ Maps
+          🗺️
         </button>
 
       </div>
 
-      <div class="location-row">
 
-        <div class="location-dot"></div>
+      <!-- DESTINATION -->
 
-        <input
-          id="pickupLocation"
-          type="text"
-          placeholder="Enter pickup location"
+      <div class="location">
+
+        <div class="location-icon destination-icon">
+          ◆
+        </div>
+
+        <div class="location-content">
+
+          <div class="location-label">
+            DESTINATION
+          </div>
+
+          <input
+            id="destinationLocation"
+            class="location-input"
+            type="text"
+            placeholder="Where do you want to go?"
+            autocomplete="street-address"
+          >
+
+        </div>
+
+        <button
+          class="location-map"
+          onclick="openDestinationMap()"
+          aria-label="Destination map"
         >
+          🗺️
+        </button>
 
       </div>
 
@@ -1503,156 +1336,181 @@ main{
     </button>
 
 
-<!-- DESTINATION -->
+    <!-- TRIP TYPE -->
 
-    <div class="location-box">
-
-      <div class="location-top">
-
-        <span class="location-label">
-          DESTINATION
-        </span>
-
-        <button
-          class="maps-button"
-          onclick="openDestinationMap()"
-        >
-          🗺️ Maps
-        </button>
-
-      </div>
-
-      <div class="location-row">
-
-        <div class="location-dot destination"></div>
-
-        <input
-          id="destinationLocation"
-          type="text"
-          placeholder="Where do you want to go?"
-        >
-
-      </div>
-
-    </div>
-
-
-<!-- TRIP TYPE -->
-
-    <div class="trip-title">
+    <div class="field-title">
       TRIP TYPE
     </div>
 
-    <div class="trip-types">
+    <div class="trip-grid">
 
       <button
         id="oneWay"
-        class="trip-type active"
+        class="trip-btn active"
         onclick="selectTripType('oneway')"
       >
-        One Way
-      </button>
 
-      <button
-        id="roundTrip"
-        class="trip-type"
-        onclick="selectTripType('roundtrip')"
-      >
-        Round Trip
-      </button>
-
-    </div>
-
-
-<!-- FARE ESTIMATE -->
-
-    <div
-      id="estimateBox"
-      class="estimate"
-    >
-
-      <div class="estimate-head">
-
-        <span>
-          FARE ESTIMATE
-        </span>
-
-        <span class="estimate-status">
-          Estimated
-        </span>
-
-      </div>
-
-      <div class="estimate-row">
-
-        <span class="estimate-label">
-          Trip
-        </span>
+        <div class="trip-btn-icon">
+          ➜
+        </div>
 
         <span
-          class="estimate-value"
-          id="estimateTrip"
+          class="trip-btn-text"
         >
           One Way
         </span>
 
-      </div>
+      </button>
 
-      <div class="estimate-row total-row">
 
-        <span class="total-label">
-          Estimated Fare
+      <button
+        id="roundTrip"
+        class="trip-btn"
+        onclick="selectTripType('roundtrip')"
+      >
+
+        <div class="trip-btn-icon">
+          ⇄
+        </div>
+
+        <span
+          class="trip-btn-text"
+        >
+          Round Trip
         </span>
 
-        <strong
-          class="total-value"
-          id="fareText"
-        >
-          ₹0
-        </strong>
+      </button>
 
+    </div>
+
+
+    <!-- IMPORTANT:
+         NO KM
+         NO PER KM RATE
+         NO COMMISSION
+         NO INTERNAL PRICING
+         CUSTOMER ONLY SEES CONFIRMATION MESSAGE
+    -->
+
+    <div class="fare-note">
+
+      <div class="fare-note-icon">
+        ℹ️
       </div>
 
-      <div class="extra-note">
-        ℹ️ Toll charges and parking fees
-        are extra, if applicable.
+      <div>
+        Final fare will be confirmed by
+        Darshana Sethu Cab based on the selected
+        trip and vehicle availability.
       </div>
 
     </div>
 
 
     <button
-      class="primary-button"
-      id="calculateButton"
-      onclick="calculateFare()"
-    >
-      Get Fare Estimate
-    </button>
-
-    <button
-      class="dark-button hidden"
-      id="continueButton"
+      class="book-button"
       onclick="startBooking()"
     >
-      Continue with this Fare →
+      🚕 Continue Booking
     </button>
 
   </div>
 
 
-<!-- =====================================================
-     SERVICES
-===================================================== -->
+  <!-- SERVICES -->
 
-  <div class="section-title">
+  <div class="section-head">
 
     <h2>
+      Why travel with us?
+    </h2>
 
-      <!-- =====================================================
-     PART 2
-     DARSHANA SETHU CAB
-     CONTINUATION
-===================================================== -->
+    <span>
+      Sethu Service
+    </span>
+
+  </div>
+
+
+  <div class="service-grid">
+
+    <div class="service-card">
+
+      <div class="service-icon">
+        🛡️
+      </div>
+
+      <b>
+        Safety First
+      </b>
+
+      <p>
+        Safety-focused travel experience.
+      </p>
+
+    </div>
+
+
+    <div class="service-card">
+
+      <div class="service-icon">
+        🚕
+      </div>
+
+      <b>
+        Comfortable
+      </b>
+
+      <p>
+        Travel comfortably with your family.
+      </p>
+
+    </div>
+
+
+    <div class="service-card">
+
+      <div class="service-icon">
+        🛕
+      </div>
+
+      <b>
+        Temple Travel
+      </b>
+
+      <p>
+        Convenient journeys to temples.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- TRUST -->
+
+  <div class="trust-strip">
+
+    <div class="trust-shield">
+      ✓
+    </div>
+
+    <div class="trust-content">
+
+      <b>
+        Travel with confidence
+      </b>
+
+      <span>
+        Clear booking details, Ride PIN and
+        safety support throughout your journey.
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
 
 
 <!-- =====================================================
@@ -1671,7 +1529,8 @@ main{
     </h1>
 
     <p>
-      Enter your details to confirm your cab booking.
+      Just a few details and your journey request
+      will be ready.
     </p>
 
   </div>
@@ -1679,173 +1538,53 @@ main{
 
   <div class="booking-card">
 
-    <div
-      class="trip-summary"
-      id="bookingSummary"
-    >
+    <div class="trip-summary">
 
       <div class="summary-label">
         YOUR TRIP
       </div>
 
-      <div
-        class="summary-location"
-        id="summaryPickup"
-      >
-        Pickup location
+      <div class="summary-row">
+
+        <div class="summary-dot"></div>
+
+        <div id="summaryPickup">
+          Pickup location
+        </div>
+
       </div>
 
       <div class="summary-arrow">
         ↓
       </div>
 
-      <div
-        class="summary-location"
-        id="summaryDestination"
-      >
-        Destination
+      <div class="summary-row">
+
+        <div class="summary-dot"></div>
+
+        <div id="summaryDestination">
+          Destination
+        </div>
+
       </div>
 
     </div>
 
 
     <label class="form-label">
-      Full Name
+      FULL NAME
     </label>
 
     <input
-      id="customerName"
-      class="form-input"
-      type="text"
-      placeholder="Enter your name"
-      autocomplete="name"
-    >
-
-
-    <label class="form-label">
-      Mobile Number
-    </label>
-
-    <input
-      id="customerPhone"
-      class="form-input"
-      type="tel"
-      inputmode="numeric"
-      maxlength="10"
-      placeholder="Enter 10-digit mobile number"
-    >
-
-
-    <label class="form-label">
-      Travel Date
-    </label>
-
-    <input
-      id="travelDate"
-      class="form-input"
-      type="date"
-    >
-
-
-    <label class="form-label">
-      Pickup Time
-    </label>
-
-    <input
-      id="travelTime"
-      class="form-input"
-      type="time"
-    >
-
-
-    <label class="form-label">
-      Vehicle Type
-    </label>
-
-    <select
-      id="vehicleType"
-      class="form-select"
-    >
-
-      <option value="sedan">
-        Sedan – Comfortable
-      </option>
-
-      <option value="suv">
-        SUV – Family Travel
-      </option>
-
-      <option value="premium">
-        Premium – Extra Comfort
-      </option>
-
-    </select>
-
-
-    <label class="form-label">
-      Passengers
-    </label>
-
-    <select
-      id="passengers"
-      class="form-select"
-    >
-
-      <option value="1">
-        1 Passenger
-      </option>
-
-      <option value="2">
-        2 Passengers
-      </option>
-
-      <option value="3">
-        3 Passengers
-      </option>
-
-      <option value="4">
-        4 Passengers
-      </option>
-
-      <option value="5">
-        5 Passengers
-      </option>
-
-      <option value="6">
-        6 Passengers
-      </option>
-
-      <option value="7">
-        7 Passengers
-      </option>
-
-    </select>
-
-
-    <button
-      class="primary-button"
-      id="confirmBookingButton"
-      onclick="confirmBooking()"
-    >
-      Confirm Booking
-    </button>
-
-
-    <button
-      class="dark-button"
-      onclick="showPage('home')"
-    >
-      ← Change Trip
-    </button>
-
-  </div>
-
-</section>
-
+     <!-- =====================================================
+     PART 2 / 3
+     DARSHANA SETHU CAB
+     CUSTOMER PWA
+===================================================== -->
 
 
 <!-- =====================================================
-     BOOKING SUCCESS PAGE
+     BOOKING SUCCESS
 ===================================================== -->
 
 <section
@@ -1853,46 +1592,59 @@ main{
   class="page"
 >
 
+  <div class="page-top">
+
+    <h1>
+      Booking Request
+    </h1>
+
+    <p>
+      Your journey request has been received.
+    </p>
+
+  </div>
+
+
   <div class="booking-card success-card">
 
-    <div class="success-icon">
+    <div class="success-mark">
       ✓
     </div>
 
     <h1>
-      Booking Request Sent
+      Booking Sent
     </h1>
 
     <p>
-      Your cab booking request has been received.
-      Our team will contact you shortly.
+      Thank you for choosing Darshana Sethu Cab.
+      Our team will contact you to confirm your trip.
     </p>
 
 
-    <div class="booking-id-box">
+    <div class="booking-number">
 
-      <div class="booking-id-label">
+      <div class="booking-number-label">
         BOOKING ID
       </div>
 
       <div
-        class="booking-id"
+        class="booking-number-value"
         id="bookingId"
       >
-        DSCS-000000
+        DSCS000000
       </div>
 
     </div>
 
 
-    <div class="pin-box">
+    <div class="ride-pin">
 
-      <div class="pin-label">
+      <div class="ride-pin-label">
         YOUR 4-DIGIT RIDE PIN
       </div>
 
       <div
-        class="pin-value"
+        class="ride-pin-value"
         id="ridePin"
       >
         0000
@@ -1910,10 +1662,18 @@ main{
 
 
     <button
-      class="dark-button"
+      class="secondary-button"
+      onclick="showMyBookings()"
+    >
+      📋 View My Booking
+    </button>
+
+
+    <button
+      class="secondary-button"
       onclick="showPage('home')"
     >
-      Back to Home
+      ← Back to Home
     </button>
 
   </div>
@@ -1923,7 +1683,7 @@ main{
 
 
 <!-- =====================================================
-     SAFETY PAGE
+     SAFETY CENTER
 ===================================================== -->
 
 <section
@@ -1938,129 +1698,305 @@ main{
     </h1>
 
     <p>
-      Your safety is important throughout your journey.
+      Simple safety tools for every journey.
     </p>
 
   </div>
 
 
-  <div class="safety-hero">
+  <div
+    class="booking-card"
+    style="
+      background:#111827;
+      color:#fff;
+    "
+  >
 
-    <div class="safety-icon">
+    <div
+      style="
+        font-size:32px;
+        margin-bottom:10px;
+      "
+    >
       🛡️
     </div>
 
-    <h2>
-      Travel with confidence
+    <h2
+      style="
+        font-size:20px;
+        font-weight:1000;
+      "
+    >
+      Your safety matters
     </h2>
 
-    <p>
-      Darshana Sethu Cab is designed with
-      safety-focused travel features.
+    <p
+      style="
+        color:#cbd5e1;
+        font-size:10px;
+        line-height:1.6;
+        margin-top:7px;
+      "
+    >
+      Use these safety features during your
+      Darshana Sethu Cab journey.
     </p>
 
   </div>
 
+
+  <!-- SAFETY ITEMS -->
 
   <div class="booking-card">
 
 
-    <div class="safety-item">
+    <div
+      style="
+        display:flex;
+        gap:12px;
+        align-items:center;
+        padding:13px 0;
+        border-bottom:1px solid #edf0f3;
+      "
+    >
 
-      <div class="safety-item-icon">
+      <div
+        style="
+          width:42px;
+          height:42px;
+          border-radius:13px;
+          background:#f1f5f9;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          font-size:20px;
+          flex:none;
+        "
+      >
         👤
       </div>
 
-      <div class="safety-item-content">
+      <div style="flex:1;">
 
-        <b>
+        <b
+          style="
+            display:block;
+            font-size:12px;
+          "
+        >
           Driver Verification
         </b>
 
-        <span>
-          Driver and vehicle details are checked.
+        <span
+          style="
+            display:block;
+            color:#667085;
+            font-size:9px;
+            margin-top:3px;
+            line-height:1.4;
+          "
+        >
+          Driver and vehicle details should be
+          verified before starting the trip.
         </span>
 
       </div>
 
-      <span class="safety-active">
+      <span
+        style="
+          color:#15803d;
+          font-size:10px;
+          font-weight:1000;
+        "
+      >
         ✓
       </span>
 
     </div>
 
 
-    <div class="safety-item">
+    <div
+      style="
+        display:flex;
+        gap:12px;
+        align-items:center;
+        padding:13px 0;
+        border-bottom:1px solid #edf0f3;
+      "
+    >
 
-      <div class="safety-item-icon">
+      <div
+        style="
+          width:42px;
+          height:42px;
+          border-radius:13px;
+          background:#f1f5f9;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          font-size:20px;
+          flex:none;
+        "
+      >
         🔢
       </div>
 
-      <div class="safety-item-content">
+      <div style="flex:1;">
 
-        <b>
+        <b
+          style="
+            display:block;
+            font-size:12px;
+          "
+        >
           Ride PIN
         </b>
 
-        <span>
-          Confirm your Ride PIN before starting.
+        <span
+          style="
+            display:block;
+            color:#667085;
+            font-size:9px;
+            margin-top:3px;
+            line-height:1.4;
+          "
+        >
+          Confirm your 4-digit Ride PIN
+          before starting the journey.
         </span>
 
       </div>
 
-      <span class="safety-active">
+      <span
+        style="
+          color:#15803d;
+          font-size:10px;
+          font-weight:1000;
+        "
+      >
         ✓
       </span>
 
     </div>
 
 
-    <div class="safety-item">
+    <div
+      style="
+        display:flex;
+        gap:12px;
+        align-items:center;
+        padding:13px 0;
+        border-bottom:1px solid #edf0f3;
+      "
+    >
 
-      <div class="safety-item-icon">
+      <div
+        style="
+          width:42px;
+          height:42px;
+          border-radius:13px;
+          background:#f1f5f9;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          font-size:20px;
+          flex:none;
+        "
+      >
         📍
       </div>
 
-      <div class="safety-item-content">
+      <div style="flex:1;">
 
-        <b>
-          Trip Visibility
+        <b
+          style="
+            display:block;
+            font-size:12px;
+          "
+        >
+          Trip Details
         </b>
 
-        <span>
-          Keep your trip information available.
+        <span
+          style="
+            display:block;
+            color:#667085;
+            font-size:9px;
+            margin-top:3px;
+            line-height:1.4;
+          "
+        >
+          Keep your booking information
+          available during the journey.
         </span>
 
       </div>
 
-      <span class="safety-active">
-        ✓
-      </span>
-
     </div>
 
 
-    <div class="safety-item">
+    <div
+      style="
+        display:flex;
+        gap:12px;
+        align-items:center;
+        padding:13px 0;
+      "
+    >
 
-      <div class="safety-item-icon">
+      <div
+        style="
+          width:42px;
+          height:42px;
+          border-radius:13px;
+          background:#f1f5f9;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          font-size:20px;
+          flex:none;
+        "
+      >
         📤
       </div>
 
-      <div class="safety-item-content">
+      <div style="flex:1;">
 
-        <b>
+        <b
+          style="
+            display:block;
+            font-size:12px;
+          "
+        >
           Share Trip
         </b>
 
-        <span>
-          Share your journey details with family.
+        <span
+          style="
+            display:block;
+            color:#667085;
+            font-size:9px;
+            margin-top:3px;
+            line-height:1.4;
+          "
+        >
+          Share your booking details
+          with family or friends.
         </span>
 
       </div>
 
       <button
-        class="maps-button"
         onclick="shareTrip()"
+        style="
+          border:0;
+          background:#eef2ff;
+          color:#2563eb;
+          border-radius:10px;
+          padding:8px 10px;
+          font-size:9px;
+          font-weight:1000;
+        "
       >
         Share
       </button>
@@ -2068,30 +2004,20 @@ main{
     </div>
 
 
-    <div class="safety-item">
-
-      <div class="safety-item-icon">
-        ☎️
-      </div>
-
-      <div class="safety-item-content">
-
-        <b>
-          Emergency Contact
-        </b>
-
-        <span>
-          Keep a trusted contact informed.
-        </span>
-
-      </div>
-
-    </div>
-
-
     <button
       class="sos-button"
       onclick="triggerSOS()"
+      style="
+        width:100%;
+        border:0;
+        border-radius:14px;
+        background:#dc2626;
+        color:#fff;
+        padding:15px;
+        font-size:13px;
+        font-weight:1000;
+        margin-top:8px;
+      "
     >
       🚨 Emergency SOS
     </button>
@@ -2103,7 +2029,7 @@ main{
 
 
 <!-- =====================================================
-     ACCOUNT PAGE
+     ACCOUNT
 ===================================================== -->
 
 <section
@@ -2118,40 +2044,86 @@ main{
     </h1>
 
     <p>
-      Manage your profile, bookings and rewards.
+      Manage your profile, trips and Sethu Rewards.
     </p>
 
   </div>
 
 
-  <!-- PROFILE -->
+  <!-- PROFILE CARD -->
 
-  <div class="profile-card">
+  <div
+    class="booking-card"
+    style="
+      background:#111827;
+      color:#fff;
+      border:0;
+    "
+  >
 
-    <div class="profile-top">
+    <div
+      style="
+        display:flex;
+        align-items:center;
+        gap:12px;
+      "
+    >
 
       <div
-        class="profile-avatar"
         id="profileAvatar"
+        style="
+          width:55px;
+          height:55px;
+          border-radius:17px;
+          background:#f5b400;
+          color:#111827;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          font-size:22px;
+          font-weight:1000;
+          flex:none;
+        "
       >
         G
       </div>
 
-      <div class="profile-info">
+      <div style="flex:1;">
 
-        <h2 id="profileName">
+        <h2
+          id="profileName"
+          style="
+            font-size:17px;
+            font-weight:1000;
+          "
+        >
           Guest User
         </h2>
 
-        <p id="profilePhone">
+        <p
+          id="profilePhone"
+          style="
+            color:#cbd5e1;
+            font-size:9px;
+            margin-top:4px;
+          "
+        >
           Login to manage your account
         </p>
 
       </div>
 
       <button
-        class="profile-edit"
         onclick="editProfile()"
+        style="
+          border:1px solid #475569;
+          background:#1f2937;
+          color:#fff;
+          border-radius:10px;
+          padding:8px 10px;
+          font-size:9px;
+          font-weight:1000;
+        "
       >
         Edit
       </button>
@@ -2162,12 +2134,20 @@ main{
 
 
   <!-- =================================================
-       LOYALTY CARD
+       SETHU REWARDS
   ================================================== -->
 
   <div
     class="booking-card"
-    style="margin-bottom:13px;"
+    style="
+      background:
+        linear-gradient(
+          135deg,
+          #fffdf3,
+          #fff7d6
+        );
+      border-color:#f5e4a0;
+    "
   >
 
     <div
@@ -2175,7 +2155,7 @@ main{
         display:flex;
         align-items:center;
         justify-content:space-between;
-        gap:10px;
+        gap:12px;
       "
     >
 
@@ -2183,10 +2163,10 @@ main{
 
         <div
           style="
-            font-size:9px;
-            font-weight:900;
-            color:#667085;
-            letter-spacing:.7px;
+            color:#795900;
+            font-size:8px;
+            font-weight:1000;
+            letter-spacing:.8px;
           "
         >
           SETHU REWARDS
@@ -2194,28 +2174,43 @@ main{
 
         <div
           style="
-            font-size:20px;
-            font-weight:900;
             margin-top:5px;
+            font-size:22px;
+            font-weight:1000;
           "
         >
-          ⭐ <span id="loyaltyPoints">0</span>
-          Points
+          ⭐
+          <span id="loyaltyPoints">
+            0
+          </span>
+          <span style="font-size:12px;">
+            Points
+          </span>
+        </div>
+
+        <div
+          style="
+            color:#795900;
+            font-size:9px;
+            margin-top:4px;
+          "
+        >
+          Earn points on eligible completed rides.
         </div>
 
       </div>
 
-
       <div
         style="
-          width:46px;
-          height:46px;
-          border-radius:14px;
-          background:#fff7d6;
+          width:48px;
+          height:48px;
+          border-radius:15px;
+          background:#f5b400;
           display:flex;
           align-items:center;
           justify-content:center;
           font-size:24px;
+          flex:none;
         "
       >
         🎁
@@ -2224,28 +2219,14 @@ main{
     </div>
 
 
-    <div
-      style="
-        margin-top:12px;
-        padding:11px;
-        border-radius:12px;
-        background:#f8fafc;
-        color:#667085;
-        font-size:10px;
-        line-height:1.5;
-        font-weight:700;
-      "
-    >
-      Earn points on eligible completed rides
-      and use your rewards on future bookings.
-    </div>
-
-
     <button
       class="primary-button"
       onclick="showLoyaltyDetails()"
+      style="
+        margin-top:13px;
+      "
     >
-      View Rewards
+      View Sethu Rewards
     </button>
 
   </div>
@@ -2253,204 +2234,442 @@ main{
 
   <!-- ACCOUNT MENU -->
 
-  <div class="account-menu">
+  <div class="booking-card" style="padding:5px 15px;">
 
 
     <button
-      class="account-menu-item"
+      class="account-item"
       onclick="showMyBookings()"
+      style="
+        width:100%;
+        border:0;
+        background:#fff;
+        display:flex;
+        align-items:center;
+        gap:12px;
+        padding:13px 0;
+        text-align:left;
+        border-bottom:1px solid #edf0f3;
+      "
     >
 
-      <div class="menu-icon">
+      <span
+        style="
+          width:39px;
+          height:39px;
+          border-radius:12px;
+          background:#f5f6f8;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          font-size:18px;
+          flex:none;
+        "
+      >
         📋
-      </div>
+      </span>
 
-      <div class="menu-text">
+      <span style="flex:1;">
 
-        <b>
+        <b
+          style="
+            display:block;
+            font-size:11px;
+          "
+        >
           My Bookings
         </b>
 
-        <span>
-          View your cab booking history
-        </span>
+        <small
+          style="
+            display:block;
+            color:#667085;
+            font-size:8px;
+            margin-top:3px;
+          "
+        >
+          View your booking history
+        </small>
 
-      </div>
+      </span>
 
-      <div class="menu-arrow">
+      <span style="color:#98a2b3;font-size:20px;">
         ›
-      </div>
+      </span>
 
     </button>
 
 
     <button
-      class="account-menu-item"
+      class="account-item"
       onclick="showLoyaltyDetails()"
+      style="
+        width:100%;
+        border:0;
+        background:#fff;
+        display:flex;
+        align-items:center;
+        gap:12px;
+        padding:13px 0;
+        text-align:left;
+        border-bottom:1px solid #edf0f3;
+      "
     >
 
-      <div class="menu-icon">
+      <span
+        style="
+          width:39px;
+          height:39px;
+          border-radius:12px;
+          background:#fff7d6;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          font-size:18px;
+          flex:none;
+        "
+      >
         ⭐
-      </div>
+      </span>
 
-      <div class="menu-text">
+      <span style="flex:1;">
 
-        <b>
+        <b
+          style="
+            display:block;
+            font-size:11px;
+          "
+        >
           Sethu Rewards
         </b>
 
-        <span>
-          Loyalty points and rewards
-        </span>
+        <small
+          style="
+            display:block;
+            color:#667085;
+            font-size:8px;
+            margin-top:3px;
+          "
+        >
+          Points and rewards
+        </small>
 
-      </div>
+      </span>
 
-      <div class="menu-arrow">
+      <span style="color:#98a2b3;font-size:20px;">
         ›
-      </div>
+      </span>
 
     </button>
 
 
     <button
-      class="account-menu-item"
       onclick="showSafety()"
+      style="
+        width:100%;
+        border:0;
+        background:#fff;
+        display:flex;
+        align-items:center;
+        gap:12px;
+        padding:13px 0;
+        text-align:left;
+        border-bottom:1px solid #edf0f3;
+      "
     >
 
-      <div class="menu-icon">
+      <span
+        style="
+          width:39px;
+          height:39px;
+          border-radius:12px;
+          background:#f5f6f8;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          font-size:18px;
+          flex:none;
+        "
+      >
         🛡️
-      </div>
+      </span>
 
-      <div class="menu-text">
+      <span style="flex:1;">
 
-        <b>
+        <b
+          style="
+            display:block;
+            font-size:11px;
+          "
+        >
           Safety Center
         </b>
 
-        <span>
-          Safety tools and emergency support
-        </span>
+        <small
+          style="
+            display:block;
+            color:#667085;
+            font-size:8px;
+            margin-top:3px;
+          "
+        >
+          Safety tools and support
+        </small>
 
-      </div>
+      </span>
 
-      <div class="menu-arrow">
+      <span style="color:#98a2b3;font-size:20px;">
         ›
-      </div>
+      </span>
 
     </button>
 
 
     <button
-      class="account-menu-item"
       onclick="showAbout()"
+      style="
+        width:100%;
+        border:0;
+        background:#fff;
+        display:flex;
+        align-items:center;
+        gap:12px;
+        padding:13px 0;
+        text-align:left;
+        border-bottom:1px solid #edf0f3;
+      "
     >
 
-      <div class="menu-icon">
+      <span
+        style="
+          width:39px;
+          height:39px;
+          border-radius:12px;
+          background:#f5f6f8;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          font-size:18px;
+          flex:none;
+        "
+      >
         ℹ️
-      </div>
+      </span>
 
-      <div class="menu-text">
+      <span style="flex:1;">
 
-        <b>
+        <b
+          style="
+            display:block;
+            font-size:11px;
+          "
+        >
           About Darshana Sethu
         </b>
 
-        <span>
-          Learn about our service
-        </span>
+        <small
+          style="
+            display:block;
+            color:#667085;
+            font-size:8px;
+            margin-top:3px;
+          "
+        >
+          About our travel service
+        </small>
 
-      </div>
+      </span>
 
-      <div class="menu-arrow">
+      <span style="color:#98a2b3;font-size:20px;">
         ›
-      </div>
+      </span>
 
     </button>
 
 
     <button
-      class="account-menu-item"
       onclick="showTerms()"
+      style="
+        width:100%;
+        border:0;
+        background:#fff;
+        display:flex;
+        align-items:center;
+        gap:12px;
+        padding:13px 0;
+        text-align:left;
+        border-bottom:1px solid #edf0f3;
+      "
     >
 
-      <div class="menu-icon">
+      <span
+        style="
+          width:39px;
+          height:39px;
+          border-radius:12px;
+          background:#f5f6f8;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          font-size:18px;
+          flex:none;
+        "
+      >
         📄
-      </div>
+      </span>
 
-      <div class="menu-text">
+      <span style="flex:1;">
 
-        <b>
+        <b
+          style="
+            display:block;
+            font-size:11px;
+          "
+        >
           Terms & Conditions
         </b>
 
-        <span>
-          Service terms and policies
-        </span>
+        <small
+          style="
+            display:block;
+            color:#667085;
+            font-size:8px;
+            margin-top:3px;
+          "
+        >
+          Service terms
+        </small>
 
-      </div>
+      </span>
 
-      <div class="menu-arrow">
+      <span style="color:#98a2b3;font-size:20px;">
         ›
-      </div>
+      </span>
 
     </button>
 
 
     <button
-      class="account-menu-item"
       onclick="showPrivacy()"
+      style="
+        width:100%;
+        border:0;
+        background:#fff;
+        display:flex;
+        align-items:center;
+        gap:12px;
+        padding:13px 0;
+        text-align:left;
+        border-bottom:1px solid #edf0f3;
+      "
     >
 
-      <div class="menu-icon">
+      <span
+        style="
+          width:39px;
+          height:39px;
+          border-radius:12px;
+          background:#f5f6f8;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          font-size:18px;
+          flex:none;
+        "
+      >
         🔐
-      </div>
+      </span>
 
-      <div class="menu-text">
+      <span style="flex:1;">
 
-        <b>
+        <b
+          style="
+            display:block;
+            font-size:11px;
+          "
+        >
           Privacy Policy
         </b>
 
-        <span>
-          How your information is handled
-        </span>
+        <small
+          style="
+            display:block;
+            color:#667085;
+            font-size:8px;
+            margin-top:3px;
+          "
+        >
+          Your information
+        </small>
 
-      </div>
+      </span>
 
-      <div class="menu-arrow">
+      <span style="color:#98a2b3;font-size:20px;">
         ›
-      </div>
+      </span>
 
     </button>
 
 
     <button
-      class="account-menu-item"
       onclick="showFAQ()"
+      style="
+        width:100%;
+        border:0;
+        background:#fff;
+        display:flex;
+        align-items:center;
+        gap:12px;
+        padding:13px 0;
+        text-align:left;
+      "
     >
 
-      <div class="menu-icon">
+      <span
+        style="
+          width:39px;
+          height:39px;
+          border-radius:12px;
+          background:#f5f6f8;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          font-size:18px;
+          flex:none;
+        "
+      >
         ❓
-      </div>
+      </span>
 
-      <div class="menu-text">
+      <span style="flex:1;">
 
-        <b>
-          FAQ
+        <b
+          style="
+            display:block;
+            font-size:11px;
+          "
+        >
+          Frequently Asked Questions
         </b>
 
-        <span>
-          Frequently asked questions
-        </span>
+        <small
+          style="
+            display:block;
+            color:#667085;
+            font-size:8px;
+            margin-top:3px;
+          "
+        >
+          Quick answers
+        </small>
 
-      </div>
+      </span>
 
-      <div class="menu-arrow">
+      <span style="color:#98a2b3;font-size:20px;">
         ›
-      </div>
+      </span>
 
     </button>
-
 
   </div>
 
@@ -2459,7 +2678,7 @@ main{
 
 
 <!-- =====================================================
-     LOYALTY PAGE
+     SETHU REWARDS
 ===================================================== -->
 
 <section
@@ -2474,18 +2693,39 @@ main{
     </h1>
 
     <p>
-      Earn points through eligible completed rides.
+      Your rewards journey with Darshana Sethu.
     </p>
 
   </div>
 
 
-  <div class="booking-card center">
+  <div
+    class="booking-card"
+    style="
+      background:
+        linear-gradient(
+          145deg,
+          #111827,
+          #1f2937
+        );
+      color:#fff;
+      text-align:center;
+      border:0;
+    "
+  >
 
     <div
       style="
-        font-size:45px;
-        margin-bottom:8px;
+        width:62px;
+        height:62px;
+        border-radius:19px;
+        background:#f5b400;
+        color:#111827;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        margin:0 auto 13px;
+        font-size:29px;
       "
     >
       ⭐
@@ -2493,21 +2733,22 @@ main{
 
     <div
       style="
-        color:#667085;
-        font-size:10px;
-        font-weight:900;
-        letter-spacing:.7px;
+        color:#9ca3af;
+        font-size:8px;
+        font-weight:1000;
+        letter-spacing:.9px;
       "
     >
-      YOUR LOYALTY BALANCE
+      YOUR POINTS
     </div>
 
     <div
       id="loyaltyPagePoints"
       style="
-        font-size:34px;
-        font-weight:900;
-        margin-top:5px;
+        color:#fff;
+        font-size:36px;
+        font-weight:1000;
+        margin-top:4px;
       "
     >
       0
@@ -2515,9 +2756,9 @@ main{
 
     <div
       style="
-        color:#667085;
-        font-size:11px;
-        margin-top:3px;
+        color:#cbd5e1;
+        font-size:9px;
+        margin-top:2px;
       "
     >
       Sethu Points
@@ -2526,754 +2767,144 @@ main{
   </div>
 
 
-  <div
-    class="booking-card"
-    style="margin-top:12px;"
-  >
+  <div class="booking-card">
 
     <div
-      style="
-        font-size:15px;
-        font-weight:900;
-        margin-bottom:12px;
-      "
-    >
-      How points work
-    </div>
-
-
-    <div class="safety-item">
-
-      <div class="safety-item-icon">
-        🚕
-      </div>
-
-      <div class="safety-item-content">
-
-        <b>
-          Complete eligible rides
-        </b>
-
-        <span>
-          Points are added after eligible ride completion.
-        </span>
-
-      </div>
-
-    </div>
-
-
-    <div class="safety-item">
-
-      <div class="safety-item-icon">
-        ⭐
-      </div>
-
-      <div class="safety-item-content">
-
-        <b>
-          Build your balance
-        </b>
-
-        <span>
-          Your points are stored in your account.
-        </span>
-
-      </div>
-
-    </div>
-
-
-    <div class="safety-item">
-
-      <div class="safety-item-icon">
-        🎁
-      </div>
-
-      <div class="safety-item-content">
-
-        <b>
-          Redeem rewards
-        </b>
-
-        <span>
-          Available rewards can be used when eligible.
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <button
-    class="dark-button"
-    onclick="showPage('account')"
-  >
-    ← Back to Account
-  </button>
-
-</section>
-
-
-
-<!-- =====================================================
-     MY BOOKINGS PAGE
-===================================================== -->
-
-<section
-  id="myBookings"
-  class="page"
->
-
-  <div class="page-top">
-
-    <h1>
-      My Bookings
-    </h1>
-
-    <p>
-      Your recent booking requests will appear here.
-    </p>
-
-  </div>
-
-
-  <div
-    id="bookingHistory"
-    class="booking-card"
-  >
-
-    <div class="empty-state">
-
-      <div class="empty-state-icon">
-        📋
-      </div>
-
-      <h3>
-        No bookings yet
-      </h3>
-
-      <p>
-        Your booking history will appear here
-        after you make a booking.
-      </p>
-
-    </div>
-
-  </div>
-
-
-  <button
-    class="primary-button"
-    onclick="showPage('home')"
-  >
-    🚕 Book a Cab
-  </button>
-
-</section>
-
-
-
-<!-- =====================================================
-     ABOUT PAGE
-===================================================== -->
-
-<section
-  id="about"
-  class="page"
->
-
-  <div class="page-top">
-
-    <h1>
-      About Darshana Sethu
-    </h1>
-
-    <p>
-      Safe, simple and trusted travel.
-    </p>
-
-  </div>
-
-
-  <div class="booking-card">
-
-    <h2
-      style="
-        font-size:18px;
-        margin-bottom:9px;
-      "
-    >
-      Our Journey
-    </h2>
-
-    <p
-      style="
-        color:#667085;
-        font-size:12px;
-        line-height:1.7;
-      "
-    >
-      Darshana Sethu Cab is a travel service
-      focused on comfortable and dependable
-      cab journeys for families, local travel,
-      outstation trips and temple travel.
-    </p>
-
-
-    <div
-      style="
-        margin-top:17px;
-        padding:14px;
-        border-radius:14px;
-        background:#fff7d6;
-        color:#5f4b00;
-        font-size:11px;
-        line-height:1.6;
-        font-weight:700;
-      "
-    >
-      🚕 Safe • Simple • Trusted Travel
-    </div>
-
-  </div>
-
-
-  <button
-    class="dark-button"
-    onclick="showPage('account')"
-  >
-    ← Back to Account
-  </button>
-
-</section>
-
-
-
-<!-- =====================================================
-     TERMS PAGE
-===================================================== -->
-
-<section
-  id="terms"
-  class="page"
->
-
-  <div class="page-top">
-
-    <h1>
-      Terms & Conditions
-    </h1>
-
-    <p>
-      Please read the service terms before booking.
-    </p>
-
-  </div>
-
-
-  <div class="booking-card">
-
-    <h3 style="font-size:14px;margin-bottom:7px;">
-      1. Booking
-    </h3>
-
-    <p
-      class="muted"
-      style="font-size:11px;line-height:1.6;margin-bottom:14px;"
-    >
-      A booking request is subject to vehicle
-      and driver availability. Confirmation may
-      require contact from our team.
-    </p>
-
-
-    <h3 style="font-size:14px;margin-bottom:7px;">
-      2. Fare
-    </h3>
-
-    <p
-      class="muted"
-      style="font-size:11px;line-height:1.6;margin-bottom:14px;"
-    >
-      Displayed fares are estimates unless
-      specifically confirmed. Toll, parking and
-      other applicable charges may be extra.
-    </p>
-
-
-    <h3 style="font-size:14px;margin-bottom:7px;">
-      3. Cancellation
-    </h3>
-
-    <p
-      class="muted"
-      style="font-size:11px;line-height:1.6;margin-bottom:14px;"
-    >
-      Cancellation and waiting policies may
-      depend on the booking and vehicle type.
-    </p>
-
-
-    <h3 style="font-size:14px;margin-bottom:7px;">
-      4. Safety
-    </h3>
-
-    <p
-      class="muted"
-      style="font-size:11px;line-height:1.6;"
-    >
-      Customers should verify the vehicle and
-      driver details before starting the trip.
-    </p>
-
-  </div>
-
-
-  <button
-    class="dark-button"
-    onclick="showPage('account')"
-  >
-    ← Back to Account
-  </button>
-
-</section>
-
-
-
-<!-- =====================================================
-     PRIVACY PAGE
-===================================================== -->
-
-<section
-  id="privacy"
-  class="page"
->
-
-  <div class="page-top">
-
-    <h1>
-      Privacy Policy
-    </h1>
-
-    <p>
-      Your information should be handled responsibly.
-    </p>
-
-  </div>
-
-
-  <div class="booking-card">
-
-    <h3 style="font-size:14px;margin-bottom:7px;">
-      Information we collect
-    </h3>
-
-    <p
-      class="muted"
-      style="font-size:11px;line-height:1.6;margin-bottom:14px;"
-    >
-      Information such as your name, mobile
-      number and booking details may be used
-      to provide the requested travel service.
-    </p>
-
-
-    <h3 style="font-size:14px;margin-bottom:7px;">
-      Use of information
-    </h3>
-
-    <p
-      class="muted"
-      style="font-size:11px;line-height:1.6;margin-bottom:14px;"
-    >
-      Booking information may be used for
-      communication, service support and
-      improving the customer experience.
-    </p>
-
-
-    <h3 style="font-size:14px;margin-bottom:7px;">
-      Data security
-    </h3>
-
-    <p
-      class="muted"
-      style="font-size:11px;line-height:1.6;"
-    >
-      Reasonable measures should be used to
-      protect customer information.
-    </p>
-
-  </div>
-
-
-  <button
-    class="dark-button"
-    onclick="showPage('account')"
-  >
-    ← Back to Account
-  </button>
-
-</section>
-
-
-
-<!-- =====================================================
-     FAQ PAGE
-===================================================== -->
-
-<section
-  id="faq"
-  class="page"
->
-
-  <div class="page-top">
-
-    <h1>
-      Frequently Asked Questions
-    </h1>
-
-    <p>
-      Quick answers about Darshana Sethu Cab.
-    </p>
-
-  </div>
-
-
-  <div class="booking-card">
-
-
-    <details style="padding:12px 0;border-bottom:1px solid #edf0f3;">
-
-      <summary
-        style="
-          font-size:12px;
-          font-weight:900;
-          cursor:pointer;
-        "
-      >
-        How can I book a cab?
-      </summary>
-
-      <p
-        class="muted"
-        style="
-          font-size:11px;
-          line-height:1.6;
-          margin-top:8px;
-        "
-      >
-        Enter your pickup and destination,
-        get an estimate and continue with
-        the booking details.
-      </p>
-
-    </details>
-
-
-    <details style="padding:12px 0;border-bottom:1px solid #edf0f3;">
-
-      <summary
-        style="
-          font-size:12px;
-          font-weight:900;
-          cursor:pointer;
-        "
-  <!-- =====================================================
+    <!-- =====================================================
      PART 3
      DARSHANA SETHU CAB
-     FINAL JAVASCRIPT + FOOTER + PWA SUPPORT
+     FINAL JAVASCRIPT + FOOTER
 ===================================================== */
 
 
 /* =====================================================
-   FOOTER
+   FINAL BOOKING / LOYALTY / UI FUNCTIONS
 ===================================================== */
 
-(function createFooter(){
+function resetBookingForm(){
 
-  const footer = document.createElement("footer");
+  document.getElementById("customerName").value = "";
+  document.getElementById("customerPhone").value = "";
+  document.getElementById("travelTime").value = "";
 
-  footer.style.cssText = `
-    max-width:650px;
-    margin:20px auto 100px;
-    padding:20px 14px;
-    text-align:center;
-  `;
-
-  footer.innerHTML = `
-
-    <div
-      style="
-        background:#111827;
-        color:#fff;
-        border-radius:20px;
-        padding:20px 15px;
-      "
-    >
-
-      <div
-        style="
-          font-size:16px;
-          font-weight:900;
-        "
-      >
-        DARSHANA
-        <span style="color:#f5b400;">
-          SETHU CAB
-        </span>
-      </div>
-
-      <div
-        style="
-          margin-top:5px;
-          color:#cbd5e1;
-          font-size:9px;
-          font-weight:800;
-          letter-spacing:1px;
-        "
-      >
-        SAFE • SIMPLE • TRUSTED TRAVEL
-      </div>
-
-      <div
-        style="
-          margin-top:14px;
-          color:#94a3b8;
-          font-size:10px;
-          line-height:1.6;
-        "
-      >
-        Local • Outstation • Family • Temple Travel
-      </div>
-
-      <div
-        style="
-          margin-top:14px;
-          padding-top:13px;
-          border-top:1px solid #334155;
-          color:#94a3b8;
-          font-size:9px;
-          line-height:1.6;
-        "
-      >
-        © ${new Date().getFullYear()}
-        Darshana Sethu Cab.
-        All rights reserved.
-      </div>
-
-    </div>
-
-  `;
-
-  document.body.appendChild(footer);
-
-})();
-
-
-
-/* =====================================================
-   SAVE LANGUAGE
-===================================================== */
-
-function saveLanguage(){
-
-  localStorage.setItem(
-    "sethuLanguage",
-    currentLanguage
-  );
+  document.getElementById("vehicleType").value = "sedan";
+  document.getElementById("passengers").value = "1";
 
 }
 
 
-
 /* =====================================================
-   LOAD LANGUAGE
+   ADD LOYALTY POINTS
+   POINTS ARE NOT ADDED AT BOOKING REQUEST.
+   THEY SHOULD BE ADDED ONLY AFTER COMPLETED RIDE.
 ===================================================== */
 
-function loadLanguage(){
+function completeRideAndReward(bookingId){
 
-  const saved =
-    localStorage.getItem(
-      "sethuLanguage"
+  const booking =
+    bookings.find(function(item){
+
+      return item.id === bookingId;
+
+    });
+
+
+  if(!booking){
+
+    return;
+
+  }
+
+
+  if(booking.status === "Completed"){
+
+    return;
+
+  }
+
+
+  booking.status = "Completed";
+
+
+  /*
+    Example loyalty rule:
+    1 point for every ₹100 of eligible fare.
+
+    This is internal logic.
+    Customer never sees KM or rate calculation.
+  */
+
+  const earnedPoints =
+    Math.floor(
+      Number(booking.fare || 0) / 100
     );
 
 
-  if(
-    saved === "te" ||
-    saved === "en"
-  ){
+  if(earnedPoints > 0){
 
-    currentLanguage = saved;
+    addLoyaltyPoints(earnedPoints);
 
   }
-
-
-  const data =
-    languageData[currentLanguage];
-
-
-  if(
-    document.getElementById("heroTitle")
-  ){
-
-    document.getElementById("heroTitle")
-      .textContent =
-        data.heroTitle;
-
-  }
-
-
-  if(
-    document.getElementById("heroText")
-  ){
-
-    document.getElementById("heroText")
-      .textContent =
-        data.heroText;
-
-  }
-
-
-  if(
-    document.getElementById("languageButton")
-  ){
-
-    document.getElementById("languageButton")
-      .textContent =
-        currentLanguage === "en"
-          ? "తెలుగు"
-          : "English";
-
-  }
-
-
-  if(
-    document.getElementById("oneWay")
-  ){
-
-    document.getElementById("oneWay")
-      .textContent =
-        data.oneWay;
-
-  }
-
-
-  if(
-    document.getElementById("roundTrip")
-  ){
-
-    document.getElementById("roundTrip")
-      .textContent =
-        data.roundTrip;
-
-  }
-
-
-  if(
-    document.getElementById("calculateButton")
-  ){
-
-    document.getElementById("calculateButton")
-      .textContent =
-        data.fareEstimate;
-
-  }
-
-}
-
-
-
-/* =====================================================
-   OVERRIDE LANGUAGE TO SAVE
-===================================================== */
-
-const originalToggleLanguage =
-  toggleLanguage;
-
-
-toggleLanguage = function(){
-
-  originalToggleLanguage();
-
-  saveLanguage();
-
-};
-
-
-
-/* =====================================================
-   BOOKING NUMBER SAFETY
-===================================================== */
-
-function getNextBookingNumber(){
-
-  const stored =
-    Number(
-      localStorage.getItem(
-        "sethuBookingSequence"
-      ) || 0
-    );
-
-
-  const next =
-    stored + 1;
 
 
   localStorage.setItem(
-    "sethuBookingSequence",
-    next
+    "sethuBookings",
+    JSON.stringify(bookings)
   );
 
 
-  return next;
+  renderBookingHistory();
 
 }
 
 
-
 /* =====================================================
-   BETTER BOOKING ID
-   DSCS + DATE + SERIAL
+   BOOKING DATE VALIDATION
 ===================================================== */
 
-generateBookingId = function(){
+document.addEventListener(
+  "DOMContentLoaded",
+  function(){
 
-  const now =
-    new Date();
-
-
-  const date =
-    String(now.getDate())
-      .padStart(2,"0") +
-
-    String(now.getMonth()+1)
-      .padStart(2,"0") +
-
-    String(now.getFullYear())
-      .slice(-2);
+    const dateInput =
+      document.getElementById("travelDate");
 
 
-  const number =
-    getNextBookingNumber();
+    if(dateInput){
+
+      const today =
+        new Date();
 
 
-  return (
-    "DSCS" +
-    date +
-    String(number)
-      .padStart(3,"0")
-  );
+      const year =
+        today.getFullYear();
 
-};
 
+      const month =
+        String(
+          today.getMonth() + 1
+        ).padStart(2,"0");
+
+
+      const day =
+        String(
+          today.getDate()
+        ).padStart(2,"0");
+
+
+      dateInput.min =
+        year + "-" +
+        month + "-" +
+        day;
+
+    }
+
+  }
+);
 
 
 /* =====================================================
-   PHONE NUMBER INPUT
+   PHONE INPUT
 ===================================================== */
 
 document.addEventListener(
@@ -3296,1115 +2927,195 @@ document.addEventListener(
 );
 
 
-
 /* =====================================================
-   PREVENT PAST TRAVEL DATE
+   LANGUAGE - EXTENDED UI
 ===================================================== */
 
-function setMinimumTravelDate(){
+function applyLanguage(){
 
-  const dateInput =
+  const te =
+    currentLanguage === "te";
+
+
+  const data =
+    languageData[currentLanguage];
+
+
+  const heroTitle =
+    document.getElementById("heroTitle");
+
+
+  const heroText =
+    document.getElementById("heroText");
+
+
+  const oneWay =
+    document.getElementById("oneWay");
+
+
+  const roundTrip =
+    document.getElementById("roundTrip");
+
+
+  const calculateButton =
+    document.getElementById("calculateButton");
+
+
+  if(heroTitle){
+
+    heroTitle.textContent =
+      data.heroTitle;
+
+  }
+
+
+  if(heroText){
+
+    heroText.textContent =
+      data.heroText;
+
+  }
+
+
+  if(oneWay){
+
+    oneWay.textContent =
+      data.oneWay;
+
+  }
+
+
+  if(roundTrip){
+
+    roundTrip.textContent =
+      data.roundTrip;
+
+  }
+
+
+  if(calculateButton){
+
+    calculateButton.textContent =
+      data.fareEstimate;
+
+  }
+
+
+  const languageButton =
     document.getElementById(
-      "travelDate"
+      "languageButton"
     );
 
 
-  if(!dateInput){
-
-    return;
-
-  }
-
-
-  const now =
-    new Date();
-
-
-  const year =
-    now.getFullYear();
-
-
-  const month =
-    String(
-      now.getMonth()+1
-    ).padStart(2,"0");
-
-
-  const day =
-    String(
-      now.getDate()
-    ).padStart(2,"0");
-
-
-  const today =
-    year +
-    "-" +
-    month +
-    "-" +
-    day;
-
-
-  dateInput.min = today;
-
-}
-
-
-
-/* =====================================================
-   AUTO SET TIME
-===================================================== */
-
-function setDefaultTravelTime(){
-
-  const timeInput =
-    document.getElementById(
-      "travelTime"
-    );
-
-
-  if(
-    !timeInput ||
-    timeInput.value
-  ){
-
-    return;
-
-  }
-
-
-  const now =
-    new Date();
-
-
-  let hours =
-    now.getHours();
-
-
-  let minutes =
-    now.getMinutes();
-
-
-  minutes =
-    Math.ceil(
-      minutes / 15
-    ) * 15;
-
-
-  if(minutes >= 60){
-
-    minutes = 0;
-
-    hours++;
-
-  }
-
-
-  if(hours >= 24){
-
-    hours = 23;
-
-    minutes = 45;
-
-  }
-
-
-  timeInput.value =
-    String(hours)
-      .padStart(2,"0") +
-    ":" +
-    String(minutes)
-      .padStart(2,"0");
-
-}
-
-
-
-/* =====================================================
-   BOOKING FORM RESET
-===================================================== */
-
-function resetBookingForm(){
-
-  const fields = [
-
-    "customerName",
-    "customerPhone",
-    "travelDate",
-    "travelTime"
-
-  ];
-
-
-  fields.forEach(function(id){
-
-    const element =
-      document.getElementById(id);
-
-
-    if(element){
-
-      element.value = "";
-
-    }
-
-  });
-
-
-  const vehicle =
-    document.getElementById(
-      "vehicleType"
-    );
-
-
-  if(vehicle){
-
-    vehicle.value = "sedan";
-
-  }
-
-
-  const passengers =
-    document.getElementById(
-      "passengers"
-    );
-
-
-  if(passengers){
-
-    passengers.value = "1";
+  if(languageButton){
+
+    languageButton.textContent =
+      te
+        ? "English"
+        : "తెలుగు";
 
   }
 
 }
 
 
-
 /* =====================================================
-   SUCCESS → NEW BOOKING
+   OVERRIDE LANGUAGE BUTTON
 ===================================================== */
 
-function startNewBooking(){
+function toggleLanguage(){
 
-  currentFare = 0;
-
-  currentBookingId = "";
-
-  currentRidePin = "";
-
-  const estimate =
-    document.getElementById(
-      "estimateBox"
-    );
+  currentLanguage =
+    currentLanguage === "en"
+      ? "te"
+      : "en";
 
 
-  const continueButton =
-    document.getElementById(
-      "continueButton"
-    );
-
-
-  if(estimate){
-
-    estimate.classList.remove("show");
-
-  }
-
-
-  if(continueButton){
-
-    continueButton.classList.add("hidden");
-
-  }
-
-
-  resetBookingForm();
-
-  showPage("home");
+  applyLanguage();
 
 }
 
 
-
 /* =====================================================
-   ADD NEW BOOKING BUTTON
+   SAFE LOCAL STORAGE
 ===================================================== */
 
-(function addNewBookingButton(){
-
-  const success =
-    document.getElementById(
-      "success"
-    );
-
-
-  if(!success){
-
-    return;
-
-  }
-
-
-  const card =
-    success.querySelector(
-      ".booking-card"
-    );
-
-
-  if(!card){
-
-    return;
-
-  }
-
-
-  const button =
-    document.createElement(
-      "button"
-    );
-
-
-  button.className =
-    "dark-button";
-
-
-  button.textContent =
-    "🚕 Make Another Booking";
-
-
-  button.onclick =
-    startNewBooking;
-
-
-  card.appendChild(button);
-
-})();
-
-
-
-/* =====================================================
-   BOOKING DETAILS
-===================================================== */
-
-function getLatestBooking(){
-
-  return bookings.length
-    ? bookings[0]
-    : null;
-
-}
-
-
-
-/* =====================================================
-   COPY BOOKING ID
-===================================================== */
-
-function copyBookingId(){
-
-  const latest =
-    getLatestBooking();
-
-
-  if(!latest){
-
-    alert(
-      "Booking information not found."
-    );
-
-    return;
-
-  }
-
-
-  if(
-    navigator.clipboard
-  ){
-
-    navigator.clipboard
-      .writeText(latest.id)
-      .then(function(){
-
-        alert(
-          "Booking ID copied."
-        );
-
-      })
-      .catch(function(){
-
-        alert(
-          "Booking ID: " +
-          latest.id
-        );
-
-      });
-
-  }
-
-  else{
-
-    alert(
-      "Booking ID: " +
-      latest.id
-    );
-
-  }
-
-}
-
-
-
-/* =====================================================
-   BOOKING DETAILS SHARE
-===================================================== */
-
-function shareBooking(){
-
-  const latest =
-    getLatestBooking();
-
-
-  if(!latest){
-
-    alert(
-      "No booking information available."
-    );
-
-    return;
-
-  }
-
-
-  const text =
-    "Darshana Sethu Cab\n\n" +
-
-    "Booking ID: " +
-    latest.id +
-
-    "\nName: " +
-    latest.name +
-
-    "\nPickup: " +
-    latest.pickup +
-
-    "\nDestination: " +
-    latest.destination +
-
-    "\nDate: " +
-    latest.date +
-
-    "\nTime: " +
-    latest.time +
-
-    "\nVehicle: " +
-    latest.vehicle;
-
-
-  if(
-    navigator.share
-  ){
-
-    navigator.share({
-
-      title:
-        "Darshana Sethu Cab Booking",
-
-      text:text
-
-    });
-
-  }
-
-  else if(
-    navigator.clipboard
-  ){
-
-    navigator.clipboard
-      .writeText(text)
-      .then(function(){
-
-        alert(
-          "Booking details copied."
-        );
-
-      });
-
-  }
-
-}
-
-
-
-/* =====================================================
-   REWARDS INFORMATION
-===================================================== */
-
-function getRewardMessage(){
-
-  if(loyaltyPoints <= 0){
-
-    return (
-      "Complete eligible rides to start earning Sethu Points."
-    );
-
-  }
-
-
-  if(loyaltyPoints < 100){
-
-    return (
-      "Keep travelling with Darshana Sethu Cab to build your rewards."
-    );
-
-  }
-
-
-  return (
-    "You have rewards available. Redemption rules may apply."
-  );
-
-}
-
-
-
-/* =====================================================
-   LOYALTY DETAILS ALERT
-===================================================== */
-
-function showRewardMessage(){
-
-  alert(
-    "⭐ Sethu Rewards\n\n" +
-    "Points: " +
-    loyaltyPoints +
-    "\n\n" +
-    getRewardMessage()
-  );
-
-}
-
-
-
-/* =====================================================
-   LOYALTY SAFE RENDER
-===================================================== */
-
-const originalRenderLoyalty =
-  renderLoyalty;
-
-
-renderLoyalty = function(){
-
-  originalRenderLoyalty();
-
-
-  const points =
-    document.getElementById(
-      "loyaltyPoints"
-    );
-
-
-  if(points){
-
-    points.textContent =
-      Number(loyaltyPoints)
-        .toLocaleString("en-IN");
-
-  }
-
-
-  const pagePoints =
-    document.getElementById(
-      "loyaltyPagePoints"
-    );
-
-
-  if(pagePoints){
-
-    pagePoints.textContent =
-      Number(loyaltyPoints)
-        .toLocaleString("en-IN");
-
-  }
-
-};
-
-
-
-/* =====================================================
-   ACTIVE BOOKING STATUS
-===================================================== */
-
-function getActiveBooking(){
-
-  return bookings.find(
-    function(booking){
-
-      return (
-        booking.status === "Requested" ||
-        booking.status === "Confirmed" ||
-        booking.status === "Driver Assigned" ||
-        booking.status === "Started"
-      );
-
-    }
-  );
-
-}
-
-
-
-/* =====================================================
-   SAFETY SHARE — ACTIVE BOOKING FIRST
-===================================================== */
-
-shareTrip = function(){
-
-  const latest =
-    getActiveBooking() ||
-    getLatestBooking();
-
-
-  if(!latest){
-
-    alert(
-      "No booking is available to share."
-    );
-
-    return;
-
-  }
-
-
-  const text =
-    "Darshana Sethu Cab Trip\n\n" +
-
-    "Booking ID: " +
-    latest.id +
-
-    "\nPickup: " +
-    latest.pickup +
-
-    "\nDestination: " +
-    latest.destination +
-
-    "\nDate: " +
-    latest.date +
-
-    "\nTime: " +
-    latest.time;
-
-
-  if(
-    navigator.share
-  ){
-
-    navigator.share({
-
-      title:
-        "Darshana Sethu Cab Trip",
-
-      text:text
-
-    }).catch(function(){});
-
-  }
-
-  else if(
-    navigator.clipboard
-  ){
-
-    navigator.clipboard
-      .writeText(text)
-      .then(function(){
-
-        alert(
-          "Trip details copied."
-        );
-
-      });
-
-  }
-
-  else{
-
-    alert(text);
-
-  }
-
-};
-
-
-
-/* =====================================================
-   SOS — SAFETY CONFIRMATION
-===================================================== */
-
-triggerSOS = function(){
-
-  const confirmed =
-    confirm(
-      "🚨 EMERGENCY SOS\n\n" +
-      "Do you need emergency assistance?\n\n" +
-      "Press OK to continue."
-    );
-
-
-  if(!confirmed){
-
-    return;
-
-  }
-
-
-  const latest =
-    getActiveBooking();
-
-
-  const bookingInfo =
-    latest
-      ? "\nBooking ID: " + latest.id
-      : "";
-
-
-  alert(
-    "SOS support request initiated." +
-    bookingInfo +
-    "\n\n" +
-    "If you are in immediate danger, " +
-    "contact the appropriate local emergency service."
-  );
-
-};
-
-
-
-/* =====================================================
-   FARE DISPLAY SAFETY
-===================================================== */
-
-function formatFare(amount){
-
-  return (
-    "₹" +
-    Number(amount)
-      .toLocaleString("en-IN")
-  );
-
-}
-
-
-
-/* =====================================================
-   ENHANCED FARE ESTIMATE
-===================================================== */
-
-calculateFare = function(){
-
-  const pickup =
-    document
-      .getElementById(
-        "pickupLocation"
-      )
-      .value
-      .trim();
-
-
-  const destination =
-    document
-      .getElementById(
-        "destinationLocation"
-      )
-      .value
-      .trim();
-
-
-  if(!pickup){
-
-    alert(
-      "Please enter pickup location."
-    );
-
-    return;
-
-  }
-
-
-  if(!destination){
-
-    alert(
-      "Please enter destination."
-    );
-
-    return;
-
-  }
-
-
-  /*
-    FINAL PRODUCTION NOTE:
-
-    This amount is only a temporary
-    front-end estimate.
-
-    Later the Admin/Firebase fare
-    engine can replace this value
-    with the actual approved fare.
-  */
-
-
-  if(
-    selectedTripType === "oneway"
-  ){
-
-    currentFare = 1500;
-
-  }
-
-  else{
-
-    currentFare = 2800;
-
-  }
-
-
-  const estimateTrip =
-    document.getElementById(
-      "estimateTrip"
-    );
-
-
-  const fareText =
-    document.getElementById(
-      "fareText"
-    );
-
-
-  const estimateBox =
-    document.getElementById(
-      "estimateBox"
-    );
-
-
-  const continueButton =
-    document.getElementById(
-      "continueButton"
-    );
-
-
-  if(estimateTrip){
-
-    estimateTrip.textContent =
-      selectedTripType === "oneway"
-        ? "One Way"
-        : "Round Trip";
-
-  }
-
-
-  if(fareText){
-
-    fareText.textContent =
-      formatFare(currentFare);
-
-  }
-
-
-  if(estimateBox){
-
-    estimateBox.classList.add("show");
-
-  }
-
-
-  if(continueButton){
-
-    continueButton.classList.remove("hidden");
-
-  }
-
-};
-
-
-
-/* =====================================================
-   START BOOKING — ENHANCED
-===================================================== */
-
-startBooking = function(){
-
-  if(!currentFare){
-
-    alert(
-      "Please get a fare estimate first."
-    );
-
-    return;
-
-  }
-
-
-  const pickup =
-    document
-      .getElementById(
-        "pickupLocation"
-      )
-      .value
-      .trim();
-
-
-  const destination =
-    document
-      .getElementById(
-        "destinationLocation"
-      )
-      .value
-      .trim();
-
-
-  if(!pickup || !destination){
-
-    alert(
-      "Please enter pickup and destination."
-    );
-
-    return;
-
-  }
-
-
-  document
-    .getElementById(
-      "summaryPickup"
-    )
-    .textContent =
-      pickup;
-
-
-  document
-    .getElementById(
-      "summaryDestination"
-    )
-    .textContent =
-      destination;
-
-
-  setMinimumTravelDate();
-
-  setDefaultTravelTime();
-
-
-  showPage("booking");
-
-};
-
-
-
-/* =====================================================
-   BOOKING CONFIRMATION — SAFER VERSION
-===================================================== */
-
-const originalConfirmBooking =
-  confirmBooking;
-
-
-confirmBooking = function(){
-
-  const phone =
-    document
-      .getElementById(
-        "customerPhone"
-      )
-      .value
-      .replace(/\D/g,"");
-
-
-  if(phone.length !== 10){
-
-    alert(
-      "Please enter a valid 10-digit mobile number."
-    );
-
-    return;
-
-  }
-
-
-  originalConfirmBooking();
-
-};
-
-
-
-/* =====================================================
-   PROFILE LOAD
-===================================================== */
-
-function loadSavedProfile(){
-
-  renderProfile();
-
-}
-
-
-
-/* =====================================================
-   LOCAL STORAGE HEALTH CHECK
-===================================================== */
-
-function checkStorage(){
+function safeGetBookings(){
 
   try{
 
-    const testKey =
-      "__sethu_storage_test__";
+    const data =
+      localStorage.getItem(
+        "sethuBookings"
+      );
 
 
-    localStorage.setItem(
-      testKey,
-      "1"
-    );
+    if(!data){
+
+      return [];
+
+    }
 
 
-    localStorage.removeItem(
-      testKey
-    );
+    const parsed =
+      JSON.parse(data);
 
 
-    return true;
+    return Array.isArray(parsed)
+      ? parsed
+      : [];
 
   }
 
   catch(error){
 
-    console.warn(
-      "Local storage unavailable.",
-      error
-    );
-
-
-    return false;
+    return [];
 
   }
 
 }
 
 
-
 /* =====================================================
-   PWA INSTALL PROMPT
+   SCREENSHOT / CLEAN UI MODE
 ===================================================== */
 
-let deferredInstallPrompt = null;
+function hideBottomNavForScreenshot(){
 
-
-window.addEventListener(
-  "beforeinstallprompt",
-  function(event){
-
-    event.preventDefault();
-
-    deferredInstallPrompt = event;
-
-  }
-);
-
-
-
-function installApp(){
-
-  if(!deferredInstallPrompt){
-
-    alert(
-      "If the install option is available, " +
-      "use your browser menu and choose " +
-      "'Add to Home screen'."
+  const nav =
+    document.getElementById(
+      "bottomNav"
     );
 
-    return;
+
+  if(nav){
+
+    nav.classList.add(
+      "screenshot-hidden"
+    );
 
   }
-
-
-  deferredInstallPrompt
-    .prompt();
-
-
-  deferredInstallPrompt
-    .userChoice
-    .then(function(){
-
-      deferredInstallPrompt = null;
-
-    });
 
 }
 
 
+function showBottomNavAfterScreenshot(){
 
-/* =====================================================
-   ONLINE / OFFLINE STATUS
-===================================================== */
+  const nav =
+    document.getElementById(
+      "bottomNav"
+    );
 
-window.addEventListener(
-  "online",
-  function(){
 
-    console.log(
-      "Darshana Sethu Cab is online."
+  if(nav){
+
+    nav.classList.remove(
+      "screenshot-hidden"
     );
 
   }
-);
-
-
-window.addEventListener(
-  "offline",
-  function(){
-
-    console.log(
-      "Darshana Sethu Cab is offline."
-    );
-
-  }
-);
-
-
-
-/* =====================================================
-   SERVICE WORKER
-===================================================== */
-
-if(
-  "serviceWorker" in navigator
-){
-
-  window.addEventListener(
-    "load",
-    function(){
-
-      navigator.serviceWorker
-        .register("./sw.js")
-        .then(function(){
-
-          console.log(
-            "Darshana Sethu Cab service worker registered."
-          );
-
-        })
-        .catch(function(error){
-
-          console.log(
-            "Service worker registration skipped:",
-            error
-          );
-
-        });
-
-    }
-  );
 
 }
-
 
 
 /* =====================================================
@@ -4415,49 +3126,281 @@ document.addEventListener(
   "DOMContentLoaded",
   function(){
 
-    checkStorage();
+    /*
+      Reload latest local data.
+    */
 
-    loadSavedProfile();
+    bookings =
+      safeGetBookings();
+
+
+    loyaltyPoints =
+      Number(
+        localStorage.getItem(
+          "sethuLoyaltyPoints"
+        ) || 0
+      );
+
+
+    renderProfile();
 
     renderLoyalty();
 
     renderBookingHistory();
 
-    loadLanguage();
-
-    setMinimumTravelDate();
+    applyLanguage();
 
     updateBottomNav("home");
 
   }
 );
 
+</script>
+
+
+<!-- =====================================================
+     FINAL FOOTER
+===================================================== -->
+
+<footer
+  class="site-footer"
+>
+
+  <div class="footer-brand">
+    DARSHANA <span>SETHU CAB</span>
+  </div>
+
+  <div class="footer-tagline">
+    SAFE • SIMPLE • TRUSTED TRAVEL
+  </div>
+
+  <div class="footer-links">
+
+    <button onclick="showAbout()">
+      About
+    </button>
+
+    <button onclick="showTerms()">
+      Terms
+    </button>
+
+    <button onclick="showPrivacy()">
+      Privacy
+    </button>
+
+    <button onclick="showFAQ()">
+      FAQ
+    </button>
+
+  </div>
+
+  <div class="footer-copy">
+    © 2026 Darshana Sethu Cab
+  </div>
+
+</footer>
+
+
+<!-- =====================================================
+     FINAL STYLE OVERRIDES
+===================================================== -->
+
+<style>
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer{
+
+  max-width:650px;
+
+  margin:24px auto 105px;
+
+  padding:22px 16px;
+
+  text-align:center;
+
+  border-top:1px solid #e5e7eb;
+
+  background:#f5f6f8;
+
+}
+
+
+.footer-brand{
+
+  font-size:15px;
+
+  font-weight:900;
+
+  letter-spacing:.2px;
+
+  color:#111827;
+
+}
+
+
+.footer-brand span{
+
+  color:#d89f00;
+
+}
+
+
+.footer-tagline{
+
+  margin-top:5px;
+
+  font-size:8px;
+
+  letter-spacing:1px;
+
+  color:#98a2b3;
+
+  font-weight:900;
+
+}
+
+
+.footer-links{
+
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:5px;
+
+  margin-top:15px;
+
+}
+
+
+.footer-links button{
+
+  border:0;
+
+  background:#fff;
+
+  color:#475467;
+
+  padding:8px 11px;
+
+  border-radius:9px;
+
+  font-size:9px;
+
+  font-weight:800;
+
+}
+
+
+.footer-copy{
+
+  margin-top:14px;
+
+  color:#98a2b3;
+
+  font-size:8px;
+
+}
 
 
 /* =====================================================
-   PREVENT ACCIDENTAL FORM SUBMISSION
+   SCREENSHOT MODE
 ===================================================== */
 
-document.addEventListener(
-  "keydown",
-  function(event){
+.screenshot-hidden{
 
-    if(
-      event.key === "Enter" &&
-      event.target &&
-      event.target.tagName === "INPUT"
-    ){
+  display:none!important;
 
-      /*
-        Do not submit anything accidentally.
-        User must press the actual button.
-      */
+}
 
-    }
+
+/* =====================================================
+   CUSTOMER FARE PRIVACY
+===================================================== */
+
+/*
+   Customer only sees the final estimated fare.
+
+   NO:
+   - KM
+   - Per KM rate
+   - Base rate
+   - Commission
+   - Internal calculation
+*/
+
+
+#estimateBox{
+
+  overflow:hidden;
+
+}
+
+
+/* =====================================================
+   CLEAN MOBILE SCREEN
+===================================================== */
+
+@media(max-width:650px){
+
+  body{
+
+    padding-bottom:92px;
 
   }
-);
 
 
+  .site-footer{
 
-/* ===========
+    margin-bottom:100px;
+
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:380px){
+
+  .site-footer{
+
+    padding-left:10px;
+
+    padding-right:10px;
+
+  }
+
+
+  .footer-links{
+
+    gap:4px;
+
+  }
+
+
+  .footer-links button{
+
+    padding:7px 9px;
+
+  }
+
+}
+
+</style>
+
+
+<!-- =====================================================
+     FINAL END
+===================================================== -->
+
+</body>
+
+    </html>
