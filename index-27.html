@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#111827">
+<meta name="description" content="Darshana Sethu Cab — Your Journey, Our Priority">
+<meta name="app-version" content="2026.08.28.customer-index">
+<link rel="manifest" href="./manifest.json">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<title>Darshana Sethu Cab</title>
+<link rel="preload" as="image" href="data:image/webp;base64,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">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;color:#111827;padding-bottom:84px}
+button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.6}
+.header{position:sticky;top:0;z-index:1000;background:#111827;color:#fff;padding:12px 15px;box-shadow:0 3px 15px rgba(0,0,0,.18)}
+.header-inner{max-width:680px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand-icon{position:relative;width:46px;height:46px;flex:none;border-radius:13px;background:#f5b400;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 4px 10px rgba(245,180,0,.22)}.brand-logo-img{width:100%;height:100%;object-fit:contain;display:block}.brand-icon.logo-fallback:after{content:"DS";font-weight:900;color:#111827;font-size:17px}
+.logo{font-size:16px;font-weight:900;letter-spacing:.2px;white-space:nowrap}.logo span{color:#f5b400}
+.tagline{margin-top:4px;font-size:9px;letter-spacing:1px;color:#cbd5e1;font-weight:800}
+.language{border:1px solid #475569;background:#1f2937;color:#fff;padding:9px 12px;border-radius:22px;font-size:11px;font-weight:900;flex:none}
+main{max-width:680px;margin:auto}.page{display:none;padding:14px}.page.active{display:block}
+.hero{position:relative;overflow:hidden;background:#111827;border-radius:25px;padding:28px 20px;margin-bottom:14px;min-height:255px}
+.hero:before{content:"";position:absolute;width:250px;height:250px;border-radius:50%;right:-125px;top:-125px;background:#f5b400;opacity:.14}
+.hero:after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;left:-85px;bottom:-85px;background:#f5b400;opacity:.08}
+.hero-content{position:relative;z-index:2}.badge{display:inline-block;background:rgba(245,180,0,.14);color:#f5b400;padding:7px 11px;border-radius:20px;font-size:10px;font-weight:900;letter-spacing:.5px;margin-bottom:13px}
+.hero h1{color:#fff;font-size:31px;line-height:1.16;margin-bottom:10px;max-width:500px}.hero p{color:#cbd5e1;font-size:14px;line-height:1.55;max-width:500px}
+.hero-buttons{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:19px}.hero-button{border:0;border-radius:14px;padding:14px 9px;font-size:13px;font-weight:900}.hero-book{background:#f5b400;color:#111827}.hero-map{background:#fff;color:#111827}
+.card{background:#fff;border-radius:21px;padding:17px;box-shadow:0 4px 18px rgba(0,0,0,.065)}.heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}.heading h2{font-size:20px}
+.location-box{border:1px solid #e1e5ea;background:#fafafa;border-radius:14px;padding:12px;margin-bottom:8px}.location-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}.label{font-size:9px;font-weight:900;letter-spacing:.7px;color:#667085}.maps{border:0;background:transparent;color:#2563eb;font-size:10px;font-weight:900}.location-row{display:flex;align-items:center;gap:9px}.dot{width:9px;height:9px;flex:none;border-radius:50%;background:#16a34a}.dot.dest{border-radius:3px;background:#111827}.location-row input{width:100%;border:0;outline:0;background:transparent;font-size:14px;color:#111827}.location-row input::placeholder{color:#98a2b3}.current{display:block;border:0;background:transparent;color:#2563eb;font-size:11px;font-weight:900;padding:3px 0 12px}
+.trip-title{font-size:10px;font-weight:900;color:#667085;margin:5px 0 7px}.trip-types{display:grid;grid-template-columns:1fr 1fr;gap:8px}.trip-type{border:1px solid #e1e5ea;background:#fff;color:#344054;border-radius:12px;padding:12px 8px;font-size:12px;font-weight:900}.trip-type.active{border-color:#f5b400;background:#fff9df;color:#111827}
+.primary{width:100%;border:0;border-radius:14px;background:#f5b400;color:#111827;padding:15px;margin-top:13px;font-size:14px;font-weight:900}.dark{width:100%;border:0;border-radius:14px;background:#111827;color:#fff;padding:15px;margin-top:10px;font-size:14px;font-weight:900}.danger{width:100%;border:0;border-radius:14px;background:#dc2626;color:#fff;padding:15px;margin-top:12px;font-size:14px;font-weight:900}
+.estimate{display:none;margin-top:13px;border-radius:17px;background:#f8fafc;border:1px solid #e5e7eb;padding:15px}.estimate.show{display:block}.estimate-head{display:flex;justify-content:space-between;margin-bottom:9px}.estimate-status{font-size:10px;color:#15803d;font-weight:900}.row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid #e5e7eb;font-size:12px}.row:last-child{border:0}.total{font-size:22px;color:#15803d;font-weight:900}.note{margin-top:10px;padding:10px;border-radius:10px;background:#fff7d6;color:#795900;font-size:10px;line-height:1.5;font-weight:700}
+.section-title{margin:20px 2px 10px}.section-title h2{font-size:19px}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.service{background:#fff;border-radius:16px;padding:16px 7px;text-align:center;box-shadow:0 3px 12px rgba(0,0,0,.05)}.service-icon{font-size:24px;margin-bottom:7px}.service b{display:block;font-size:11px}.service small{display:block;color:#667085;font-size:9px;margin-top:4px}
+.page-top{padding:6px 2px 15px}.page-top h1{font-size:26px;margin-bottom:5px}.page-top p{color:#667085;font-size:12px;line-height:1.55}
+.summary{border-radius:17px;background:#111827;color:#fff;padding:16px;margin-bottom:13px}.summary-label{color:#9ca3af;font-size:9px;font-weight:900;letter-spacing:.7px;margin-bottom:7px}.summary-location{font-size:13px;font-weight:800;line-height:1.5}.arrow{color:#f5b400;margin:6px 0}.form-label{display:block;margin:13px 0 6px;color:#344054;font-size:11px;font-weight:900}.form-input,.form-select{width:100%;border:1px solid #d9dee7;background:#fff;border-radius:12px;padding:13px;outline:0;font-size:14px}.form-input:focus,.form-select:focus{border-color:#f5b400}
+.success{text-align:center}.success-icon{width:68px;height:68px;margin:3px auto 13px;border-radius:50%;background:#dcfce7;display:flex;align-items:center;justify-content:center;font-size:34px}.success h1{font-size:24px}.success p{color:#667085;font-size:12px;line-height:1.6;margin-top:7px}.idbox{background:#111827;color:#fff;border-radius:16px;padding:16px;margin-top:17px}.idlabel{color:#9ca3af;font-size:9px;font-weight:900;letter-spacing:.8px}.id{color:#f5b400;font-size:23px;font-weight:900;margin-top:6px}.pinbox{margin-top:10px;background:#f8fafc;border:1px solid #e5e7eb;border-radius:14px;padding:13px}.pin{font-size:25px;font-weight:900;letter-spacing:5px;margin-top:4px}
+.safety-hero{background:#111827;color:#fff;border-radius:20px;padding:20px;margin-bottom:12px}.safety-hero h2{font-size:22px}.safety-hero p{color:#cbd5e1;font-size:12px;line-height:1.55;margin-top:7px}.safety-item{display:flex;align-items:center;gap:12px;padding:15px 0;border-bottom:1px solid #edf0f3}.safety-item:last-child{border:0}.safety-icon{width:40px;height:40px;border-radius:12px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;font-size:20px;flex:none}.safety-content{flex:1}.safety-content b{display:block;font-size:12px}.safety-content span{display:block;color:#667085;font-size:10px;margin-top:3px}.ok{color:#15803d;font-size:10px;font-weight:900}
+.profile{background:#111827;color:#fff;border-radius:22px;padding:20px;margin-bottom:13px}.profile-top{display:flex;align-items:center;gap:13px}.avatar{width:55px;height:55px;border-radius:17px;background:#f5b400;color:#111827;display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:900;flex:none}.profile-info{flex:1}.profile-info h2{font-size:19px}.profile-info p{color:#cbd5e1;font-size:11px;margin-top:4px}.edit{border:1px solid #475569;background:#1f2937;color:#fff;padding:8px 10px;border-radius:10px;font-size:10px;font-weight:900}
+.menu{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.06)}.menu-item{width:100%;border:0;background:#fff;display:flex;align-items:center;text-align:left;padding:15px;gap:12px;border-bottom:1px solid #edf0f3}.menu-item:last-child{border:0}.menu-icon{width:40px;height:40px;flex:none;border-radius:12px;background:#f5f6f8;display:flex;align-items:center;justify-content:center;font-size:19px}.menu-text{flex:1}.menu-text b{display:block;font-size:12px}.menu-text span{display:block;color:#667085;font-size:10px;margin-top:3px}.arrow-right{color:#98a2b3;font-size:20px}
+.reward-balance{text-align:center}.stars{font-size:45px}.points{font-size:35px;font-weight:900;margin-top:5px}.muted{color:#667085}.small{font-size:11px;line-height:1.6}.center{text-align:center}.empty{text-align:center;padding:28px 12px;color:#667085}.empty-icon{font-size:35px;margin-bottom:9px}.empty h3{color:#344054;font-size:15px;margin-bottom:5px}
+details{padding:13px 0;border-bottom:1px solid #edf0f3}details:last-child{border:0}summary{font-size:12px;font-weight:900;cursor:pointer}details p{margin-top:8px}
+.hidden{display:none!important}
+.bottom{position:fixed;left:0;right:0;bottom:0;z-index:1200;background:#fff;border-top:1px solid #e5e7eb;box-shadow:0 -5px 20px rgba(0,0,0,.08);padding-bottom:max(7px,env(safe-area-inset-bottom))}
+.bottom-inner{max-width:680px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);padding:7px 8px}.nav{border:0;background:transparent;padding:6px 3px;font-size:10px;font-weight:900;color:#667085;line-height:1.4}.nav.active{color:#111827}.nav-icon{font-size:20px;display:block;margin-bottom:2px}
+.toast{position:fixed;left:50%;bottom:95px;transform:translateX(-50%);z-index:2000;background:#111827;color:#fff;padding:11px 15px;border-radius:12px;font-size:11px;font-weight:800;box-shadow:0 5px 20px rgba(0,0,0,.2);display:none;max-width:90%;text-align:center}.toast.show{display:block}
+@media(max-width:380px){.hero h1{font-size:27px}.hero-buttons{grid-template-columns:1fr}.services{gap:6px}.logo{font-size:14px}}
+
+/* v2 final additions */
+.extra-note{margin-top:12px;padding:14px 13px;border-radius:13px;background:#fff3bf;border:2px solid #f5b400;color:#5b4500;font-size:14px;line-height:1.45;font-weight:900;text-align:center}.extra-note strong{font-size:15px}.setup-overlay{position:fixed;inset:0;z-index:5000;background:rgba(15,23,42,.72);display:flex;align-items:center;justify-content:center;padding:18px}.setup-card{width:min(520px,100%);background:#fff;border-radius:24px;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.3)}.setup-logo{width:62px;height:62px;border-radius:18px;background:#f5b400;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:12px}.setup-logo img{width:100%;height:100%;object-fit:contain}.setup-card h2{font-size:22px;color:#111827}.setup-card p{font-size:12px;line-height:1.6;color:#667085;margin-top:7px}.setup-list{margin:14px 0}.setup-row{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid #edf0f3}.setup-row:last-child{border:0}.setup-row .ico{width:36px;height:36px;border-radius:11px;background:#f8fafc;display:flex;align-items:center;justify-content:center}.setup-row div:nth-child(2){flex:1}.setup-row b{display:block;font-size:12px}.setup-row span{display:block;font-size:10px;color:#667085;margin-top:2px}.setup-btn{border:0;border-radius:13px;padding:13px;width:100%;font-weight:900;background:#f5b400;color:#111827}.setup-secondary{margin-top:8px;background:#111827;color:#fff}.install-mini{font-size:10px!important;text-align:center;margin-top:9px!important}.ride-alert{position:fixed;left:12px;right:12px;top:78px;z-index:2500;background:#111827;color:#fff;border:2px solid #f5b400;border-radius:17px;padding:14px;box-shadow:0 10px 30px rgba(0,0,0,.25);display:none}.ride-alert.show{display:block}.ride-alert b{display:block;color:#f5b400;font-size:14px}.ride-alert span{display:block;font-size:11px;margin-top:4px;color:#e5e7eb}
+
+.map-modal{position:fixed;inset:0;z-index:4000;background:#fff;display:none;flex-direction:column}.map-modal.show{display:flex}.map-head{padding:12px 14px;background:#111827;color:#fff;display:flex;align-items:center;gap:10px}.map-close{border:0;background:#1f2937;color:#fff;border-radius:11px;width:42px;height:42px;font-size:22px}.map-head-text{flex:1}.map-head-text b{display:block;font-size:16px}.map-head-text span{display:block;font-size:10px;color:#cbd5e1;margin-top:3px}.map-search{padding:10px 12px;background:#fff;box-shadow:0 2px 12px #0002;z-index:3}.map-search-row{display:flex;gap:8px}.map-search input{flex:1;border:1px solid #d0d5dd;border-radius:13px;padding:13px;font-size:15px;outline:0}.map-search button{border:0;border-radius:13px;padding:0 14px;background:#f5b400;font-weight:900}.map-wrap{position:relative;flex:1;min-height:0}.map-canvas{position:absolute;inset:0}.center-pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);z-index:1000;pointer-events:none}.pin-head{width:42px;height:42px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#f5b400;border:4px solid #111827;box-shadow:0 4px 12px #0005}.pin-dot{width:12px;height:12px;border-radius:50%;background:#111827;position:absolute;left:11px;top:11px}.map-actions{position:absolute;left:12px;right:12px;bottom:12px;z-index:1001;display:flex;gap:8px}.map-actions button{flex:1;border:0;border-radius:14px;padding:14px;font-weight:900;box-shadow:0 3px 12px #0003}.map-current{background:#fff;color:#111827}.map-confirm{background:#f5b400;color:#111827}.map-hint{position:absolute;top:10px;left:50%;transform:translateX(-50%);z-index:1001;background:#111827;color:#fff;padding:8px 12px;border-radius:20px;font-size:10px;font-weight:800;white-space:nowrap}.map-result{padding:8px 12px;font-size:11px;color:#475467;background:#fff;border-top:1px solid #eee}.leaflet-control-attribution{font-size:8px!important}
+
+.trip-type{cursor:pointer;transition:.15s}
+.trip-type.active{box-shadow:0 0 0 2px #f5b400 inset}
+#roundTrip{display:block!important}
+</style>
+
+<style id="dsMinimalVehicleAndKmFix">
+.quick-vehicle{
+  min-height:72px;border:1px solid #dfe6ef;border-radius:14px;
+  background:#f8fafc;color:#182235;display:flex;align-items:center;
+  justify-content:center;gap:5px;flex-direction:column;font-size:15px;
+}
+.quick-vehicle strong{font-size:15px}.quick-vehicle small{font-size:11px;color:#66758a}
+.quick-vehicle.active{border:2px solid #174b91;background:#f3f7ff}
+#distanceBox{display:none !important}
+</style>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-icon" aria-label="Darshana Sethu Cab logo"><img class="brand-logo-img" src="data:image/webp;base64,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" alt="Darshana Sethu Cab" onerror="this.style.display='none';this.parentElement.classList.add('logo-fallback');"></div>
+      <div>
+        <div class="logo">DARSHANA <span>SETHU CAB</span></div>
+        <div class="tagline">YOUR JOURNEY, OUR PRIORITY</div>
+      </div>
+    </div>
+    <button class="language" id="languageButton" onclick="toggleLanguage()">తెలుగు</button>
+  </div>
+</header>
+
+<main>
+<div id="mapModal" class="map-modal"><div class="map-head"><button class="map-close" onclick="closeMap()">‹</button><div class="map-head-text"><b id="mapTitle">Select pickup</b><span>Move the map and keep the pin on your exact location</span></div></div><div class="map-search"><div class="map-search-row"><input id="mapSearch" placeholder="Search place or area"><button onclick="searchMapPlace()">Search</button></div></div><div class="map-wrap"><div id="mapCanvas" class="map-canvas"></div><div class="center-pin"><div class="pin-head"><div class="pin-dot"></div></div></div><div class="map-hint">📍 Move map under the pin</div><div class="map-actions"><button class="map-current" onclick="mapUseCurrent()">📍 Current location</button><button class="map-confirm" onclick="confirmMapLocation()">Confirm location</button></div></div><div id="mapResult" class="map-result">Waiting for location…</div></div>
+<div id="firebaseStatus" style="max-width:680px;margin:8px auto 0;padding:0 14px;font-size:10px;font-weight:800;color:#15803d"></div>
+
+
+<section id="home" class="page active">
+  <div class="hero">
+    <div class="hero-content">
+      <div class="badge">● CAB SERVICE</div>
+      <h1 id="heroTitle">Your journey starts here.</h1>
+      <p id="heroText">Comfortable cab service for local, outstation, family and temple travel.</p>
+      <div class="hero-buttons">
+        <button class="hero-button hero-book" onclick="focusBooking()">🚕 Book a Cab</button>
+        <button class="hero-button hero-map" onclick="useCurrentLocation()">📍 My Location</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="bookingCard">
+    <div class="heading"><h2 id="planTitle">Plan your trip</h2></div>
+
+    <div class="location-box">
+      <div class="location-top"><span class="label">PICKUP LOCATION</span><button class="maps" onclick="openPickupMap()">🗺️ Maps</button></div>
+      <div class="location-row"><div class="dot"></div><input id="pickupLocation" placeholder="Enter pickup location"></div>
+    </div>
+    <button class="current" onclick="useCurrentLocation()">📍 Use my current location</button>
+
+    <div class="location-box">
+      <div class="location-top"><span class="label">DESTINATION</span><button class="maps" onclick="openDestinationMap()">🗺️ Maps</button></div>
+      <div class="location-row"><div class="dot dest"></div><input id="destinationLocation" placeholder="Where do you want to go?"></div>
+      <button class="current" onclick="openDestinationNavigation()">🧭 Open Navigation to Destination</button>
+    </div>
+
+    <div class="trip-title">TRIP TYPE</div>
+    <div class="trip-types">
+      <button id="oneWay" class="trip-type active" onclick="selectTripType('oneway')">One Way</button>
+      <button id="roundTrip" class="trip-type" onclick="selectTripType('roundtrip')">Round Trip</button>
+    </div>
+
+    
+<div class="trip-title" style="margin-top:18px">VEHICLE</div>
+<div id="quickVehicleTypes" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0 14px">
+  <button type="button" id="quick4Seater" class="quick-vehicle active" onclick="selectQuickVehicle('4seater')">
+    <span style="font-size:20px">🚗</span><strong>4 Seater</strong><small>Comfort</small>
+  </button>
+  <button type="button" id="quick6Seater" class="quick-vehicle" onclick="selectQuickVehicle('6seater')">
+    <span style="font-size:20px">🚙</span><strong>6 Seater</strong><small>Family</small>
+  </button>
+</div>
+
+<div id="estimateBox" class="estimate">
+      <div class="estimate-head"><span class="label">FARE ESTIMATE</span><span class="estimate-status">Estimated</span></div>
+      <div class="row"><span>Trip</span><strong id="estimateTrip">One Way</strong></div>
+      <div class="row"><span>Vehicle</span><strong id="estimateVehicle">Sedan</strong></div>
+      <div class="row"><span>Estimated Fare</span><strong class="total" id="fareText">₹0</strong></div>
+      <div class="extra-note">⚠️ <strong>Toll charges &amp; Parking fees are EXTRA</strong><br>Applicable tolls, parking and other route charges are not included in the fare estimate.</div>
+    </div>
+
+    <button class="primary" id="calculateButton" onclick="calculateFare()">Get Fare Estimate</button>
+    <div id="fareBuild" style="font-size:10px;color:#7b8794;margin-top:4px">Fare Engine v6 • Firebase Rates</div><div id="adminRateStatus" class="small muted" style="margin-top:8px">Fare is calculated from Firebase setting/fare rates.</div><div id="distanceBox" class="card hidden" style="margin-top:10px;padding:12px;background:#f8fafc;border:1px solid #e5e7eb"><div class="label">TRIP DISTANCE</div><div id="distanceText" style="font-size:18px;font-weight:900;margin-top:4px">-- km</div><div id="distanceNote" class="small muted" style="margin-top:3px">Select pickup and destination on the map for distance.</div></div>
+    <button class="dark hidden" id="continueButton" onclick="startBooking()">Continue with this Fare →</button>
+  </div>
+
+  <div class="section-title"><h2>Travel with confidence</h2></div>
+  <div class="services">
+    <div class="service"><div class="service-icon">🚕</div><b>Comfortable</b><small>Reliable cab</small></div>
+    <div class="service"><div class="service-icon">🛡️</div><b>Safety</b><small>Trusted travel</small></div>
+    <div class="service"><div class="service-icon">📍</div><b>Trip Support</b><small>Journey visibility</small></div>
+  </div>
+</section>
+
+<section id="booking" class="page">
+  <div class="page-top"><h1>Complete your booking</h1><p>Your secure 4-digit Ride PIN will be generated automatically by the system.</p></div>
+  <div class="card">
+    <div class="summary"><div class="summary-label">YOUR TRIP</div><div class="summary-location" id="summaryPickup">Pickup</div><div class="arrow">↓</div><div class="summary-location" id="summaryDestination">Destination</div></div>
+    <div class="row"><span>Estimated Fare</span><strong id="bookingFare">₹0</strong></div>
+
+    <label class="form-label">Full Name</label><input id="customerName" class="form-input" placeholder="Enter your name" autocomplete="name">
+    <label class="form-label">Mobile Number</label><input id="customerPhone" class="form-input" type="tel" inputmode="numeric" maxlength="10" placeholder="10-digit mobile number">
+    <label class="form-label">Travel Date</label><input id="travelDate" class="form-input" type="date">
+    <label class="form-label">Pickup Time</label><input id="travelTime" class="form-input" type="time">
+    <label class="form-label">Vehicle Type</label>
+    <select id="vehicleType" class="form-select"><option value="sedan">Sedan – Comfortable</option><option value="suv">SUV – Family Travel</option><option value="premium">Premium – Extra Comfort</option></select>
+    <label class="form-label">Passengers</label>
+    <select id="passengers" class="form-select"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select>
+
+    <div class="pinbox" style="margin-top:14px"><div class="label">SYSTEM-GENERATED RIDE PIN</div><div class="pin" id="generatedRidePinPreview">----</div><p class="small muted" style="margin-top:6px">A unique 4-digit PIN will be generated automatically when you confirm the booking. Do not share it before the driver arrives.</p></div>
+
+    <button class="primary" id="confirmBookingButton" onclick="confirmBooking()">Confirm Booking</button>
+    <button class="dark" onclick="showPage('home')">← Change Trip</button>
+  </div>
+</section>
+
+<section id="success" class="page">
+  <div class="card success">
+    <div class="success-icon">✓</div>
+    <h1>Booking Request Sent</h1>
+    <p id="welcomeMessage">Welcome! Your booking request has been received. Our team will contact you shortly.</p>
+    <div class="idbox"><div class="idlabel">BOOKING ID</div><div class="id" id="bookingId">DSCS-00000</div></div>
+    <div class="pinbox"><div class="label">YOUR RIDE PIN</div><div class="pin" id="ridePin">0000</div><p class="small muted">Your private PIN is saved for this booking.</p></div>
+    <button class="primary" onclick="openWhatsAppBooking()">💬 Contact Booking Support</button>
+    <button class="dark" onclick="showPage('home')">Back to Home</button>
+  </div>
+</section>
+
+<section id="complete" class="page">
+  <div class="card success">
+    <div class="success-icon">🙏</div>
+    <h1>Thank You!</h1>
+    <p>Your trip is marked complete. Thank you for travelling with Darshana Sethu Cab.</p>
+    <div class="idbox"><div class="idlabel">BOOKING</div><div class="id" id="completeBookingId">DSCS-00000</div></div>
+    <div class="pinbox"><b>⭐ Sethu Rewards</b><p class="small muted" style="margin-top:5px">You earned <strong id="earnedPoints">0</strong> points on this eligible completed ride.</p></div>
+    <button class="primary" onclick="showLoyaltyDetails()">View Sethu Rewards</button>
+    <button class="dark" onclick="showPage('home')">Back to Home</button>
+  </div>
+</section>
+
+<section id="safety" class="page">
+  <div class="page-top"><h1>Safety Center</h1><p>Your safety matters throughout the journey.</p></div>
+  <div class="safety-hero"><div style="font-size:31px;margin-bottom:10px">🛡️</div><h2>Travel with confidence</h2><p>Use Ride PIN, trip sharing and emergency support during your journey.</p></div>
+  <div class="card">
+    <div class="safety-item"><div class="safety-icon">👤</div><div class="safety-content"><b>Driver Verification</b><span>Driver and vehicle details are checked.</span></div><span class="ok">✓</span></div>
+    <div class="safety-item"><div class="safety-icon">🔢</div><div class="safety-content"><b>Ride PIN</b><span>Confirm your private PIN before starting.</span></div><span class="ok">✓</span></div>
+    <div class="safety-item"><div class="safety-icon">📤</div><div class="safety-content"><b>Share Trip</b><span>Share your booking details with family.</span></div><button class="maps" onclick="shareTrip()">Share</button></div>
+    <div class="safety-item"><div class="safety-icon">☎️</div><div class="safety-content"><b>Customer Care</b><span>Contact support for booking assistance.</span></div><button class="maps" onclick="openSupport()">Call</button></div>
+    <button class="danger" onclick="triggerSOS()">🚨 Emergency SOS</button>
+  </div>
+</section>
+
+<section id="account" class="page">
+  <div class="page-top"><h1>Account</h1><p>Manage your bookings, rewards and support.</p></div>
+  <div class="profile"><div class="profile-top"><div class="avatar" id="profileAvatar">G</div><div class="profile-info"><h2 id="profileName">Guest User</h2><p id="profilePhone">No login required</p></div><button class="edit" onclick="editProfile()">Edit</button></div></div>
+  <div class="card" style="margin-bottom:13px"><div class="heading"><div><div class="label">SETHU REWARDS</div><div style="font-size:20px;font-weight:900;margin-top:5px">⭐ <span id="loyaltyPoints">0</span> Points</div></div><div style="font-size:27px">🎁</div></div><div class="small muted">Earn points on eligible completed rides and use rewards on future bookings.</div><button class="primary" onclick="showLoyaltyDetails()">View Rewards</button></div>
+  <div class="card" style="margin-bottom:13px">
+    <div class="heading"><div><div class="label">CUSTOMER REFERRAL</div><div style="font-size:18px;font-weight:900;margin-top:5px">🔗 Share & Earn</div></div><div style="font-size:27px">🎁</div></div>
+    <div class="small muted">Share your personal customer referral link. Referral rewards are tracked separately from Driver Partner referrals.</div>
+    <div id="customerReferralLink" style="margin-top:10px;padding:11px;border:1px solid #e5e7eb;border-radius:11px;background:#f8fafc;font-size:10px;word-break:break-all">Loading referral link…</div>
+    <button class="primary" onclick="shareCustomerReferral()">🔗 Share Customer Link</button><button class="dark" onclick="document.getElementById('setupOverlay').style.display='flex'">⚙️ App Setup &amp; Permissions</button>
+  </div>
+  <div class="menu">
+    <button class="menu-item" onclick="showMyBookings()"><div class="menu-icon">📋</div><div class="menu-text"><b>My Bookings</b><span>View booking history</span></div><div class="arrow-right">›</div></button>
+    <button class="menu-item" onclick="showLoyaltyDetails()"><div class="menu-icon">⭐</div><div class="menu-text"><b>Sethu Rewards</b><span>Loyalty points and rewards</span></div><div class="arrow-right">›</div></button>
+    <button class="menu-item" onclick="showPage('safety')"><div class="menu-icon">🛡️</div><div class="menu-text"><b>Safety Center</b><span>Safety and emergency support</span></div><div class="arrow-right">›</div></button>
+    <button class="menu-item" onclick="showPage('care')"><div class="menu-icon">🎧</div><div class="menu-text"><b>Customer Care</b><span>Booking assistance</span></div><div class="arrow-right">›</div></button>
+    <button class="menu-item" onclick="showPage('about')"><div class="menu-icon">ℹ️</div><div class="menu-text"><b>About</b><span>About Darshana Sethu Cab</span></div><div class="arrow-right">›</div></button>
+    <button class="menu-item" onclick="showPage('contact')"><div class="menu-icon">📞</div><div class="menu-text"><b>Contact</b><span>Contact our team</span></div><div class="arrow-right">›</div></button>
+    <button class="menu-item" onclick="showPage('support')"><div class="menu-icon">💬</div><div class="menu-text"><b>Support</b><span>Help with your journey</span></div><div class="arrow-right">›</div></button>
+    <button class="menu-item" onclick="showPage('faq')"><div class="menu-icon">❓</div><div class="menu-text"><b>FAQ</b><span>Frequently asked questions</span></div><div class="arrow-right">›</div></button>
+    <button class="menu-item" onclick="showPage('terms')"><div class="menu-icon">📄</div><div class="menu-text"><b>Terms & Conditions</b><span>Service terms</span></div><div class="arrow-right">›</div></button>
+    <button class="menu-item" onclick="showPage('privacy')"><div class="menu-icon">🔐</div><div class="menu-text"><b>Privacy Policy</b><span>Information handling</span></div><div class="arrow-right">›</div></button>
+    <button class="menu-item" onclick="showPage('cancel')"><div class="menu-icon">↩️</div><div class="menu-text"><b>Cancellation Policy</b><span>Cancellation rules</span></div><div class="arrow-right">›</div></button>
+  </div>
+</section>
+
+<section id="loyalty" class="page">
+  <div class="page-top"><h1>Sethu Rewards</h1><p>Earn points through eligible completed rides.</p></div>
+  <div class="card reward-balance"><div class="stars">⭐</div><div class="label">YOUR LOYALTY BALANCE</div><div class="points" id="loyaltyPagePoints">0</div><div class="small muted">Sethu Points</div></div>
+  <div class="card" style="margin-top:12px"><h3 style="font-size:16px;margin-bottom:8px">How points work</h3><div class="safety-item"><div class="safety-icon">🚕</div><div class="safety-content"><b>Complete eligible rides</b><span>Points are added after trip completion.</span></div></div><div class="safety-item"><div class="safety-icon">🎁</div><div class="safety-content"><b>Use future rewards</b><span>Available rewards and eligibility rules apply.</span></div></div></div>
+  <button class="dark" onclick="showPage('account')">← Back to Account</button>
+</section>
+
+<section id="myBookings" class="page">
+  <div class="page-top"><h1>My Bookings</h1><p>Your booking requests and completed trips.</p></div>
+  <div id="bookingHistory" class="card"></div>
+  <button class="primary" onclick="showPage('home')">🚕 Book a Cab</button>
+</section>
+
+<section id="care" class="page">
+  <div class="page-top"><h1>Customer Care</h1><p>We are here to help with your booking.</p></div>
+  <div class="card">
+    <div class="safety-item"><div class="safety-icon">📞</div><div class="safety-content"><b>Call Customer Care</b><span>For booking and journey assistance.</span></div><button class="maps" onclick="openSupport()">Call</button></div>
+    <div class="safety-item"><div class="safety-icon">💬</div><div class="safety-content"><b>WhatsApp Support</b><span>Send your booking details to support.</span></div><button class="maps" onclick="openWhatsAppBooking()">Chat</button></div>
+  </div>
+</section>
+
+<section id="contact" class="page">
+  <div class="page-top"><h1>Contact</h1><p>Reach Darshana Sethu Cab.</p></div>
+  <div class="card"><h2 style="font-size:18px;margin-bottom:10px">Darshana Sethu Cab</h2><p class="small muted">For bookings, customer care and travel support, contact our official team.</p><button class="primary" onclick="openSupport()">📞 Contact Customer Care</button><button class="dark" onclick="openWhatsAppBooking()">💬 WhatsApp Support</button></div>
+</section>
+
+<section id="support" class="page">
+  <div class="page-top"><h1>Support</h1><p>Quick help for your journey.</p></div>
+  <div class="card">
+    <h3 style="font-size:15px;margin-bottom:9px">Need help?</h3>
+    <p class="small muted">Keep your Booking ID ready when contacting support. Our team can help with booking details, changes and journey assistance.</p>
+    <button class="primary" onclick="openWhatsAppBooking()">💬 Chat on WhatsApp</button>
+    <button class="dark" onclick="openSupport()">📞 Call Support</button>
+  </div>
+</section>
+
+<section id="about" class="page">
+  <div class="page-top"><h1>About Darshana Sethu</h1><p>Your journey, our priority.</p></div>
+  <div class="card"><h2 style="font-size:18px;margin-bottom:9px">Our Journey</h2><p class="small muted">Darshana Sethu Cab is a travel service focused on comfortable and dependable cab journeys for families, local travel, outstation trips and temple travel.</p><div style="margin-top:17px;padding:14px;border-radius:14px;background:#fff7d6;color:#5f4b00;font-size:11px;line-height:1.6;font-weight:700">🚕 YOUR JOURNEY, OUR PRIORITY</div></div>
+</section>
+
+<section id="terms" class="page"><div class="page-top"><h1>Terms & Conditions</h1><p>Please read before booking.</p></div><div class="card">
+<h3>1. Booking</h3><p class="small muted" style="margin:6px 0 14px">Booking requests are subject to vehicle and driver availability. Confirmation may require contact from our team.</p>
+<h3>2. Fare</h3><p class="small muted" style="margin:6px 0 14px">Displayed fares are estimates unless specifically confirmed. Toll, parking and applicable charges may be extra.</p>
+<h3>3. Service</h3><p class="small muted">Passengers should follow reasonable safety instructions and verify vehicle details before starting the trip.</p>
+</div></section>
+
+<section id="privacy" class="page"><div class="page-top"><h1>Privacy Policy</h1><p>Your information should be handled responsibly.</p></div><div class="card">
+<h3>Information we collect</h3><p class="small muted" style="margin:6px 0 14px">Name, mobile number, pickup, destination and booking information may be collected to provide the requested service.</p>
+<h3>Use of information</h3><p class="small muted" style="margin:6px 0 14px">Information may be used for booking communication, support, safety and service improvement.</p>
+<h3>Security</h3><p class="small muted">Reasonable measures should be used to protect customer information.</p>
+</div></section>
+
+<section id="cancel" class="page"><div class="page-top"><h1>Cancellation Policy</h1><p>Simple and transparent cancellation information.</p></div><div class="card">
+<h3>Before confirmation</h3><p class="small muted" style="margin:6px 0 14px">A booking request can be cancelled before confirmation by contacting customer support.</p>
+<h3>After confirmation</h3><p class="small muted" style="margin:6px 0 14px">Cancellation charges, if any, depend on timing, vehicle assignment and trip status.</p>
+<h3>No-show</h3><p class="small muted">A no-show after the agreed pickup time may be subject to applicable charges.</p>
+</div></section>
+
+<section id="faq" class="page"><div class="page-top"><h1>Frequently Asked Questions</h1><p>Quick answers about Darshana Sethu Cab.</p></div><div class="card">
+<details open><summary>How can I book a cab?</summary><p class="small muted">Enter pickup and destination, get a fare estimate and continue with the booking details.</p></details>
+<details><summary>Do I need to login?</summary><p class="small muted">No. You can book without a customer login. Your booking ID and self-created Ride PIN identify your booking.</p></details>
+<details><summary>What is the Ride PIN?</summary><p class="small muted">It is your private 4-digit code used to confirm your ride. Do not share it before the driver arrives.</p></details>
+<details><summary>How do Sethu Rewards work?</summary><p class="small muted">Eligible completed rides can earn Sethu Points. Redemption rules may apply.</p></details>
+</div></section>
+
+</main>
+
+<div id="setupOverlay" class="setup-overlay" aria-hidden="false">
+  <div class="setup-card">
+    <div class="setup-logo"><img src="data:image/webp;base64,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" alt="Darshana Sethu Cab" onerror="this.style.display='none';this.parentElement.classList.add('logo-fallback');"></div>
+    <h2>Darshana Sethu Cab — Ready to Go</h2>
+    <p>మొదటిసారి app open చేసినప్పుడు అవసరమైన permissions / install setup ఇక్కడే చేయండి. ఒక్కసారి setup చేస్తే మళ్లీ అడగదు.</p>
+    <div class="setup-list">
+      <div class="setup-row"><div class="ico">📱</div><div><b>Install the PWA</b><span>Install the app on your phone for quick access.</span></div><button class="maps" onclick="installPWA()">Install</button></div>
+      <div class="setup-row"><div class="ico">📍</div><div><b>Location access</b><span>Needed for My Location and trip pickup assistance.</span></div><button class="maps" onclick="allowLocation()">Allow</button></div>
+      <div class="setup-row"><div class="ico">🔔</div><div><b>Notifications</b><span>Allow when your browser supports notifications.</span></div><button class="maps" onclick="allowNotifications()">Allow</button></div>
+      <div class="setup-row"><div class="ico">🔊</div><div><b>Ride alert sound</b><span>Enables the feel-good sound when a driver accepts.</span></div><button class="maps" onclick="enableRideSound()">Enable</button></div>
+    </div>
+    <button class="setup-btn" onclick="finishSetup()">✓ Allow &amp; Continue</button>
+    <button class="setup-btn setup-secondary" onclick="finishSetup()">Continue without setup</button>
+    <p class="install-mini">Browser permissions can only be requested after your tap. Some browsers may show their own permission screen.</p>
+  </div>
+</div>
+
+<div id="rideAlert" class="ride-alert"><b>🎉 Ride Accepted!</b><span id="rideAlertText">Your Driver Partner has accepted your ride.</span></div>
+
+<nav class="bottom">
+  <div class="bottom-inner">
+    <button class="nav active" id="navHome" onclick="showPage('home')"><span class="nav-icon">🏠</span>Home</button>
+    <button class="nav" id="navBookings" onclick="showMyBookings()"><span class="nav-icon">📋</span>Bookings</button>
+    <button class="nav" id="navSafety" onclick="showPage('safety')"><span class="nav-icon">🛡️</span>Safety</button>
+    <button class="nav" id="navAccount" onclick="showPage('account')"><span class="nav-icon">👤</span>Account</button>
+  </div>
+</nav>
+
+<div id="toast" class="toast"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+<script>
+"use strict";
+
+const firebaseConfig={
+  apiKey:"AIzaSyCKKThIcHKI8jFvOmfXgQZ-UKXwNCiha_U",
+  authDomain:"darshana-sethu-cab.firebaseapp.com",
+  projectId:"darshana-sethu-cab",
+  storageBucket:"darshana-sethu-cab.firebasestorage.app",
+  messagingSenderId:"753735533400",
+  appId:"1:753735533400:web:dd314c6e8b61d2f1b09b2d",
+  measurementId:"G-E366CXE9LT"
+};
+
+let firebaseReady=false,db=null;
+try{
+  if(!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+  db=firebase.firestore();
+  try { db.settings({ experimentalForceLongPolling: true, useFetchStreams: false }); } catch(_) {}
+  firebaseReady=true;
+}catch(e){console.error("Firebase init failed",e);}
+
+let selectedTripType="oneway",currentFare=0,currentBookingId="",currentLanguage="en",currentRidePin="";
+let adminFareSettings=null;
+const DEFAULT_FARE_SLABS=[
+  {km:20,oneway:1200,round:2000},
+  {km:40,oneway:1500,round:2300},
+  {km:65,oneway:1800,round:2600},
+  {km:100,oneway:2500,round:3200},
+  {km:165,oneway:4500,round:4500},
+  {km:200,oneway:5000,round:5000},
+  {km:300,oneway:6500,round:6500},
+  {km:450,oneway:9000,round:0}
+];
+
+async function loadAdminFareSettings(){
+  if(!firebaseReady||!db)throw new Error("Firebase not ready");
+
+  let s=null, lastError=null;
+  const paths=[["setting","fare"],["settings","fare"]];
+  for(const [collection,docId] of paths){
+    try{
+      const snap=await db.collection(collection).doc(docId).get({source:"server"});
+      if(snap.exists){ s=snap; break; }
+    }catch(e){ lastError=e; }
+  }
+  if(!s){
+    const msg=lastError && (lastError.code||lastError.message) ? ` (${lastError.code||lastError.message})` : "";
+    throw new Error("Firebase fare document not readable at setting/fare"+msg);
+  }
+
+  const d=s.data()||{};
+  const f={
+    basicRateUnder25:Number(d.basicRateUnder25),
+    basicRateAbove25:Number(d.basicRateAbove25),
+    fourSeaterOneWay:Number(d.fourSeaterOneWay),
+    fourSeaterRoundTrip:Number(d.fourSeaterRoundTrip),
+    fourPlusOneWay:Number(d.fourPlusOneWay),
+    fourPlusRoundTrip:Number(d.fourPlusRoundTrip)
+  };
+  const missing=Object.entries(f).filter(([,v])=>!Number.isFinite(v)).map(([k])=>k);
+  if(missing.length)throw new Error("Missing/invalid Firebase fare fields: "+missing.join(", "));
+  adminFareSettings=f;
+  return f;
+}
+
+function nearestFareSlab(distanceKm){
+  const slabs=(adminFareSettings&&Array.isArray(adminFareSettings.slabs)&&adminFareSettings.slabs.length)
+    ? adminFareSettings.slabs : DEFAULT_FARE_SLABS;
+  const sorted=slabs.slice().sort((a,b)=>Number(a.km)-Number(b.km));
+  return sorted.find(x=>distanceKm<=Number(x.km))||sorted[sorted.length-1];
+}
+
+let deferredInstallPrompt=null,rideAudioContext=null,bookingWatcher=null,lastRideStatus="";
+let loyaltyPoints=Number(localStorage.getItem("sethuLoyaltyPoints")||0);
+let bookings=JSON.parse(localStorage.getItem("sethuBookings")||"[]");
+const SUPPORT_PHONE="919999999999";
+
+
+function allowLocation(){
+ if(!navigator.geolocation){toast(currentLanguage==="te"?"ఈ browser location support చేయదు.":"Location is not supported by this browser.");return}
+ navigator.geolocation.getCurrentPosition(()=>{localStorage.setItem("ds_location_allowed","yes");toast(currentLanguage==="te"?"Location permission ఇచ్చారు ✓":"Location permission allowed ✓")},()=>{toast(currentLanguage==="te"?"Location permission ఇవ్వలేదు.":"Location permission was not allowed.")},{enableHighAccuracy:true,timeout:10000});
+}
+async function allowNotifications(){
+ if(!("Notification" in window)){toast("Notifications are not supported in this browser.");return}
+ try{const p=await Notification.requestPermission();toast(p==="granted"?"Notifications allowed ✓":p==="denied"?"Notifications blocked":"Notification permission not changed")}catch(e){toast("Notification permission could not be requested.")}
+}
+function enableRideSound(){
+ try{rideAudioContext=rideAudioContext||new (window.AudioContext||window.webkitAudioContext)();if(rideAudioContext.state==="suspended")rideAudioContext.resume();localStorage.setItem("ds_ride_sound","yes");playRideSound();toast("Ride alert sound enabled ✓")}catch(e){toast("Sound could not be enabled in this browser.")}
+}
+function playRideSound(){
+ try{rideAudioContext=rideAudioContext||new (window.AudioContext||window.webkitAudioContext)();if(rideAudioContext.state==="suspended")rideAudioContext.resume();const now=rideAudioContext.currentTime;[523.25,659.25,783.99,1046.5].forEach((f,i)=>{const o=rideAudioContext.createOscillator(),g=rideAudioContext.createGain();o.type="sine";o.frequency.value=f;g.gain.setValueAtTime(0,now+i*.13);g.gain.linearRampToValueAtTime(.08,now+i*.13+.02);g.gain.exponentialRampToValueAtTime(.001,now+i*.13+.28);o.connect(g);g.connect(rideAudioContext.destination);o.start(now+i*.13);o.stop(now+i*.13+.3)});}catch(e){}
+}
+function finishSetup(){
+ localStorage.setItem("ds_setup_done","yes");const o=document.getElementById("setupOverlay");if(o){o.style.display="none";o.setAttribute("aria-hidden","true")}
+}
+function installPWA(){
+ if(deferredInstallPrompt){deferredInstallPrompt.prompt();deferredInstallPrompt.userChoice.finally(()=>{deferredInstallPrompt=null;});return}
+ if(window.matchMedia && window.matchMedia("(display-mode: standalone)").matches){toast("App is already installed ✓");return}
+ toast("Install option is not available yet. Use browser menu → Add to Home screen.");
+}
+window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredInstallPrompt=e;});
+window.addEventListener("appinstalled",()=>{deferredInstallPrompt=null;toast("Darshana Sethu Cab installed ✓")});
+
+function showRideAcceptedAlert(b){
+ const a=document.getElementById("rideAlert"),t=document.getElementById("rideAlertText");if(!a)return;
+ const driver=b.driverName||"Driver Partner";t.textContent=driver+" has accepted your ride. Please keep your Ride PIN ready.";a.classList.add("show");
+ if(localStorage.getItem("ds_ride_sound")==="yes")playRideSound();
+ if("Notification" in window && Notification.permission==="granted"){try{new Notification("Darshana Sethu Cab — Ride Accepted",{body:driver+" has accepted your ride. Keep your Ride PIN ready."})}catch(e){}}
+ setTimeout(()=>a.classList.remove("show"),7000);
+}
+function watchBookingStatus(id){
+ if(!firebaseReady||!db||!id)return;
+ if(bookingWatcher)try{bookingWatcher();}catch(e){}
+ lastRideStatus=localStorage.getItem("ds_last_status_"+id)||"";
+ bookingWatcher=db.collection("bookings").doc(id).onSnapshot(s=>{
+   if(!s.exists)return;const b=s.data()||{};const status=String(b.status||"").toLowerCase();
+   if((status==="accepted"||status==="assigned") && lastRideStatus!==status){showRideAcceptedAlert(b)}
+   lastRideStatus=status;localStorage.setItem("ds_last_status_"+id,status);
+ },e=>console.warn("Ride status listener",e));
+}
+
+function showPage(id){
+ document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+ const p=document.getElementById(id);if(p)p.classList.add("active");
+ updateNav(id);window.scrollTo({top:0,behavior:"smooth"});
+}
+function updateNav(id){
+ ["navHome","navBookings","navSafety","navAccount"].forEach(x=>{const b=document.getElementById(x);if(b)b.classList.remove("active")});
+ let x=id==="home"?"navHome":id==="myBookings"?"navBookings":id==="safety"?"navSafety":["account","loyalty","care","contact","support","about","terms","privacy","cancel","faq"].includes(id)?"navAccount":null;
+ if(x&&document.getElementById(x))document.getElementById(x).classList.add("active");
+}
+function focusBooking(){document.getElementById("bookingCard").scrollIntoView({behavior:"smooth",block:"start"})}
+function selectTripType(t){
+  selectedTripType=t;
+  document.getElementById("oneWay").classList.toggle("active",t==="oneway");
+  document.getElementById("roundTrip").classList.toggle("active",t==="roundtrip");
+  document.getElementById("estimateBox").classList.remove("show");
+  document.getElementById("continueButton").classList.add("hidden");
+  document.getElementById("fareText").textContent="₹0";
+  document.getElementById("estimateTrip").textContent=t==="roundtrip"?"Up & Down":"One Way";
+  currentFare=0;
+  const distanceText=document.getElementById("distanceText");
+  if(distanceText && Number.isFinite(window.lastCalculatedDistanceKm)){
+    const km=window.lastCalculatedDistanceKm;
+    distanceText.textContent=t==="roundtrip"
+      ? `${km.toFixed(1)} km one way • ${(km*2).toFixed(1)} km total`
+      : `${km.toFixed(1)} km one way`;
+  }
+}
+function setLocationInput(id,label,lat,lon){
+ const el=document.getElementById(id);if(!el)return;
+ el.value=label||(`${lat.toFixed(5)}, ${lon.toFixed(5)}`);
+ el.dataset.lat=String(lat);el.dataset.lon=String(lon);
+ updateTripDistance();
+}
+function useCurrentLocation(){
+ const i=document.getElementById("pickupLocation");
+ if(!navigator.geolocation){alert("Location is not supported. Please enter pickup manually.");return}
+ i.value=currentLanguage==="te"?"ప్రస్తుత location తీసుకుంటోంది…":"Getting current location…";
+ navigator.geolocation.getCurrentPosition(async pos=>{
+   const lat=pos.coords.latitude,lon=pos.coords.longitude;
+   let label=`Current Location (${lat.toFixed(5)}, ${lon.toFixed(5)})`;
+   try{const r=await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&zoom=18&addressdetails=1`,{headers:{Accept:"application/json"}});const a=await r.json();label=a.display_name||label}catch(e){}
+   setLocationInput("pickupLocation",label,lat,lon);
+ },()=>{i.value="";alert("Unable to get your current location. Please allow Location permission in the browser and try again.")},{enableHighAccuracy:true,timeout:15000,maximumAge:30000});
+}
+let mapInstance=null,mapMode="pickup",mapCoords=null,mapMoveTimer=null;
+function openPickupMap(){openMap("pickup")}
+function openDestinationMap(){openMap("destination")}
+function openMap(mode){
+ mapMode=mode;
+ document.getElementById("mapTitle").textContent=mode==="pickup"?"Select pickup location":"Select drop location";
+ document.getElementById("mapSearch").value="";
+ document.getElementById("mapModal").classList.add("show");
+ setTimeout(async()=>{
+   if(!window.L){alert("Map library could not load. Please check internet and refresh the app.");return}
+   if(!mapInstance){
+     mapInstance=L.map("mapCanvas",{zoomControl:true,attributionControl:true}).setView([16.5,82.0],10);
+     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"© OpenStreetMap contributors"}).addTo(mapInstance);
+     mapInstance.on("moveend",()=>{clearTimeout(mapMoveTimer);mapMoveTimer=setTimeout(updateMapCenter,250)});
+   }
+   mapInstance.invalidateSize(true);
+   const input=document.getElementById(mode==="pickup"?"pickupLocation":"destinationLocation");
+   const lat=Number(input.dataset.lat),lon=Number(input.dataset.lon);
+   if(Number.isFinite(lat)&&Number.isFinite(lon)){
+     mapInstance.setView([lat,lon],17);updateMapCenter();return;
+   }
+   if(mode==="pickup" && navigator.geolocation){
+     navigator.geolocation.getCurrentPosition(p=>{mapInstance.setView([p.coords.latitude,p.coords.longitude],17);updateMapCenter()},()=>{mapInstance.setView([16.5,82.0],10);updateMapCenter()},{enableHighAccuracy:true,timeout:15000,maximumAge:30000});
+   }else{mapInstance.setView([16.5,82.0],10);updateMapCenter()}
+ },180);
+}
+function closeMap(){document.getElementById("mapModal").classList.remove("show")}
+async function geocodePlace(q){
+ const r=await fetch("https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=in&addressdetails=1&q="+encodeURIComponent(q+", India"),{headers:{Accept:"application/json"}});
+ if(!r.ok)throw new Error("geocode failed");
+ const a=await r.json();if(!a.length)throw new Error("not found");
+ return {lat:Number(a[0].lat),lon:Number(a[0].lon),label:a[0].display_name};
+}
+async function searchPlace(q){
+ q=(q||document.getElementById("mapSearch").value).trim();if(!q)return;
+ try{const a=await geocodePlace(q);mapInstance.setView([a.lat,a.lon],16);mapCoords=a;document.getElementById("mapResult").textContent=a.label;}
+ catch(e){alert("Location not found. Please type the village/town name with district or nearby landmark.")}
+}
+function searchMapPlace(){searchPlace(document.getElementById("mapSearch").value)}
+async function updateMapCenter(){
+ if(!mapInstance)return;
+ const c=mapInstance.getCenter();mapCoords={lat:c.lat,lon:c.lng,label:""};
+ document.getElementById("mapResult").textContent="Getting place name…";
+ try{const r=await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${c.lat}&lon=${c.lng}&zoom=18&addressdetails=1`,{headers:{Accept:"application/json"}});const a=await r.json();mapCoords.label=a.display_name||`${c.lat.toFixed(5)}, ${c.lng.toFixed(5)}`;document.getElementById("mapResult").textContent=mapCoords.label}
+ catch(e){mapCoords.label=`${c.lat.toFixed(5)}, ${c.lng.toFixed(5)}`;document.getElementById("mapResult").textContent=mapCoords.label}
+}
+function mapUseCurrent(){
+ if(!navigator.geolocation){alert("Location is not supported by this browser.");return}
+ navigator.geolocation.getCurrentPosition(p=>{mapInstance.setView([p.coords.latitude,p.coords.longitude],17);updateMapCenter()},()=>alert("Please allow Location permission for current location."),{enableHighAccuracy:true,timeout:15000,maximumAge:30000});
+}
+function confirmMapLocation(){
+ if(!mapCoords||!Number.isFinite(mapCoords.lat)||!Number.isFinite(mapCoords.lon)){alert("Please wait for the map location to load.");return}
+ const id=mapMode==="pickup"?"pickupLocation":"destinationLocation";
+ setLocationInput(id,mapCoords.label,mapCoords.lat,mapCoords.lon);
+ closeMap();toast(mapMode==="pickup"?"Pickup location selected ✓":"Drop location selected ✓");
+}
+function haversineKm(a,b){
+ const R=6371,rad=Math.PI/180,dLat=(b.lat-a.lat)*rad,dLon=(b.lon-a.lon)*rad;
+ const x=Math.sin(dLat/2)**2+Math.cos(a.lat*rad)*Math.cos(b.lat*rad)*Math.sin(dLon/2)**2;
+ return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
+}
+async function updateTripDistance(){
+ const p=document.getElementById("pickupLocation"),d=document.getElementById("destinationLocation"),box=document.getElementById("distanceBox"),txt=document.getElementById("distanceText"),note=document.getElementById("distanceNote");
+ if(!p||!d||!box||!txt)return;
+ let pLat=Number(p.dataset.lat),pLon=Number(p.dataset.lon),dLat=Number(d.dataset.lat),dLon=Number(d.dataset.lon);
+ if(![pLat,pLon,dLat,dLon].every(Number.isFinite)){box.classList.add("hidden");return}
+ box.classList.remove("hidden");txt.textContent="Calculating…";note.textContent="Route distance";
+ try{
+   const url=`https://router.project-osrm.org/route/v1/driving/${pLon},${pLat};${dLon},${dLat}?overview=false`;
+   const r=await fetch(url);const j=await r.json();
+   if(j.code==="Ok"&&j.routes&&j.routes[0]){txt.textContent=(j.routes[0].distance/1000).toFixed(1)+" km";return}
+   throw new Error("route unavailable");
+ }catch(e){txt.textContent=haversineKm({lat:pLat,lon:pLon},{lat:dLat,lon:dLon}).toFixed(1)+" km";note.textContent="Approximate straight-line distance";}
+}
+
+async function openDestinationNavigation(){
+ const input=document.getElementById("destinationLocation");
+ const destination=(input.value||"").trim();
+ if(!destination){toast("Please select a destination first.");return}
+ let lat=Number(input.dataset.lat),lon=Number(input.dataset.lon);
+ if(!Number.isFinite(lat)||!Number.isFinite(lon)){
+   try{
+     const r=await fetch("https://nominatim.openstreetmap.org/search?format=json&limit=1&q="+encodeURIComponent(destination),{headers:{Accept:"application/json"}});
+     const a=await r.json();
+     if(!a.length)throw new Error("not found");
+     lat=Number(a[0].lat);lon=Number(a[0].lon);
+     input.dataset.lat=lat;input.dataset.lon=lon;
+   }catch(e){
+     window.open("https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(destination),"_blank");
+     return;
+   }
+ }
+ if(navigator.geolocation){
+   navigator.geolocation.getCurrentPosition(p=>{
+     const origin=p.coords.latitude+","+p.coords.longitude;
+     window.open("https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent(origin)+"&destination="+encodeURIComponent(lat+","+lon)+"&travelmode=driving","_blank");
+   },()=>window.open("https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(lat+","+lon)+"&travelmode=driving","_blank"),{enableHighAccuracy:true,timeout:8000,maximumAge:60000});
+ }else window.open("https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(lat+","+lon)+"&travelmode=driving","_blank");
+}
+
+async function calculateFare(){
+ const p=document.getElementById("pickupLocation").value.trim(),d=document.getElementById("destinationLocation").value.trim();
+ if(!p||!d){alert("Please enter pickup and destination.");return}
+ try{
+   const pi=document.getElementById("pickupLocation"),di=document.getElementById("destinationLocation");
+   if(!Number.isFinite(Number(pi.dataset.lat))||!Number.isFinite(Number(pi.dataset.lon))){const a=await geocodePlace(p);setLocationInput("pickupLocation",a.label||p,a.lat,a.lon)}
+   if(!Number.isFinite(Number(di.dataset.lat))||!Number.isFinite(Number(di.dataset.lon))){const a=await geocodePlace(d);setLocationInput("destinationLocation",a.label||d,a.lat,a.lon)}
+   await updateTripDistance();
+   const pLat=Number(pi.dataset.lat),pLon=Number(pi.dataset.lon),dLat=Number(di.dataset.lat),dLon=Number(di.dataset.lon);
+   if(![pLat,pLon,dLat,dLon].every(Number.isFinite))throw new Error("coordinates missing");
+   let oneWayKm=haversineKm({lat:pLat,lon:pLon},{lat:dLat,lon:dLon});
+   try{
+     const url=`https://router.project-osrm.org/route/v1/driving/${pLon},${pLat};${dLon},${dLat}?overview=false`;
+     const r=await fetch(url);const j=await r.json();
+     if(j.code==="Ok"&&j.routes&&j.routes[0])oneWayKm=j.routes[0].distance/1000;
+   }catch(e){}
+   oneWayKm=Math.max(0.1,oneWayKm);
+   const isRound=selectedTripType==="roundtrip";
+   const totalKm=isRound?oneWayKm*2:oneWayKm;
+   window.lastCalculatedDistanceKm=totalKm;
+   const car=window.selectedQuickVehicle==="6seater"?"4plus":"4seater";
+   const rate=await loadAdminFareSettings();
+   const basic=totalKm<=25?rate.basicRateUnder25:rate.basicRateAbove25;
+   const perKm=isRound?(car==="4plus"?rate.fourPlusRoundTrip:rate.fourSeaterRoundTrip):(car==="4plus"?rate.fourPlusOneWay:rate.fourSeaterOneWay);
+   const fare=Math.round(basic+(totalKm*perKm));
+   currentFare=fare;
+   document.getElementById("estimateTrip").textContent=isRound?"Round Trip":"One Way";
+   document.getElementById("estimateVehicle").textContent=car==="4plus"?"4+ Seater (6 Seater)":"4 Seater";
+   document.getElementById("fareText").textContent="₹"+fare.toLocaleString("en-IN");
+   const fs=document.getElementById("adminRateStatus");if(fs)fs.textContent="✓ Firebase rate applied";
+   const dbx=document.getElementById("distanceText");if(dbx)dbx.textContent=totalKm.toFixed(1)+" km";
+   const dn=document.getElementById("distanceNote");if(dn)dn.textContent=isRound?"Total round-trip distance":"One-way route distance";
+   const eb=document.getElementById("estimateBox");if(eb)eb.classList.add("show");
+   const cb=document.getElementById("continueButton");if(cb)cb.classList.remove("hidden");
+ }catch(e){console.error("Fare calculation failed",e);alert("Firebase fare rates could not be loaded.
+
+"+(e&&e.message?e.message:"Unknown Firebase error")+"
+
+Check Firestore: setting → fare");}
+}
+function startBooking(){
+ if(!currentFare){alert("Please get a fare estimate first.");return}
+ document.getElementById("summaryPickup").textContent=document.getElementById("pickupLocation").value.trim();
+ document.getElementById("summaryDestination").textContent=document.getElementById("destinationLocation").value.trim();
+ document.getElementById("bookingFare").textContent="₹"+currentFare.toLocaleString("en-IN");
+ const today=new Date().toISOString().split("T")[0];
+ document.getElementById("travelDate").min=today;
+ if(!document.getElementById("travelDate").value)document.getElementById("travelDate").value=today;
+ showPage("booking");
+}
+async function generateBookingId(){
+ const n=new Date();
+ const y=String(n.getFullYear());
+ const dateKey=y+String(n.getMonth()+1).padStart(2,"0")+String(n.getDate()).padStart(2,"0");
+ let serial=0;
+ try{
+   if(firebaseReady&&db){
+     const ref=db.collection("bookingCounters").doc(dateKey);
+     await db.runTransaction(async tx=>{
+       const snap=await tx.get(ref);
+       serial=snap.exists?(Number(snap.data().serial||0)+1):1;
+       tx.set(ref,{serial,updatedAt:new Date().toISOString()},{merge:true});
+     });
+   }
+ }catch(e){
+   const key="dsBookingSerial_"+dateKey;
+   serial=Number(localStorage.getItem(key)||0)+1;
+   localStorage.setItem(key,String(serial));
+ }
+ return "DS-"+dateKey+"-"+String(serial).padStart(4,"0");
+}
+function generateRidePin(){
+ const min=1000,max=9999;
+ if(window.crypto&&window.crypto.getRandomValues){const a=new Uint32Array(1);window.crypto.getRandomValues(a);return String(min+(a[0]%(max-min+1)));}
+ return String(Math.floor(Math.random()*(max-min+1))+min);
+}
+
+async function confirmBooking(){
+ const name=document.getElementById("customerName").value.trim();
+ const phone=document.getElementById("customerPhone").value.replace(/\D/g,"");
+ const date=document.getElementById("travelDate").value;
+ const time=document.getElementById("travelTime").value;
+ const pickup=document.getElementById("pickupLocation").value.trim();
+ const destination=document.getElementById("destinationLocation").value.trim();
+ const vehicle=document.getElementById("vehicleType").value;
+ const passengers=document.getElementById("passengers").value;
+ if(!name){alert("Please enter your name.");return}
+ if(phone.length!==10){alert("Please enter a valid 10-digit mobile number.");return}
+ if(!pickup||!destination){alert("Please enter pickup and destination.");return}
+ if(!date||!time){alert("Please select travel date and pickup time.");return}
+ if(!firebaseReady){alert("Firebase connection is not ready. Please refresh the app and try again.");return}
+ const pin=generateRidePin();
+ currentRidePin=pin;
+ const preview=document.getElementById("generatedRidePinPreview");
+ if(preview)preview.textContent=pin;
+
+ const button=document.getElementById("confirmBookingButton");
+ button.disabled=true;button.textContent="Sending booking…";
+ currentBookingId=await generateBookingId();
+ const now=new Date();
+ const b={
+   id:currentBookingId,bookingId:currentBookingId,
+   name,customerName:name,phone,customerPhone:phone,
+   pickup,pickupLocation:pickup,destination,destinationLocation:destination,
+   tripType:selectedTripType,fare:Number(currentFare||0),date,time,
+   vehicle,vehicleType:vehicle,passengers,pin,ridePin:pin,
+   status:"pending",driverId:null,driverName:null,driverPhone:null,
+   createdAt:now.toISOString(),createdAtMs:Date.now(),completed:false,
+   source:"customer-pwa",referralCode:getCustomerReferralCode()
+ };
+ try{
+   await db.collection("bookings").doc(currentBookingId).set(b);
+   bookings.unshift(b);
+   localStorage.setItem("sethuBookings",JSON.stringify(bookings));
+   localStorage.setItem("sethuCustomerName",name);
+   localStorage.setItem("sethuCustomerPhone",phone);
+   document.getElementById("bookingId").textContent=currentBookingId;
+   document.getElementById("ridePin").textContent=pin;
+   document.getElementById("welcomeMessage").textContent="Welcome, "+name+"! Your booking request "+currentBookingId+" has been received. Nearby Driver Partners can now see the request.";
+   renderProfile();renderBookingHistory();showPage("success");
+   watchBookingStatus(currentBookingId);
+ }catch(error){
+   console.error("Booking save failed",error);
+   alert("Booking could not be sent to the server. Please check your internet connection and try again.");
+ }finally{
+   button.disabled=false;button.textContent=currentLanguage==="te"?"బుకింగ్ నిర్ధారించండి":"Confirm Booking";
+ }
+}
+function renderProfile(){
+ const n=localStorage.getItem("sethuCustomerName")||"Guest User",p=localStorage.getItem("sethuCustomerPhone");
+ document.getElementById("profileName").textContent=n;
+ document.getElementById("profilePhone").textContent=p?"+91 "+p:"No login required";
+ document.getElementById("profileAvatar").textContent=n.charAt(0).toUpperCase();
+}
+function renderLoyalty(){
+ document.getElementById("loyaltyPoints").textContent=loyaltyPoints;
+ document.getElementById("loyaltyPagePoints").textContent=loyaltyPoints;
+}
+function showLoyaltyDetails(){renderLoyalty();showPage("loyalty")}
+function showMyBookings(){renderBookingHistory();showPage("myBookings")}
+function renderBookingHistory(){
+ const c=document.getElementById("bookingHistory");if(!c)return;
+ if(!bookings.length){c.innerHTML='<div class="empty"><div class="empty-icon">📋</div><h3>No bookings yet</h3><p>Your booking history will appear here after you make a booking.</p></div>';return}
+ c.innerHTML=bookings.map((b,i)=>`<div style="padding:14px 0;border-bottom:1px solid #edf0f3"><div style="display:flex;justify-content:space-between;gap:8px"><b style="font-size:12px">${escapeHtml(b.id||b.bookingId)}</b><span style="color:#15803d;font-size:10px;font-weight:900">${escapeHtml(b.status||"pending")}</span></div><div style="font-size:11px;line-height:1.6;margin-top:7px">${escapeHtml(b.pickup||b.pickupLocation)}<br>↓<br>${escapeHtml(b.destination||b.destinationLocation)}</div><div class="small muted" style="margin-top:6px">${escapeHtml(b.date||"")} • ${escapeHtml(b.time||"")} • ₹${Number(b.fare||0).toLocaleString("en-IN")}</div></div>`).join("");
+}
+function completeTrip(i){
+ const b=bookings[i];if(!b)return;
+ b.status="Completed";b.completed=true;
+ const earned=Math.max(10,Math.floor(Number(b.fare)/100));
+ loyaltyPoints+=earned;
+ localStorage.setItem("sethuLoyaltyPoints",loyaltyPoints);
+ localStorage.setItem("sethuBookings",JSON.stringify(bookings));
+ document.getElementById("completeBookingId").textContent=b.id;
+ document.getElementById("earnedPoints").textContent=earned;
+ renderLoyalty();renderBookingHistory();showPage("complete");
+}
+function shareTrip(){
+ const b=bookings[0];if(!b){alert("No booking available to share.");return}
+ const text="Darshana Sethu Cab Trip\nBooking ID: "+b.id+"\nPickup: "+b.pickup+"\nDestination: "+b.destination;
+ if(navigator.share)navigator.share({title:"Darshana Sethu Cab Trip",text});else if(navigator.clipboard)navigator.clipboard.writeText(text).then(()=>toast("Trip details copied."));
+}
+function triggerSOS(){if(confirm("Emergency SOS\n\nAre you sure you need emergency assistance?"))alert("Please contact local emergency services immediately if you are in danger.")}
+function editProfile(){
+ const n=prompt("Enter your name:",localStorage.getItem("sethuCustomerName")||"");if(!n||!n.trim())return;
+ const p=(prompt("Enter 10-digit mobile number:",localStorage.getItem("sethuCustomerPhone")||"")||"").replace(/\D/g,"");
+ if(p.length!==10){alert("Please enter a valid 10-digit number.");return}
+ localStorage.setItem("sethuCustomerName",n.trim());localStorage.setItem("sethuCustomerPhone",p);renderProfile();
+}
+function openSupport(){window.location.href="tel:+"+SUPPORT_PHONE}
+function openWhatsAppBooking(){
+ const b=bookings[0];let msg="Hello Darshana Sethu Cab,\n\nI need booking support.";
+ if(b)msg+="\nBooking ID: "+b.id+"\nName: "+b.name+"\nPickup: "+b.pickup+"\nDestination: "+b.destination;
+ window.open("https://wa.me/"+SUPPORT_PHONE+"?text="+encodeURIComponent(msg),"_blank");
+}
+function getCustomerReferralCode(){
+ let code=localStorage.getItem("sethuCustomerReferralCode");
+ if(!code){code="DSC-C-"+Math.random().toString(36).slice(2,8).toUpperCase();localStorage.setItem("sethuCustomerReferralCode",code)}
+ return code;
+}
+function getCustomerReferralLink(){
+ const base=window.location.origin+window.location.pathname;
+ return base+"?ref="+encodeURIComponent(getCustomerReferralCode());
+}
+async function shareCustomerReferral(){
+ const link=getCustomerReferralLink();
+ const text="Join Darshana Sethu Cab with my customer referral link:\n"+link;
+ try{
+   if(navigator.share){await navigator.share({title:"Darshana Sethu Cab",text,url:link});}
+   else if(navigator.clipboard){await navigator.clipboard.writeText(link);toast("Customer referral link copied.");}
+   else prompt("Copy your referral link:",link);
+ }catch(e){}
+}
+function renderCustomerReferral(){const el=document.getElementById("customerReferralLink");if(el)el.textContent=getCustomerReferralLink()}
+function toggleLanguage(){
+ currentLanguage=currentLanguage==="en"?"te":"en";
+ const te=currentLanguage==="te";
+ document.getElementById("languageButton").textContent=te?"English":"తెలుగు";
+ document.getElementById("heroTitle").textContent=te?"మీ ప్రయాణం ఇక్కడ ప్రారంభం.":"Your journey starts here.";
+ document.getElementById("heroText").textContent=te?"లోకల్, అవుట్‌స్టేషన్, కుటుంబ మరియు దేవాలయ ప్రయాణాలకు సౌకర్యవంతమైన క్యాబ్ సేవ.":"Comfortable cab service for local, outstation, family and temple travel.";
+ document.getElementById("planTitle").textContent=te?"మీ ప్రయాణాన్ని ప్లాన్ చేయండి":"Plan your trip";
+ document.getElementById("oneWay").textContent=te?"వన్ వే":"One Way";
+ document.getElementById("roundTrip").textContent=te?"రౌండ్ ట్రిప్":"Round Trip";
+ document.getElementById("calculateButton").textContent=te?"ఫేర్ అంచనా పొందండి":"Get Fare Estimate";
+}
+function escapeHtml(v){return String(v??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;")}
+function toast(t){const x=document.getElementById("toast");x.textContent=t;x.classList.add("show");setTimeout(()=>x.classList.remove("show"),2200)}
+
+document.addEventListener("DOMContentLoaded",()=>{
+ renderProfile();renderLoyalty();renderBookingHistory();renderCustomerReferral();updateNav("home");
+ // GitHub Pages/PWA cache protection: remove stale service workers and caches once after deployment.
+ if("serviceWorker" in navigator){
+   const CACHE_FIX="ds-cache-fix-20260823-v7";
+   if(localStorage.getItem("ds_cache_fix_version")!==CACHE_FIX){
+     navigator.serviceWorker.getRegistrations().then(rs=>Promise.all(rs.map(r=>r.unregister()))).catch(()=>{});
+     if(window.caches){caches.keys().then(keys=>Promise.all(keys.map(k=>caches.delete(k)))).catch(()=>{});}
+     localStorage.setItem("ds_cache_fix_version",CACHE_FIX);
+     setTimeout(()=>location.reload(),250);
+   } else {
+     navigator.serviceWorker.register("sw.js?v=20260823-v6",{updateViaCache:"none"}).then(r=>r.update()).catch(e=>console.warn("SW",e));
+   }
+ }
+ if(localStorage.getItem("ds_setup_done")==="yes"){const o=document.getElementById("setupOverlay");if(o){o.style.display="none";o.setAttribute("aria-hidden","true")}}
+ const latest=bookings[0];if(latest&&latest.id&&["pending","accepted","assigned","started","ongoing"].includes(String(latest.status||"").toLowerCase())){watchBookingStatus(latest.id);}
+
+ const fs=document.getElementById("firebaseStatus");if(fs)fs.textContent=firebaseReady?"✓ Booking service connected":"⚠ Booking service not connected";
+});
+</script>
+<script id="dsQuickVehicleOnlyFixV2">
+window.selectedQuickVehicle = window.selectedQuickVehicle || "4seater";
+window.selectQuickVehicle = function(type){
+  window.selectedQuickVehicle = type === "6seater" ? "6seater" : "4seater";
+  const four=document.getElementById("quick4Seater"), six=document.getElementById("quick6Seater");
+  if(four) four.classList.toggle("active", window.selectedQuickVehicle === "4seater");
+  if(six) six.classList.toggle("active", window.selectedQuickVehicle === "6seater");
+  const sel=document.getElementById("vehicleType");
+  if(sel) sel.value = window.selectedQuickVehicle === "6seater" ? "suv" : "sedan";
+  const label=document.getElementById("estimateVehicle");
+  if(label) label.textContent = window.selectedQuickVehicle === "6seater" ? "6 Seater" : "4 Seater";
+};
+document.addEventListener("DOMContentLoaded", function(){ window.selectQuickVehicle("4seater"); });
+</script>
+</body>
+</html>
